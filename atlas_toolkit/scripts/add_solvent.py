@@ -205,26 +205,30 @@ def add_solvent(
     center_sys(rep_atoms, rep_box, start_origin=0)
     init_box(rep_box, rep_atoms)
 
-    # Trim to target cell
-    cell_str = " ".join(str(target[d]) for d in ("X", "Y", "Z"))
-    print(f"  Trimming solvent to {cell_str} Å...")
-    from atlas_toolkit.scripts.trim_cell import _parse_cell
-    new_box = _parse_cell(cell_str)
-    init_box(new_box, rep_atoms)
+    # Trim to target cell only when explicit cell dimensions were requested
+    # (Perl skips trim when replication is 1x1x1, matching this behaviour)
+    has_explicit_cell = "cell" in cell_opts
+    if rep_needed or has_explicit_cell:
+        cell_str = " ".join(str(target[d]) for d in ("X", "Y", "Z"))
+        print(f"  Trimming solvent to {cell_str} Å...")
+        from atlas_toolkit.scripts.trim_cell import _parse_cell
+        new_box = _parse_cell(cell_str)
+        init_box(new_box, rep_atoms)
 
-    # Reimage then trim
-    rep_mols = get_mols(rep_atoms, rep_bonds)
-    from atlas_toolkit.core.manip_atoms import reimage_atoms
-    reimage_atoms(rep_atoms, rep_bonds, rep_mols, rep_box)
-    trim_cell(rep_atoms, rep_bonds, rep_mols, new_box)
-    rep_atoms, rep_bonds = make_seq_atom_index(rep_atoms, rep_bonds)
+        rep_mols = get_mols(rep_atoms, rep_bonds)
+        from atlas_toolkit.core.manip_atoms import reimage_atoms
+        reimage_atoms(rep_atoms, rep_bonds, rep_mols, rep_box)
+        trim_cell(rep_atoms, rep_bonds, rep_mols, new_box)
+        rep_atoms, rep_bonds = make_seq_atom_index(rep_atoms, rep_bonds)
 
-    # Re-center trimmed solvent
-    trim_box = get_box(rep_atoms, [
-        f"CRYSTX  {target['X']} {target['Y']} {target['Z']} 90.0 90.0 90.0"
-    ])
-    center_sys(rep_atoms, trim_box, start_origin=0)
-    init_box(trim_box, rep_atoms)
+        trim_box = get_box(rep_atoms, [
+            f"CRYSTX  {target['X']} {target['Y']} {target['Z']} 90.0 90.0 90.0"
+        ])
+        center_sys(rep_atoms, trim_box, start_origin=0)
+        init_box(trim_box, rep_atoms)
+    else:
+        # No trim needed — use the full solvent box as-is
+        trim_box = rep_box
 
     # Embed solute into trimmed solvent
     print("  Embedding solute (removing overlaps)...")

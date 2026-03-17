@@ -27,6 +27,11 @@ atlas-create-lammps-input = "atlas_toolkit.scripts.create_lammps_input:main"
 atlas-update-bgf-coords = "atlas_toolkit.scripts.update_bgf_coords:main"
 atlas-convert-lammps-trj = "atlas_toolkit.scripts.convert_lammps_trj:main"
 
+[tool.pytest.ini_options]
+markers = [
+    "perl_oracle: requires Perl and ~/ATLAS-toolkit (skipped automatically if absent)",
+]
+
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["atlas_toolkit*"]
