@@ -1,0 +1,147 @@
+VERSION
+ CERIUS2     1
+END
+#
+HEADER
+END
+#
+PREFERENCES
+ BONDS                                 T
+ ANGLES                                T
+ COULOMB                               T
+ INVERSIONS                            T
+ TORSIONS                              T
+ UREY_BRADLEY                          F
+ STRETCH_STRETCH                       F
+ SEPARATED_STRETCH_STRETCH             F
+ STRETCH_BEND_STRETCH                  F
+ BEND_BEND                             F
+ TORSION_STRETCH                       F
+ TORSION_BEND_BEND                     F
+ BEND_TORSION_BEND                     F
+ STRETCH_TORSION_STRETCH               F
+ HYDROGEN_BONDS                        F
+ DIAGONAL_VAN_DER_WAALS                T
+ OFF_DIAGONAL_VAN_DER_WAALS            T
+ GENERATE_UNDEFINED_TERMS              F
+ IGNORE_UNDEFINED_TERMS                F
+ NON-BONDED_3-BODY                     F
+ SHRINK_CH_BONDS                       F
+ SHRINK_CH_H_ATOM                      H__C 
+ SHRINK_CH_FACTOR                         0.91500
+ SINGLE_TORSION                        F
+ SCALE_TORSIONS_ABOUT_COMMON_BOND      F
+ SCALE_BY_N_DEFINED_TORSIONS           T
+ EXOCYCLIC_TORSIONS_SCALE_FACTOR          1.00000
+ SINGLE_INVERSION                      T
+ H-BOND_METHOD                         SPLINE
+ H-BOND_LIST                           T
+ H-BOND_DIRECT_RCUT                       4.00000
+ H-BOND_SPLINE_DISTANCE_ON                4.00000
+ H-BOND_SPLINE_DISTANCE_OFF               4.50000
+ H-BOND_SPLINE_ANGLE_ON                  65.00000
+ H-BOND_SPLINE_ANGLE_OFF                 75.00000
+ H-BOND_LIST_DISTANCE_OFF                 6.50000
+ H-BOND_LIST_ANGLE_OFF                   90.00000
+ NON_BOND_LIST                         T
+ NON_BOND_BUFFER_DISTANCE                 2.00000
+ H-BOND_BUFFER_DISTANCE                   2.00000
+ COU_DIELETRIC_CONSTANT                     1.00000000000000000      
+ COU_INTER_CUT_OFF                       50.00000
+ COU_SPLINE_OFF                          10.00000
+ COU_SPLINE_ON                            9.00000
+ EWALD_SUM_COU_ACCURACY                   0.00001
+ EWALD_SUM_COU_ETA                        2.50000
+ EWALD_SUM_COU_KCUT                       0.50000
+ EWALD_SUM_COU_RCUT                       6.00000
+ EWALD_SUM_COU_AUTO_OPT                T
+ COU_EXCLUDE_1-2                       T
+ COU_EXCLUDE_1-3                       T
+ COU_EXCLUDE_1-4                       F
+ COU_1-4_SCALE_FACTOR                     0.83000
+ COU_METHOD                            EWALD    
+ COU_DIRECT_CUT-OFF                       8.00000
+ VDW_COMBINATION_RULE                  GEOMETRIC
+ VDW_INTER_CUT_OFF                       10.00000
+ VDW_EXCLUDE_1-2                       T
+ VDW_EXCLUDE_1-3                       T
+ VDW_EXCLUDE_1-4                       F
+ VDW_1-4_SCALE_FACTOR                     0.50000
+ VDW_METHOD                            DIRECT    
+ VDW_SPLINE_ON                            9.00000
+ VDW_SPLINE_OFF                          10.00000
+ EWALD_SUM_VDW_AUTO_OPT                T
+ EWALD_SUM_VDW_ACCURACY                   0.00001
+ EWALD_SUM_VDW_ETA                        2.50000
+ EWALD_SUM_VDW_KCUT                       0.50000
+ EWALD_SUM_VDW_RCUT                       6.00000
+ EWALD_SUM_VDW_REP_CUT                    6.00000
+ FAST_EWALD_SUM_RATIO                    10.00000
+ SLOW_EWALD_SUM_RATIO                     5.00000
+ MINIMUM_IMAGE                         F
+ ASSIGN_MASS                           T
+ ASSIGN_CHARGE                         F
+ ASSIGN_HYBRIDIZATION                  F
+ ATOM_TYPE                             T
+ ATOM_TYPE_ALL                         F
+ CALCULATE_BOND_ORDER                  F
+END
+ATOMTYPES
+ Li+       Li      6.94100  1.310427 1    0   0
+ Na+       Na     22.98970  1.687597 1    0   0
+ K+        K      39.09830  2.580968 1    0   0
+ Rb+       Rb     85.46780  3.031161 1    0   0
+ Cs+       Cs    132.90550  3.665877 1    0   0
+ F-        F      18.99840  1.319199 1    0   0
+ Cl-       Cl     35.45300  2.457187 1    0   0
+ Br-       Br     79.90400  2.980713 1    0   0
+ I-        I     126.90450  3.733085 1    0   0
+ Zn2+      Zn     65.39000  3.124637 1    0   0
+ Mg2+      Mg     24.30500  2.475246 1    0   0
+ Ca2+      Ca     40.07800  3.214747 1    0   0
+ Sr2+      Sr     87.62000  3.618629 1    0   0
+ Ba2+      Ba    137.32700  4.167454 1    0   0
+END
+#
+DIAGONAL_VDW
+ Li+        LJ_6_12        2.2000  0.0300
+ Na+        LJ_6_12        2.9234  0.0315
+ K+         LJ_6_12        3.3733  0.1419
+ Rb+        LJ_6_12        3.5710  0.2731
+ Cs+        LJ_6_12        4.0476  0.2766
+ F-         LJ_6_12        4.9245  0.0026
+ Cl-        LJ_6_12        4.9622  0.0720
+ Br-        LJ_6_12        5.2526  0.0823
+ I-         LJ_6_12        5.5159  0.2084
+ Zn2+       LJ_6_12        1.8699  0.2500
+ Mg2+       LJ_6_12        2.2528  0.0500
+ Ca2+       LJ_6_12        2.5417  0.2100
+ Sr2+       LJ_6_12        2.6119  0.3400
+ Ba2+       LJ_6_12        3.1435  0.6000
+END
+#
+BOND_STRETCH
+END
+#
+ANGLE_BEND
+END
+#
+TORSIONS
+END
+#
+INVERSIONS
+END
+#
+COULOMBIC
+ X        X           CONST-EPS
+END
+#
+UREY_BRADLEY
+END
+#
+HYDROGEN_BONDS
+END
+#
+GENERATOR
+END
+

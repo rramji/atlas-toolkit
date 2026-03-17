@@ -1,0 +1,135 @@
+VERSION
+ CERIUS2     1
+END
+#
+HEADER
+END
+#
+PREFERENCES
+ BONDS                                 T
+ ANGLES                                T
+ COULOMB                               T
+ INVERSIONS                            T
+ TORSIONS                              T
+ UREY_BRADLEY                          F
+ STRETCH_STRETCH                       F
+ SEPARATED_STRETCH_STRETCH             F
+ STRETCH_BEND_STRETCH                  F
+ BEND_BEND                             F
+ TORSION_STRETCH                       F
+ TORSION_BEND_BEND                     F
+ BEND_TORSION_BEND                     F
+ STRETCH_TORSION_STRETCH               F
+ HYDROGEN_BONDS                        T
+ DIAGONAL_VAN_DER_WAALS                T
+ OFF_DIAGONAL_VAN_DER_WAALS            T
+ IGNORE_UNDEFINED_TERMS                T
+ NON-BONDED_3-BODY                     F
+ SHRINK_CH_BONDS                       F
+ SHRINK_CH_H_ATOM                      H__C 
+ SHRINK_CH_FACTOR                         0.91500
+ SINGLE_TORSION                        F
+ SCALE_TORSIONS_ABOUT_COMMON_BOND      T
+ SCALE_BY_N_DEFINED_TORSIONS           T
+ EXOCYCLIC_TORSIONS_SCALE_FACTOR          0.40000
+ SINGLE_INVERSION                      F
+ H-BOND_METHOD                         SPLINE
+ H-BOND_LIST                           T
+ H-BOND_DIRECT_RCUT                       4.00000
+ H-BOND_SPLINE_DISTANCE_ON                4.00000
+ H-BOND_SPLINE_DISTANCE_OFF               4.50000
+ H-BOND_SPLINE_ANGLE_ON                  65.00000
+ H-BOND_SPLINE_ANGLE_OFF                 75.00000
+ H-BOND_LIST_DISTANCE_OFF                 6.50000
+ H-BOND_LIST_ANGLE_OFF                   90.00000
+ NB_NEIGHBOUR_SEARCH_METHOD            LIST                          
+ NON_BOND_BUFFER_DISTANCE                 2.00000
+ H-BOND_BUFFER_DISTANCE                   2.00000
+ COU_DIELETRIC_CONSTANT                     1.00000000000000000      
+ COU_INTER_CUT_OFF                        8.50000
+ COU_SPLINE_OFF                           8.50000
+ COU_SPLINE_ON                            8.00000
+ EWALD_SUM_COU_ACCURACY                   0.00001
+ EWALD_SUM_COU_ETA                        2.50000
+ EWALD_SUM_COU_KCUT                       0.50000
+ EWALD_SUM_COU_RCUT                       6.00000
+ EWALD_SUM_COU_OPTIMIZE                SMART                         
+ COU_EXCLUDE_1-2                       T
+ COU_EXCLUDE_1-3                       T
+ COU_EXCLUDE_1-4                       F
+ COU_1-4_SCALE_FACTOR                     1.00000
+ COU_METHOD                            EWALD                         
+ COU_DIRECT_CUT-OFF                       8.00000
+ VDW_COMBINATION_RULE                  GEOMETRIC                     
+ VDW_INTER_CUT_OFF                        8.50000
+ VDW_EXCLUDE_1-2                       T
+ VDW_EXCLUDE_1-3                       T
+ VDW_EXCLUDE_1-4                       F
+ VDW_1-4_SCALE_FACTOR                     1.00000
+ VDW_METHOD                            EWALD                         
+ VDW_SPLINE_ON                            8.00000
+ VDW_SPLINE_OFF                           8.50000
+ EWALD_SUM_VDW_OPTIMIZE                SMART                         
+ EWALD_SUM_VDW_ACCURACY                   0.00001
+ EWALD_SUM_VDW_ETA                        2.50000
+ EWALD_SUM_VDW_KCUT                       0.50000
+ EWALD_SUM_VDW_RCUT                       6.00000
+ EWALD_SUM_VDW_REP_CUT                    6.00000
+ FAST_EWALD_SUM_RATIO                    10.00000
+ SLOW_EWALD_SUM_RATIO                     5.00000
+ MINIMUM_IMAGE                         F
+ ASSIGN_MASS                           T
+ ASSIGN_CHARGE                         F
+ ASSIGN_HYBRIDIZATION                  F
+ ASSIGN_VALBOND_CENTER                 F
+ ATOM_TYPE                             T
+ ATOM_TYPE_ALL                         T
+ CALCULATE_BOND_ORDER                  F
+END
+#
+ATOMTYPES
+ C_3F       C      12.01100  0.6120   3   0   0
+ C_3        C      12.01100 -0.5202   3   0   0
+ F_         F      18.99840 -0.2266   0   0   3
+ H_         H      1.007840  0.1807   0   0   3
+END
+#
+DIAGONAL_VDW
+ C_3F        VDW_MORSE    3.868018E+00    9.879931E-02    1.125414E+01
+ C_3         VDW_MORSE    3.868018E+00    9.879931E-02    1.125414E+01
+ H_          VDW_MORSE    3.352408E+00    1.022630E-02    1.192168E+01
+ F_          VDW_MORSE    3.360132E+00    4.469871E-02    1.418235E+01
+END
+#
+OFF_DIAGONAL_VDW
+ C_3F     C_3         VDW_MORSE    3.868018E+00    9.879931E-02    1.125414E+01
+ C_3F     H_          VDW_MORSE    3.270553E+00    5.375313E-02    1.063457E+01
+ C_3      H_          VDW_MORSE    3.270553E+00    5.375313E-02    1.063457E+01
+ C_3F     F_          VDW_MORSE    3.540168E+00    7.573402E-02    1.261084E+01
+ C_3      F_          VDW_MORSE    3.540168E+00    7.573402E-02    1.261084E+01
+ H_       F_          VDW_MORSE    3.149937E+00    3.011717E-02    1.238400E+01
+END
+#
+ATOM_TYPING_RULES
+END
+#
+BOND_STRETCH
+ C_3      H_          HARMONIC     655.2000    1.0850            
+ C_3F     F_          HARMONIC     998.6000    1.3570               
+ C_3F     C_3         HARMONIC     617.8000    1.5340               
+END
+#
+ANGLE_BEND
+ F_       C_3F     F_          THETA_HARM   240.0000  105.2700               
+ F_       C_3F     C_3         THETA_HARM   180.0000  107.7400               
+ C_3      C_3F     C_3         THETA_HARM   160.6000  118.2400               
+ H_       C_3      H_          THETA_HARM   77.00000  109.2700
+ H_       C_3      C_3F        THETA_HARM   85.80000  108.4500
+ C_3F     C_3      C_3F        THETA_HARM   160.6000  118.2400    
+END
+#
+TORSIONS
+ C_3F     C_3      C_3F     C_3      FOURIER  18  0.7900  1  180  1.4400  2  180  -0.7600  3  180  -0.4100  4  180  0.8500  5  180  -0.0500  6  180              
+ F_       C_3F     C_3      C_3F     FOURIER  18  0.7100  1  180  0.6900  2  180  -0.7600  3  180   0.2800  4  180  0.2900  5  180  -0.0500  6  180           
+END
+#

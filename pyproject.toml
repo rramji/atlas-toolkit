@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "atlas-toolkit"
+version = "0.1.0"
+description = "Python port of the ATLAS molecular simulation toolkit"
+license = {file = "LICENSE"}
+classifiers = ["License :: OSI Approved :: MIT License"]
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.22"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "pytest-cov"]
+
+[project.scripts]
+atlas-modify-atom-data = "atlas_toolkit.scripts.modify_atom_data:main"
+atlas-replicate = "atlas_toolkit.scripts.replicate:main"
+atlas-trim-cell = "atlas_toolkit.scripts.trim_cell:main"
+atlas-remove-mols = "atlas_toolkit.scripts.remove_mols:main"
+atlas-embed-molecule = "atlas_toolkit.scripts.embed_molecule:main"
+atlas-add-solvent = "atlas_toolkit.scripts.add_solvent:main"
+atlas-add-ions = "atlas_toolkit.scripts.add_ions:main"
+atlas-add-box-to-bgf = "atlas_toolkit.scripts.add_box_to_bgf:main"
+atlas-create-lammps-input = "atlas_toolkit.scripts.create_lammps_input:main"
+atlas-update-bgf-coords = "atlas_toolkit.scripts.update_bgf_coords:main"
+atlas-convert-lammps-trj = "atlas_toolkit.scripts.convert_lammps_trj:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["atlas_toolkit*"]
+
+[tool.setuptools.package-data]
+atlas_toolkit = ["data/ff/**/*", "data/wat/**/*"]

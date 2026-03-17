@@ -1,0 +1,140 @@
+VERSION
+ CERIUS2     1
+END
+#
+HEADER
+EPM2 forcefield for CO2
+From Nieto-Draghi, C.; de Bruin, T.; Perez-Pellitero, J.; Avalos, J. B.; Mackie, A. D. J. Chem. Phys. 2007, 126, 8.
+Anderson, K. E.; Mielke, S. L.; Siepmann, J. I.; Truhlar, D. G. J. Phys. Chem. A 2009, 113, 2053–2059
+Harris, J. G.; Yung, K. H. J. Phys. Chem. 1995, 99, 12021–12024
+END
+#
+PREFERENCES
+ BONDS                                 T
+ ANGLES                                T
+ COULOMB                               T
+ INVERSIONS                            T
+ TORSIONS                              T
+ UREY_BRADLEY                          F
+ STRETCH_STRETCH                       T
+ SEPARATED_STRETCH_STRETCH             F
+ STRETCH_BEND_STRETCH                  T
+ BEND_BEND                             T
+ TORSION_STRETCH                       F
+ TORSION_BEND_BEND                     T
+ BEND_TORSION_BEND                     F
+ STRETCH_TORSION_STRETCH               F
+ HYDROGEN_BONDS                        F
+ DIAGONAL_VAN_DER_WAALS                T
+ OFF_DIAGONAL_VAN_DER_WAALS            T
+ IGNORE_UNDEFINED_TERMS                T
+ NON-BONDED_3-BODY                     F
+ SHRINK_CH_BONDS                       F
+ SHRINK_CH_H_ATOM                      H__C 
+ SHRINK_CH_FACTOR                         0.91500
+ SINGLE_TORSION                        F
+ SCALE_TORSIONS_ABOUT_COMMON_BOND      T
+ SCALE_BY_N_DEFINED_TORSIONS           T
+ EXOCYCLIC_TORSIONS_SCALE_FACTOR          0.40000
+ SINGLE_INVERSION                      F
+ H-BOND_METHOD                         SPLINE
+ H-BOND_LIST                           T
+ H-BOND_DIRECT_RCUT                       4.00000
+ H-BOND_SPLINE_DISTANCE_ON                4.00000
+ H-BOND_SPLINE_DISTANCE_OFF               4.50000
+ H-BOND_SPLINE_ANGLE_ON                  65.00000
+ H-BOND_SPLINE_ANGLE_OFF                 75.00000
+ H-BOND_LIST_DISTANCE_OFF                 6.50000
+ H-BOND_LIST_ANGLE_OFF                   90.00000
+ NB_NEIGHBOUR_SEARCH_METHOD            LIST                          
+ NON_BOND_BUFFER_DISTANCE                 2.00000
+ H-BOND_BUFFER_DISTANCE                   2.00000
+ COU_DIELETRIC_CONSTANT                   1.00000000000000000      
+ COU_INTER_CUT_OFF                        8.50000
+ COU_SPLINE_OFF                          10.00000
+ COU_SPLINE_ON                            9.00000
+ EWALD_SUM_COU_ACCURACY                   0.00010
+ EWALD_SUM_COU_ETA                        2.50000
+ EWALD_SUM_COU_KCUT                       0.50000
+ EWALD_SUM_COU_RCUT                       6.00000
+ EWALD_SUM_COU_OPTIMIZE                NEVER                         
+ COU_EXCLUDE_1-2                       T
+ COU_EXCLUDE_1-3                       T
+ COU_EXCLUDE_1-4                       T
+ COU_1-4_SCALE_FACTOR                     1.00000
+ COU_METHOD                            EWALD                        
+ COU_DIRECT_CUT-OFF                       8.00000
+ VDW_COMBINATION_RULE                  GEOMETRIC                    
+ VDW_INTER_CUT_OFF                        8.50000
+ VDW_EXCLUDE_1-2                       T
+ VDW_EXCLUDE_1-3                       T
+ VDW_EXCLUDE_1-4                       T
+ VDW_1-4_SCALE_FACTOR                     1.00000
+ VDW_METHOD                            SPLINE                        
+ VDW_SPLINE_ON                            9.00000
+ VDW_SPLINE_OFF                          10.0000
+ EWALD_SUM_VDW_OPTIMIZE                NEVER                         
+ EWALD_SUM_VDW_ACCURACY                   0.00010
+ EWALD_SUM_VDW_ETA                        2.50000
+ EWALD_SUM_VDW_KCUT                       0.50000
+ EWALD_SUM_VDW_RCUT                       6.00000
+ EWALD_SUM_VDW_REP_CUT                    6.00000
+ FAST_EWALD_SUM_RATIO                    10.00000
+ SLOW_EWALD_SUM_RATIO                     5.00000
+ MINIMUM_IMAGE                         F
+ ASSIGN_MASS                           T
+ ASSIGN_CHARGE                         T
+ ASSIGN_HYBRIDIZATION                  F
+ ASSIGN_VALBOND_CENTER                 F
+ ATOM_TYPE                             T
+ ATOM_TYPE_ALL                         T
+ CALCULATE_BOND_ORDER                  F
+END
+#
+ATOMTYPES
+ O_21       O      15.99940 -0.3256   2   0   2
+ C_11       C      12.01100  0.6512   1   0   0
+END
+#
+DIAGONAL_VDW
+ O_21        LJ_6_12        3.40443  0.159981
+ C_11        LJ_6_12        3.09463  0.558971E-01
+END
+#
+EQUIVALENCE
+ O_21       O_2
+ C_11       C_1
+END
+#
+ATOM_TYPING_RULES
+ C_11            C            2           0           0           1
+ O_21            O            3           0           0           1
+END
+#
+#
+OFF_DIAGONAL_VDW
+END
+#
+BOND_STRETCH
+ C_11     O_21        HARMONIC    2566.7600    1.1490
+END
+#
+ANGLE_BEND
+ O_21     C_11     O_21        THETA_HARM   113.0600  180.0000
+END
+#
+TORSIONS
+END
+#
+INVERSIONS
+END
+#
+COULOMBIC
+ X        X           CONST-EPS 
+END
+#
+HYDROGEN_BONDS
+END
+#
+GENERATOR
+END

@@ -1,0 +1,169 @@
+VERSION
+ CERIUS2     1
+END
+#
+HEADER
+Taken from "Empirical Force Fields for Biologically Active Divalent Metal Cations in Water", Babu and Lim
+https://doi.org/10.1021/jp054177x
+END
+#
+PREFERENCES
+ BONDS                                 T
+ ANGLES                                T
+ COULOMB                               T
+ INVERSIONS                            T
+ TORSIONS                              T
+ UREY_BRADLEY                          F
+ STRETCH_STRETCH                       F
+ SEPARATED_STRETCH_STRETCH             F
+ STRETCH_BEND_STRETCH                  F
+ BEND_BEND                             F
+ TORSION_STRETCH                       F
+ TORSION_BEND_BEND                     F
+ BEND_TORSION_BEND                     F
+ STRETCH_TORSION_STRETCH               F
+ HYDROGEN_BONDS                        F
+ DIAGONAL_VAN_DER_WAALS                T
+ OFF_DIAGONAL_VAN_DER_WAALS            T
+ IGNORE_UNDEFINED_TERMS                F
+ NON-BONDED_3-BODY                     F
+ SHRINK_CH_BONDS                       F
+ SHRINK_CH_H_ATOM                      H__C 
+ SHRINK_CH_FACTOR                         0.91500
+ SINGLE_TORSION                        F
+ SCALE_TORSIONS_ABOUT_COMMON_BOND      T
+ SCALE_BY_N_DEFINED_TORSIONS           T
+ EXOCYCLIC_TORSIONS_SCALE_FACTOR          1.00000
+ SINGLE_INVERSION                      F
+ H-BOND_METHOD                         SPLINE
+ H-BOND_LIST                           T
+ H-BOND_DIRECT_RCUT                       4.00000
+ H-BOND_SPLINE_DISTANCE_ON                4.00000
+ H-BOND_SPLINE_DISTANCE_OFF               4.50000
+ H-BOND_SPLINE_ANGLE_ON                  65.00000
+ H-BOND_SPLINE_ANGLE_OFF                 75.00000
+ H-BOND_LIST_DISTANCE_OFF                 6.50000
+ H-BOND_LIST_ANGLE_OFF                   90.00000
+ NB_NEIGHBOUR_SEARCH_METHOD            LIST                          
+ NON_BOND_BUFFER_DISTANCE                 2.00000
+ H-BOND_BUFFER_DISTANCE                   2.00000
+ COU_DIELETRIC_CONSTANT                     1.00000000000000000      
+ COU_INTER_CUT_OFF                       14.00000
+ COU_SPLINE_OFF                          14.00000
+ COU_SPLINE_ON                           11.00000
+ EWALD_SUM_COU_ACCURACY                   0.00100
+ EWALD_SUM_COU_ETA                        2.50000
+ EWALD_SUM_COU_KCUT                       0.50000
+ EWALD_SUM_COU_RCUT                       6.00000
+ EWALD_SUM_COU_OPTIMIZE                SMART                         
+ COU_EXCLUDE_1-2                       T
+ COU_EXCLUDE_1-3                       T
+ COU_EXCLUDE_1-4                       F
+ COU_1-4_SCALE_FACTOR                     1.00000
+ COU_METHOD                            SPLINE                        
+ COU_DIRECT_CUT-OFF                      11.00000
+ VDW_COMBINATION_RULE                  GEOMETRIC                     
+ VDW_INTER_CUT_OFF                       14.00000
+ VDW_EXCLUDE_1-2                       T
+ VDW_EXCLUDE_1-3                       T
+ VDW_EXCLUDE_1-4                       F
+ VDW_1-4_SCALE_FACTOR                     1.00000
+ VDW_METHOD                            SPLINE                        
+ VDW_SPLINE_ON                           11.00000
+ VDW_SPLINE_OFF                          14.00000
+ EWALD_SUM_VDW_OPTIMIZE                SMART                         
+ EWALD_SUM_VDW_ACCURACY                   0.00100
+ EWALD_SUM_VDW_ETA                        2.50000
+ EWALD_SUM_VDW_KCUT                       0.50000
+ EWALD_SUM_VDW_RCUT                       6.00000
+ EWALD_SUM_VDW_REP_CUT                    6.00000
+ FAST_EWALD_SUM_RATIO                    10.00000
+ SLOW_EWALD_SUM_RATIO                     5.00000
+ MINIMUM_IMAGE                         F
+ ASSIGN_MASS                           T
+ ASSIGN_CHARGE                         F
+ ASSIGN_HYBRIDIZATION                  T
+ ASSIGN_VALBOND_CENTER                 F
+ ATOM_TYPE                             T
+ ATOM_TYPE_ALL                         T
+ CALCULATE_BOND_ORDER                  T
+END
+#
+ATOMTYPES
+  Be2+       Be      9.01220  0.0000  0  0  0
+  Cu2+       Cu     63.54600  0.0000  0  0  0
+  Ni2+       Ni     58.69340  0.0000  0  0  0
+  Pt2+       Pt    195.07800  0.0000  0  0  0
+  Zn2+       Zn     65.39000  0.0000  0  0  0
+  Co2+       Co     58.93320  0.0000  0  0  0
+  Pd2+       Pd    106.42000  0.0000  0  0  0
+  Ag2+       Ag    107.86820  0.0000  0  0  0
+  Cr2+       Cr     51.99610  0.0000  0  0  0
+  Fe2+       Fe     55.84500  0.0000  0  0  0
+  Mg2+       Mg     24.30500  0.0000  0  0  0
+  V2+        V      50.94150  0.0000  0  0  0
+  Mn2+       Mn     54.93800  0.0000  0  0  0
+  Hg2+       Hg    200.59000  0.0000  0  0  0
+  Cd2+       Cd    112.41100  0.0000  0  0  0
+  Yb2+       Yb    173.04000  0.0000  0  0  0
+  Ca2+       Ca     40.07800  0.0000  0  0  0
+  Sn2+       Sn    118.71000  0.0000  0  0  0
+  Pb2+       Pb    207.20000  0.0000  0  0  0
+  Eu2+       Eu    151.96400  0.0000  0  0  0
+  Sr2+       Sr     87.62000  0.0000  0  0  0
+  Sm2+       Sm    150.36000  0.0000  0  0  0
+  Ba2+       Ba    137.32700  0.0000  0  0  0
+END
+#
+DIAGONAL_VDW
+  Be2+         LJ_6_12      1.127400000000000       3.2000000000000002E-03
+  Cu2+         LJ_6_12      2.066000000000000       4.2700000000000002E-02
+  Ni2+         LJ_6_12      2.188200000000000       3.6600000000000001E-02
+  Pt2+         LJ_6_12      2.275200000000000       3.3200000000000000E-02
+  Zn2+         LJ_6_12      2.297800000000000       3.2500000000000001E-02
+  Co2+         LJ_6_12      2.453400000000000       2.8600000000000000E-02
+  Pd2+         LJ_6_12      2.472000000000000       2.8199999999999999E-02
+  Ag2+         LJ_6_12      2.621400000000000       2.6599999999999999E-02
+  Cr2+         LJ_6_12      2.668800000000000       2.6400000000000000E-02
+  Fe2+         LJ_6_12      2.697600000000000       2.6400000000000000E-02
+  Mg2+         LJ_6_12      2.727200000000000       2.6599999999999999E-02
+  V2+          LJ_6_12      2.741200000000000       2.6599999999999999E-02
+  Mn2+         LJ_6_12      2.908800000000000       2.9999999999999999E-02
+  Hg2+         LJ_6_12      2.908800000000000       2.9999999999999999E-02
+  Cd2+         LJ_6_12      2.920000000000000       3.0400000000000000E-02
+  Yb2+         LJ_6_12      3.859600000000000       3.0900000000000000E-02
+  Ca2+         LJ_6_12      3.872800000000000       3.1800000000000002E-02
+  Sn2+         LJ_6_12      3.908000000000000       3.4599999999999999E-02
+  Pb2+         LJ_6_12      4.039000000000000       5.5700000000000000E-02
+  Eu2+         LJ_6_12      4.169200000000000       6.4699999999999994E-02
+  Sr2+         LJ_6_12      4.184600000000000       6.6400000000000001E-02
+  Sm2+         LJ_6_12      4.199400000000000       6.8000000000000005E-02
+  Ba2+         LJ_6_12      4.490200000000000       1.9930000000000000E-01
+END
+#
+ATOM_TYPING_RULES
+END
+#
+OFF_DIAGONAL_VDW
+END
+END
+#
+BOND_STRETCH
+END
+#
+ANGLE_BEND
+END
+#
+TORSIONS
+END
+#
+INVERSIONS
+END
+#
+GENERATOR
+ Au         1.2620   90.0000    2.6255    0.0000    0.0000    0.0000         3        -1    0.1000   4.89400
+END
+#
+COULOMBIC
+ X        X           CONST-EPS 
+END

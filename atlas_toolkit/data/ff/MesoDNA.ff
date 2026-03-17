@@ -1,0 +1,332 @@
+VERSION
+ CERIUS2     1
+END
+#
+HEADER
+END
+#
+PREFERENCES
+ BONDS                                 T
+ ANGLES                                T
+ COULOMB                               F
+ INVERSIONS                            F
+ TORSIONS                              T
+ UREY_BRADLEY                          F
+ STRETCH_STRETCH                       F
+ SEPARATED_STRETCH_STRETCH             F
+ STRETCH_BEND_STRETCH                  F
+ BEND_BEND                             F
+ TORSION_STRETCH                       F
+ TORSION_BEND_BEND                     F
+ BEND_TORSION_BEND                     F
+ STRETCH_TORSION_STRETCH               F
+ HYDROGEN_BONDS                        T
+ DIAGONAL_VAN_DER_WAALS                T
+ OFF_DIAGONAL_VAN_DER_WAALS            T
+ IGNORE_UNDEFINED_TERMS                T
+ NON-BONDEA_3-BODY                     F
+ SHRINK_CH_BONDS                       F
+ SHRINK_CH_H_ATOM                      H__C 
+ SHRINK_CH_FACTOR                         0.91500
+ SINGLE_TORSION                        F
+ SCALE_TORSIONS_ABOUT_COMMON_BOND      F
+ SCALE_BY_N_DEFINED_TORSIONS           F
+ EXOCYCLIC_TORSIONS_SCALE_FACTOR          0.40000
+ SINGLE_INVERSION                      F
+ H-BOND_METHOD                         SPLINE
+ H-BOND_LIST                           T
+ H-BOND_DIRECT_RCUT                       4.50000
+ H-BOND_SPLINE_DISTANCE_ON                4.50000
+ H-BOND_SPLINE_DISTANCE_OFF               5.00000
+ H-BOND_SPLINE_ANGLE_ON                  65.00000
+ H-BOND_SPLINE_ANGLE_OFF                 75.00000
+ H-BOND_LIST_DISTANCE_OFF                 7.00000
+ H-BOND_LIST_ANGLE_OFF                   90.00000
+ NB_NEIGHBOUR_SEARCH_METHOD            SMART                         
+ NON_BOND_BUFFER_DISTANCE                 2.00000
+ H-BOND_BUFFER_DISTANCE                   2.00000
+ COU_DIELETRIC_CONSTANT                     1.00000000000000000      
+ COU_INTER_CUT_OFF                       14.00000
+ COU_SPLINE_OFF                          13.00000
+ COU_SPLINE_ON                           12.00000
+ EWALD_SUM_COU_ACCURACY                   0.00100
+ EWALD_SUM_COU_ETA                        2.50000
+ EWALD_SUM_COU_KCUT                       0.50000
+ EWALD_SUM_COU_RCUT                       6.00000
+ EWALD_SUM_COU_OPTClIZE                SMART                         
+ COU_EXCLUDE_1-2                       T
+ COU_EXCLUDE_1-3                       T
+ COU_EXCLUDE_1-4                       F
+ COU_1-4_SCALE_FACTOR                     1.00000
+ COU_METHOD                            SPLINE                        
+ COU_DIRECT_CUT-OFF                      12.00000
+ VDW_COMBINATION_RULE                  GEOMETRIC                     
+ VDW_INTER_CUT_OFF                       14.00000
+ VDW_EXCLUDE_1-2                       T
+ VDW_EXCLUDE_1-3                       T
+ VDW_EXCLUDE_1-4                       F
+ VDW_1-4_SCALE_FACTOR                     1.00000
+ VDW_METHOD                            SPLINE                        
+ VDW_SPLINE_ON                           12.00000
+ VDW_SPLINE_OFF                          13.00000
+ EWALD_SUM_VDW_OPTClIZE                NEVER                         
+ EWALD_SUM_VDW_ACCURACY                   0.00100
+ EWALD_SUM_VDW_ETA                        2.50000
+ EWALD_SUM_VDW_KCUT                       0.50000
+ EWALD_SUM_VDW_RCUT                      30.00000
+ EWALD_SUM_VDW_REP_CUT                   20.00000
+ FAST_EWALD_SUM_RATIO                    10.00000
+ SLOW_EWALD_SUM_RATIO                     5.00000
+ MINClUM_ClAGE                         F
+ ASSIGN_MASS                           T
+ ASSIGN_CHARGE                         F
+ ASSIGN_HYBRIDIZATION                  F
+ ASSIGN_VALBOND_CENTER                 F
+ ATOM_TYPE                             F
+ ATOM_TYPE_ALL                         F
+ CALCULATE_BOND_ORDER                  F
+END
+#
+ATOMTYPES
+ He         He    131.13200  0.0000   3   0   0 #ADE
+ Ne         Ne    108.10300  0.0000   4   0   0 #CYT
+ Xe         Xe    147.13200  0.0000   4   0   0 #GUA
+ Ar         Ar    123.11000  0.0000   3   0   0 #THY
+ S          S      78.97600  0.0000   2   0   0 #PHE
+ O          O      78.97000  0.0000   2   0   0 #PHO
+ N          N      99.10600  0.0000   3   0   0 #SUO
+ P          P      99.10600  0.0000   3   0   0 #SUE
+ H_1        H       1.00080  0.0000   1   0   0 #H1 - acceptor #1
+ H_2        H       1.00080  0.0000   1   0   0 #H2 - acceptor #2
+ H_3        H       1.00080  0.0000   1   0   0 #H3 - acceptor #3
+ A_1        H       1.00080  0.0000   1   0   0 #D1 - donor #1
+ A_2        H       1.00080  0.0000   1   0   0 #D2 - donor #2 
+ A_3        H       1.00080  0.0000   1   0   0 #D3 - donor #3
+ O_mW       O      18.00160  0.0000   0   0   0 #WAT - mW water
+ Na_mW      Na     22.00000  0.0000   0   0   0 #Na+ - mW sodium
+ Cl_mW      Cl     35.50000  0.0000   0   0   0 #Cl- - mW chlorine
+END
+#
+DIAGONAL_VDW
+ S           YUKAWA        1128691.000000000        6.0
+ O           YUKAWA        1128691.000000000        6.0
+# Na_mW       YUKAWA          45155.000000000        6.0
+# Cl_mW       YUKAWA        1474808.000000000        6.0
+#Cl          VDW_MORSE     4.765540000000000        0.350206000000000        14.48556000000000
+#S           EXPO_6        166586.0000000000        0.372762000000000         0.00000000000000
+#O           EXPO_6        166586.0000000000        0.372762000000000         0.00000000000000
+#Na          EXPO_6          1622.6440000000        0.634706000000000         0.00000000000000
+ S           VDW_MORSE     5.361680000000000        0.030631100000000        16.00600000000000
+ A_2         VDW_MORSE	   1.000000000000000        0.000000000000000         0.00000000000000
+ He          VDW_MORSE     5.800000000000000        0.430000000000000        7.000000000000000
+ O           VDW_MORSE     5.361680000000000        0.030631100000000        16.00600000000000
+ H_1         VDW_MORSE     1.000000000000000        0.000000000000000         0.00000000000000
+ A_3         VDW_MORSE     1.000000000000000        0.000000000000000         0.00000000000000
+ Ar          VDW_MORSE     5.800000000000000        0.430000000000000        7.000000000000000
+ N           VDW_MORSE     6.000000000000000        0.650000000000000         8.00000000000000
+ P           VDW_MORSE     6.000000000000000        0.650000000000000         8.00000000000000
+ H_2         VDW_MORSE     1.000000000000000        0.000000000000000         0.00000000000000
+ A_1         VDW_MORSE     1.000000000000000        0.000000000000000         0.00000000000000
+ Ne          VDW_MORSE     5.800000000000000        0.430000000000000        7.000000000000000
+ Xe          VDW_MORSE     4.133505000000000        2.740130000000000         8.43331500000000
+ H_3         VDW_MORSE     1.000000000000000        0.000000000000000         0.00000000000000
+ O_mW        VDW_MORSE     3.769989967346191        1.149999976158142         8.00000000000000    
+ Na_mW       VDW_MORSE     5.734828000000000        0.797467000000000         8.57708700000000
+ Cl_mW       VDW_MORSE     4.765540000000000        0.350206000000000        14.48556000000000
+END
+#
+ATOM_TYPING_RULES
+END
+#
+#
+OFF_DIAGONAL_VDW
+#turn off water/ions interctions which are specified in mW_ions forcefield
+ O_mW     O_mW        VDW_MORSE      DELETE
+ Na_mW    Na_mW       VDW_MORSE      DELETE
+ Cl_mW    Cl_mW       VDW_MORSE      DELETE
+ O_mW     Na_mW       VDW_MORSE      DELETE
+ O_mW     Cl_mW       VDW_MORSE      DELETE
+ Cl_mW    Na_mW       VDW_MORSE      DELETE
+# 
+ S        Na_mW       VDW_MORSE      0.947858    3.136240       13.638000
+ O        Na_mW       VDW_MORSE      0.947858    3.136240       13.638000
+ S        Cl_mW       VDW_MORSE      5.424772    0.212855       11.888560
+ O        Cl_mW       VDW_MORSE      5.424772    0.212855       11.888560
+# Na_mW    Cl_mW       VDW_MORSE      3.511895    0.867931       17.958517
+ He       O_mW        VDW_MORSE      5.6000      0.850000000    17.2086000
+ Ne       O_mW        VDW_MORSE      5.4000      2.850000000    19.7255000
+ Xe       O_mW        VDW_MORSE      5.3000      0.660000000    17.4913000
+ Ar       O_mW        VDW_MORSE      5.3000      0.730000000    19.6111000
+ N        O_mW        VDW_MORSE      5.1000      0.630000000    18.3326000
+ P        O_mW        VDW_MORSE      5.1000      0.630000000    18.3326000
+ S        O_mW        VDW_MORSE      3.8000      0.900000000    18.7651000
+ O        O_mW        VDW_MORSE      3.8000      0.900000000    18.7651000
+# Cl_mW    O_mW        VDW_MORSE      3.4000      3.000000000     8.7748356
+# Na_mW    O_mW        VDW_MORSE      2.5000     21.000000000     4.66031
+END
+#
+BOND_STRETCH
+ A_2      Xe          HARMONIC    1473.3891    1.7114
+ A_2      Ar          HARMONIC    1495.1886    1.1355
+ He       N           HARMONIC     351.0736    4.5875
+ He       P           HARMONIC     342.1705    4.5856
+ H_1      Xe          HARMONIC    1031.2417    2.5975
+ H_1      Ar          HARMONIC    1131.7065    2.3357
+ A_3      Xe          HARMONIC     921.7528    3.1068
+ Ar       N           HARMONIC     326.9628    4.1975
+ Ar       P           HARMONIC     331.5451    4.1954
+ N        S           HARMONIC      83.8305    4.0169
+ N        O           HARMONIC      35.8782    4.7609
+ P        S           HARMONIC      37.6402    4.7551
+ P        O           HARMONIC      83.0810    4.0185
+ H_2      He          HARMONIC    1513.6574    2.0066
+ H_2      Ne          HARMONIC    1461.1125    0.9860
+ A_1      He          HARMONIC     901.5758    2.5833
+ A_1      Ne          HARMONIC    1056.0568    2.4847
+ Ne       N           HARMONIC     375.4126    4.0932
+ Ne       P           HARMONIC     386.6350    4.0898
+ Xe       N           HARMONIC     299.7340    4.7121
+ Xe       P           HARMONIC     268.7308    4.7088
+ H_3      Ne          HARMONIC    1296.1002    2.3368
+END
+#
+ANGLE_BEND
+ S        N        O           COS_HARMON   36.4866  101.0000
+ S        P        O           COS_HARMON   37.6370  101.0000
+ A_2      Xe       N           COS_HARMON 1893.1673  210.0000
+ A_2      Xe       P           COS_HARMON 1943.3245  149.0000
+ A_2      Ar       N           COS_HARMON  990.8390  118.0000
+ A_2      Ar       P           COS_HARMON  988.9042  118.0000
+ He       N        S           COS_HARMON  157.3340  127.0000
+ He       N        O           COS_HARMON   20.0996  110.0000
+ He       P        S           COS_HARMON   20.5640  110.0000
+ He       P        O           COS_HARMON  154.9060  127.0000
+ H_1      Xe       A_2         COS_HARMON 2837.5257   57.0000
+ H_1      Xe       A_3         COS_HARMON 1541.7657  102.0000
+ H_1      Xe       N           COS_HARMON 1739.8224  151.0000
+ H_1      Xe       P           COS_HARMON 1701.7032  209.0000
+ H_1      Ar       A_2         COS_HARMON 1589.4350   70.0000
+ H_1      Ar       N           COS_HARMON 1634.4817  169.0000
+ H_1      Ar       P           COS_HARMON 1690.9730  168.0000
+ A_3      Xe       A_2         COS_HARMON 3934.9071   45.0000
+ A_3      Xe       N           COS_HARMON  454.8782  104.0000
+ A_3      Xe       P           COS_HARMON  433.4107  104.0000
+ Ar       N        S           COS_HARMON  239.7473  131.0000
+ Ar       N        O           COS_HARMON   87.7155  107.0000
+ Ar       P        S           COS_HARMON   85.2893  107.0000
+ Ar       P        O           COS_HARMON  257.2928  131.0000
+ P        S        N           COS_HARMON  121.7574   76.0000
+ P        O        N           COS_HARMON  130.3819   75.0000
+ H_2      He       N           COS_HARMON 1625.7093  140.0000
+ H_2      He       P           COS_HARMON 1560.1941  140.0000
+ H_2      He       A_1         COS_HARMON 2667.7465   55.0000
+ H_2      Ne       N           COS_HARMON 1419.8619  138.0000
+ H_2      Ne       P           COS_HARMON 1390.0011  137.0000
+ H_2      Ne       A_1         COS_HARMON 1413.3403   62.0000
+ A_1      He       N           COS_HARMON 4797.2634  161.0000
+ A_1      He       P           COS_HARMON 4693.0133  161.0000
+ A_1      Ne       N           COS_HARMON 4170.7519  157.0000
+ A_1      Ne       P           COS_HARMON 3944.2133  157.0000
+ Ne       N        S           COS_HARMON  195.0457  129.0000
+ Ne       N        O           COS_HARMON   38.8597  110.0000
+ Ne       P        S           COS_HARMON   40.8931  110.0000
+ Ne       P        O           COS_HARMON  178.8377  129.0000
+ Xe       N        S           COS_HARMON   93.3246  124.0000
+ Xe       N        O           COS_HARMON   40.4220  121.0000
+ Xe       P        S           COS_HARMON   28.5153  119.0000
+ Xe       P        O           COS_HARMON   88.7430  123.0000
+ H_3      Ne       N           COS_HARMON  836.8690   68.0000
+ H_3      Ne       P           COS_HARMON  817.3825   68.0000
+ H_3      Ne       H_2         COS_HARMON 1575.2803   69.0000
+ H_3      Ne       A_1         COS_HARMON 2715.0800  131.0000
+END
+#
+TORSIONS
+ A_2      Xe       N        S           SHFT_DIHDR    32.1103    1.0000  234.0000
+ A_2      Xe       N        O           SHFT_DIHDR    17.5784    1.0000   21.0000
+ A_2      Xe       P        S           SHFT_DIHDR    21.4899    1.0000   19.0000
+ A_2      Xe       P        O           SHFT_DIHDR    42.4143    1.0000  234.0000
+ A_2      Ar       N        S           SHFT_DIHDR    29.1036    1.0000  250.0000
+ A_2      Ar       N        O           SHFT_DIHDR    61.3794    1.0000   18.0000
+ A_2      Ar       P        S           SHFT_DIHDR    64.4278    1.0000   17.0000
+ A_2      Ar       P        O           SHFT_DIHDR    32.3968    1.0000  249.0000
+ He       N        S        P           SHFT_DIHDR    49.1693    1.0000  163.0000
+ He       N        O        P           SHFT_DIHDR    65.8377    1.0000  214.0000
+ He       P        S        N           SHFT_DIHDR    66.7934    1.0000  215.0000
+ He       P        O        N           SHFT_DIHDR    42.2470    1.0000  162.0000
+ H_1      Xe       N        S           SHFT_DIHDR    34.2992    1.0000   51.0000
+ H_1      Xe       N        O           SHFT_DIHDR    15.3898    1.0000  199.0000
+ H_1      Xe       P        S           SHFT_DIHDR    18.7165    1.0000  196.0000
+ H_1      Xe       P        O           SHFT_DIHDR    33.1468    1.0000   50.0000
+ H_1      Ar       N        S           SHFT_DIHDR     6.9942    1.0000   47.0000
+ H_1      Ar       N        O           SHFT_DIHDR     9.4015    1.0000  175.0000
+ H_1      Ar       P        S           SHFT_DIHDR     9.7925    1.0000  174.0000
+ H_1      Ar       P        O           SHFT_DIHDR     7.3519    1.0000   46.0000
+ A_3      Xe       N        S           SHFT_DIHDR    31.6163    1.0000  233.0000
+ A_3      Xe       N        O           SHFT_DIHDR    24.3094    1.0000   17.0000
+ A_3      Xe       P        S           SHFT_DIHDR    35.5157    1.0000   14.0000
+ A_3      Xe       P        O           SHFT_DIHDR    67.5137    1.0000  232.0000
+ Ar       N        S        P           SHFT_DIHDR    26.9554    1.0000  150.0000
+ Ar       N        O        P           SHFT_DIHDR   120.2463    1.0000  221.0000
+ Ar       P        S        N           SHFT_DIHDR   131.9869    1.0000  221.0000
+ Ar       P        O        N           SHFT_DIHDR    29.2621    1.0000  150.0000
+ N        S        P        O           SHFT_DIHDR    31.7204    1.0000    3.0000
+ N        O        P        S           SHFT_DIHDR    25.0937    1.0000   22.0000
+ P        S        N        O           SHFT_DIHDR    22.6409    1.0000   21.0000
+ P        O        N        S           SHFT_DIHDR    69.7479    1.0000    3.0000
+ H_2      He       N        S           SHFT_DIHDR    56.1237    1.0000  239.0000
+ H_2      He       N        O           SHFT_DIHDR    41.0400    1.0000   20.0000
+ H_2      He       P        S           SHFT_DIHDR    42.3204    1.0000   19.0000
+ H_2      He       P        O           SHFT_DIHDR    51.5069    1.0000  240.0000
+ H_2      Ne       N        S           SHFT_DIHDR    35.1101    1.0000  244.0000
+ H_2      Ne       N        O           SHFT_DIHDR    36.8215    1.0000   18.0000
+ H_2      Ne       P        S           SHFT_DIHDR    43.1557    1.0000   17.0000
+ H_2      Ne       P        O           SHFT_DIHDR    29.9318    1.0000  244.0000
+ A_1      He       N        S           SHFT_DIHDR    22.3528    1.0000   48.0000
+ A_1      He       N        O           SHFT_DIHDR    17.0073    1.0000  191.0000
+ A_1      He       P        S           SHFT_DIHDR    18.5668    1.0000  190.0000
+ A_1      He       P        O           SHFT_DIHDR    19.1065    1.0000   49.0000
+ A_1      Ne       N        S           SHFT_DIHDR    20.6910    1.0000   56.0000
+ A_1      Ne       N        O           SHFT_DIHDR    23.6267    1.0000  190.0000
+ A_1      Ne       P        S           SHFT_DIHDR    24.9300    1.0000  188.0000
+ A_1      Ne       P        O           SHFT_DIHDR    18.8933    1.0000   55.0000
+ Ne       N        S        P           SHFT_DIHDR    31.5363    1.0000  157.0000
+ Ne       N        O        P           SHFT_DIHDR    97.8800    1.0000  219.0000
+ Ne       P        S        N           SHFT_DIHDR   105.9409    1.0000  219.0000
+ Ne       P        O        N           SHFT_DIHDR    27.9830    1.0000  158.0000
+ Xe       N        S        P           SHFT_DIHDR    48.9698    1.0000  164.0000
+ Xe       N        O        P           SHFT_DIHDR    32.3802    1.0000  210.0000
+ Xe       P        S        N           SHFT_DIHDR    40.9299    1.0000  212.0000
+ Xe       P        O        N           SHFT_DIHDR    43.7154    1.0000  164.0000
+ H_3      Ne       N        S           SHFT_DIHDR    48.0619    1.0000  240.0000
+ H_3      Ne       N        O           SHFT_DIHDR    49.2694    1.0000   14.0000
+ H_3      Ne       P        S           SHFT_DIHDR    54.5029    1.0000   13.0000
+ H_3      Ne       P        O           SHFT_DIHDR    44.2370    1.0000  240.0000
+END
+#
+INVERSIONS
+END
+#
+COULOMBIC
+ X        X           CONST-EPS
+HYDROGEN_BONDS
+#Donor    Acceptor Hydrogen TYPE        D0        R0      power
+He        A_1      H_2      LJ_12_10    4.8000    2.7500  2
+He        A_2      H_2      LJ_12_10    4.8000    2.7500  2
+He        A_3      H_2      LJ_12_10    4.8000    2.7500  2
+
+Ne        A_1      H_2      LJ_12_10    4.8000    2.7500  2
+Ne        A_2      H_2      LJ_12_10    4.8000    2.7500  2
+Ne        A_3      H_2      LJ_12_10    4.8000    2.7500  2
+Ne        A_1      H_3      LJ_12_10    4.8000    2.7500  2
+Ne        A_2      H_3      LJ_12_10    4.8000    2.7500  2
+Ne        A_3      H_3      LJ_12_10    4.8000    2.7500  2
+
+Ar        A_1      H_1      LJ_12_10    4.8000    2.7500  2
+Ar        A_2      H_1      LJ_12_10    4.8000    2.7500  2
+Ar        A_3      H_1      LJ_12_10    4.8000    2.7500  2
+
+Xe        A_1      H_1      LJ_12_10    4.8000    2.7500  2
+Xe        A_2      H_1      LJ_12_10    4.8000    2.7500  2
+Xe        A_3      H_1      LJ_12_10    4.8000    2.7500  2
+END

@@ -1,0 +1,1393 @@
+VERSION
+ CERIUS2     1
+END
+#
+HEADER
+END
+#
+PREFERENCES
+ BONDS                                 T
+ ANGLES                                T
+ COULOMB                               T
+ INVERSIONS                            T
+ TORSIONS                              T
+ UREY_BRADLEY                          F
+ STRETCH_STRETCH                       F
+ SEPARATED_STRETCH_STRETCH             F
+ STRETCH_BEND_STRETCH                  F
+ BEND_BEND                             F
+ TORSION_STRETCH                       F
+ TORSION_BEND_BEND                     F
+ BEND_TORSION_BEND                     F
+ STRETCH_TORSION_STRETCH               F
+ HYDROGEN_BONDS                        F
+ DIAGONAL_VAN_DER_WAALS                T
+ OFF_DIAGONAL_VAN_DER_WAALS            T
+ GENERATE_UNDEFINED_TERMS              F
+ IGNORE_UNDEFINED_TERMS                F
+ NON-BONDED_3-BODY                     F
+ SHRINK_CH_BONDS                       F
+ SHRINK_CH_H_ATOM                      H__C 
+ SHRINK_CH_FACTOR                         0.91500
+ SINGLE_TORSION                        F
+ SCALE_TORSIONS_ABOUT_COMMON_BOND      F
+ SCALE_BY_N_DEFINED_TORSIONS           T
+ EXOCYCLIC_TORSIONS_SCALE_FACTOR          1.00000
+ SINGLE_INVERSION                      T
+ H-BOND_METHOD                         SPLINE
+ H-BOND_LIST                           T
+ H-BOND_DIRECT_RCUT                       4.00000
+ H-BOND_SPLINE_DISTANCE_ON                4.00000
+ H-BOND_SPLINE_DISTANCE_OFF               4.50000
+ H-BOND_SPLINE_ANGLE_ON                  65.00000
+ H-BOND_SPLINE_ANGLE_OFF                 75.00000
+ H-BOND_LIST_DISTANCE_OFF                 6.50000
+ H-BOND_LIST_ANGLE_OFF                   90.00000
+ NON_BOND_LIST                         T
+ NON_BOND_BUFFER_DISTANCE                 2.00000
+ H-BOND_BUFFER_DISTANCE                   2.00000
+ COU_DIELETRIC_CONSTANT                     1.00000000000000000      
+ COU_INTER_CUT_OFF                       50.00000
+ COU_SPLINE_OFF                          10.00000
+ COU_SPLINE_ON                            9.00000
+ EWALD_SUM_COU_ACCURACY                   0.00100
+ EWALD_SUM_COU_ETA                        2.50000
+ EWALD_SUM_COU_KCUT                       0.50000
+ EWALD_SUM_COU_RCUT                       6.00000
+ EWALD_SUM_COU_AUTO_OPT                T
+ COU_EXCLUDE_1-2                       T
+ COU_EXCLUDE_1-3                       T
+ COU_EXCLUDE_1-4                       F
+ COU_1-4_SCALE_FACTOR                     0.83000
+ COU_METHOD                            EWALD    
+ COU_DIRECT_CUT-OFF                       8.00000
+ VDW_COMBINATION_RULE                  GEOMETRIC
+ VDW_INTER_CUT_OFF                       10.00000
+ VDW_EXCLUDE_1-2                       T
+ VDW_EXCLUDE_1-3                       T
+ VDW_EXCLUDE_1-4                       F
+ VDW_1-4_SCALE_FACTOR                     0.50000
+ VDW_METHOD                            DIRECT    
+ VDW_SPLINE_ON                            9.00000
+ VDW_SPLINE_OFF                          10.00000
+ EWALD_SUM_VDW_AUTO_OPT                T
+ EWALD_SUM_VDW_ACCURACY                   0.00100
+ EWALD_SUM_VDW_ETA                        2.50000
+ EWALD_SUM_VDW_KCUT                       0.50000
+ EWALD_SUM_VDW_RCUT                       6.00000
+ EWALD_SUM_VDW_REP_CUT                    6.00000
+ FAST_EWALD_SUM_RATIO                    10.00000
+ SLOW_EWALD_SUM_RATIO                     5.00000
+ MINIMUM_IMAGE                         F
+ ASSIGN_MASS                           T
+ ASSIGN_CHARGE                         F
+ ASSIGN_HYBRIDIZATION                  F
+ ATOM_TYPE                             T
+ ATOM_TYPE_ALL                         F
+ CALCULATE_BOND_ORDER                  F
+END
+ATOMTYPES
+ 6R         H      12.01078  0.0000   0   0   0
+ 6W         H      12.01078  0.0000   0   0   0
+ 6D         H      12.01078  0.0000   0   0   0
+ 6T         H      12.01078  0.0000   0   0   0
+ 6S         H      12.01078  0.0000   0   0   0
+ 6N         H      12.01078  0.0000   0   0   0
+ 6j         H      12.01078  0.0000   0   0   0
+ 6q         H      12.01078  0.0000   0   0   0
+ 6Y         H      12.01078  0.0000   0   0   0
+ 6t         H      12.01078  0.0000   0   0   0
+ 6h         H      12.01078  0.0000   0   0   0
+ 6+         H      12.01078  0.0000   0   0   0
+ 6E         H      12.01078  0.0000   0   0   0
+ 6i         H      12.01078  0.0000   0   0   0
+ 6P         H      12.01078  0.0000   0   0   0
+ 6V         H      12.01078  0.0000   0   0   0
+ 6c         H      12.01078  0.0000   0   0   0
+ 6k         H      12.01078  0.0000   0   0   0
+ 6H         H      12.01078  0.0000   0   0   0
+ 6L         H      12.01078  0.0000   0   0   0
+ 6F         H      12.01078  0.0000   0   0   0
+ 6e         H      12.01078  0.0000   0   0   0
+ 6J         H      12.01078  0.0000   0   0   0
+ 6Q         H      12.01078  0.0000   0   0   0
+ 6M         H      12.01078  0.0000   0   0   0
+ 6K         H      12.01078  0.0000   0   0   0
+ 6d         H      12.01078  0.0000   0   0   0
+ 6I         H      12.01078  0.0000   0   0   0
+ 6C         H      12.01078  0.0000   0   0   0
+END
+#
+DIAGONAL_VDW
+ 6R          LJ_6_12        3.8160  0.1094
+ 6W          LJ_6_12        3.8160  0.1094
+ 6D          LJ_6_12        3.8160  0.1094
+ 6T          LJ_6_12        3.8160  0.1094
+ 6S          LJ_6_12        3.8160  0.1094
+ 6N          LJ_6_12        3.8160  0.1094
+ 6j          LJ_6_12        3.8160  0.1094
+ 6q          LJ_6_12        3.8160  0.1094
+ 6Y          LJ_6_12        3.8160  0.1094
+ 6t          LJ_6_12        3.8160  0.1094
+ 6h          LJ_6_12        3.8160  0.1094
+ 6+          LJ_6_12        3.8160  0.1094
+ 6E          LJ_6_12        3.8160  0.1094
+ 6i          LJ_6_12        3.8160  0.1094
+ 6P          LJ_6_12        3.8160  0.1094
+ 6V          LJ_6_12        3.8160  0.1094
+ 6c          LJ_6_12        3.8160  0.1094
+ 6k          LJ_6_12        3.8160  0.1094
+ 6H          LJ_6_12        3.8160  0.1094
+ 6L          LJ_6_12        3.8160  0.1094
+ 6F          LJ_6_12        3.8160  0.1094
+ 6e          LJ_6_12        3.8160  0.1094
+ 6J          LJ_6_12        3.8160  0.1094
+ 6Q          LJ_6_12        3.8160  0.1094
+ 6M          LJ_6_12        3.8160  0.1094
+ 6K          LJ_6_12        3.8160  0.1094
+ 6d          LJ_6_12        3.8160  0.1094
+ 6I          LJ_6_12        3.8160  0.1094
+ 6C          LJ_6_12        3.8160  0.1094
+END
+#
+ATOM_TYPING_RULES
+END
+#
+OFF_DIAGONAL_VDW
+END
+#
+BOND_STRETCH
+ CT       N2          HARMONIC     673.4935    1.4598
+ CT       F           HARMONIC     734.0000    1.3800
+ CT       I           HARMONIC     296.0000    2.1660
+ CT       OH          HARMONIC     641.0889    1.4161
+ CT       OS          HARMONIC     640.0000    1.4100
+ CT       N*          HARMONIC     674.0000    1.4750
+ CT       S           HARMONIC     454.3614    1.8149
+ CT       H2          HARMONIC     680.0000    1.0900
+ CT       SH          HARMONIC     477.3268    1.8057
+ CT       N3          HARMONIC     730.8465    1.4894
+ CT       CZ          HARMONIC     800.0000    1.4590
+ CT       HP          HARMONIC     693.1698    1.0873
+ CT       Cl          HARMONIC     464.0000    1.7660
+ CT       CY          HARMONIC     800.0000    1.4580
+ CT       H3          HARMONIC     680.0000    1.0900
+ CT       HC          HARMONIC     711.0721    1.0882
+ CT       NT          HARMONIC     734.0000    1.4710
+ CT       N           HARMONIC     700.4536    1.4324
+ CT       CT          HARMONIC     581.4210    1.5145
+ CT       H1          HARMONIC     709.0228    1.0877
+ 6V       HC          HARMONIC     711.0721    1.0882
+ 6V       CT          HARMONIC     581.4210    1.5145
+ CD       CD          HARMONIC     938.0000    1.4000
+ CD       HA          HARMONIC     734.0000    1.0800
+ CD       CM          HARMONIC    1098.0000    1.3500
+ CD       CT          HARMONIC     634.0000    1.5100
+ CR       H5          HARMONIC     750.6486    1.0784
+ CR       NA          HARMONIC     939.5803    1.3516
+ CR       NB          HARMONIC     966.9702    1.3178
+ 6P       HC          HARMONIC     711.0721    1.0882
+ 6P       CT          HARMONIC     581.4210    1.5145
+ 6i       HC          HARMONIC     711.0721    1.0882
+ 6D       CT          HARMONIC     581.4210    1.5145
+ 6D       C           HARMONIC     550.1872    1.5091
+ 6D       HC          HARMONIC     711.0721    1.0882
+ CA       OH          HARMONIC     900.0000    1.3640
+ CA       I           HARMONIC     342.0000    2.0750
+ CA       CA          HARMONIC     872.8060    1.3834
+ CA       NA          HARMONIC     854.0000    1.3810
+ CA       NC          HARMONIC     966.0000    1.3390
+ CA       N2          HARMONIC     958.8423    1.3647
+ CA       F           HARMONIC     772.0000    1.3590
+ CA       HA          HARMONIC     737.8521    1.0835
+ CA       Cl          HARMONIC     386.0000    1.7270
+ CA       CM          HARMONIC     854.0000    1.4330
+ CA       H4          HARMONIC     734.0000    1.0800
+ CA       CT          HARMONIC     631.7208    1.4879
+ CA       CB          HARMONIC     935.5552    1.3978
+ CA       CN          HARMONIC     933.6996    1.4061
+ C*       CT          HARMONIC     630.9901    1.4912
+ C*       CW          HARMONIC    1084.4896    1.3670
+ C*       CB          HARMONIC     771.9600    1.4420
+ C*       HC          HARMONIC     734.0000    1.0800
+ CY       NY          HARMONIC    1200.0000    1.1500
+ CC       NB          HARMONIC     814.9635    1.3760
+ CC       CW          HARMONIC    1029.1186    1.3742
+ CC       NA          HARMONIC     842.4261    1.3803
+ CC       CV          HARMONIC    1017.9520    1.3787
+ CC       CT          HARMONIC     628.9478    1.4832
+ 6N       C           HARMONIC     550.1872    1.5091
+ 6N       HC          HARMONIC     711.0721    1.0882
+ 6N       CT          HARMONIC     581.4210    1.5145
+ C        N           HARMONIC     817.9509    1.3520
+ C        H5          HARMONIC     734.0000    1.0800
+ C        H4          HARMONIC     734.0000    1.0800
+ C        CT          HARMONIC     550.1872    1.5091
+ C        CM          HARMONIC     820.0000    1.4440
+ C        O           HARMONIC    1135.6516    1.2275
+ C        O2          HARMONIC    1264.6686    1.2542
+ C        CB          HARMONIC     894.0000    1.4190
+ C        OS          HARMONIC     900.0000    1.3230
+ C        CA          HARMONIC     926.7342    1.3928
+ C        OH          HARMONIC     893.5181    1.3671
+ C        N*          HARMONIC     848.0000    1.3830
+ C        NC          HARMONIC     914.0000    1.3580
+ C        NA          HARMONIC     836.0000    1.3880
+ C        C           HARMONIC     620.0000    1.5250
+ CZ       HZ          HARMONIC     800.0000    1.0560
+ CZ       CZ          HARMONIC    1200.0000    1.2060
+ 6Q       CT          HARMONIC     581.4210    1.5145
+ 6Q       6q          HARMONIC     581.4210    1.5145
+ 6Q       HC          HARMONIC     711.0721    1.0882
+ CM       N*          HARMONIC     896.0000    1.3650
+ CM       CM          HARMONIC    1098.0000    1.3500
+ CM       OS          HARMONIC     960.0000    1.2400
+ CM       H5          HARMONIC     734.0000    1.0800
+ CM       H4          HARMONIC     734.0000    1.0800
+ CM       CT          HARMONIC     634.0000    1.5100
+ CM       HA          HARMONIC     734.0000    1.0800
+ CK       N*          HARMONIC     880.0000    1.3710
+ CK       H5          HARMONIC     734.0000    1.0800
+ CK       NB          HARMONIC    1058.0000    1.3040
+ 6C       SH          HARMONIC     477.3268    1.8057
+ 6C       H1          HARMONIC     709.0228    1.0877
+ 6C       CT          HARMONIC     581.4210    1.5145
+ O2       P           HARMONIC    1050.0000    1.4800
+ 6I       CT          HARMONIC     581.4210    1.5145
+ 6I       6i          HARMONIC     581.4210    1.5145
+ 6I       HC          HARMONIC     711.0721    1.0882
+ CB       N*          HARMONIC     872.0000    1.3740
+ CB       NC          HARMONIC     922.0000    1.3540
+ CB       CN          HARMONIC     889.3920    1.4098
+ CB       NB          HARMONIC     828.0000    1.3910
+ CB       CB          HARMONIC    1040.0000    1.3700
+ OH       P           HARMONIC     460.0000    1.6100
+ OS       P           HARMONIC     460.0000    1.6100
+ 6c       SH          HARMONIC     477.3268    1.8057
+ 6c       CT          HARMONIC     581.4210    1.5145
+ 6c       H1          HARMONIC     709.0228    1.0877
+ S        S           HARMONIC     332.0000    2.0380
+ 6F       CT          HARMONIC     581.4210    1.5145
+ 6F       CA          HARMONIC     631.7208    1.4879
+ 6F       HC          HARMONIC     711.0721    1.0882
+ 6L       CT          HARMONIC     581.4210    1.5145
+ 6L       HC          HARMONIC     711.0721    1.0882
+ 6H       CT          HARMONIC     581.4210    1.5145
+ 6H       CC          HARMONIC     628.9478    1.4832
+ 6H       HC          HARMONIC     711.0721    1.0882
+ 6+       CC          HARMONIC     628.9478    1.4832
+ 6+       HC          HARMONIC     711.0721    1.0882
+ 6+       CT          HARMONIC     581.4210    1.5145
+ 6E       CT          HARMONIC     581.4210    1.5145
+ 6E       6e          HARMONIC     581.4210    1.5145
+ 6E       HC          HARMONIC     711.0721    1.0882
+ 6Y       HC          HARMONIC     711.0721    1.0882
+ 6Y       CT          HARMONIC     581.4210    1.5145
+ 6Y       CA          HARMONIC     631.7208    1.4879
+ 6t       HC          HARMONIC     711.0721    1.0882
+ 6h       CC          HARMONIC     628.9478    1.4832
+ 6h       HC          HARMONIC     711.0721    1.0882
+ 6h       CT          HARMONIC     581.4210    1.5145
+ 6q       HC          HARMONIC     711.0721    1.0882
+ 6q       C           HARMONIC     550.1872    1.5091
+ 6j       HC          HARMONIC     711.0721    1.0882
+ 6j       C           HARMONIC     550.1872    1.5091
+ Br       CT          HARMONIC     318.0000    1.9440
+ Br       CA          HARMONIC     344.0000    1.8900
+ HS       SH          HARMONIC     556.9634    1.3372
+ 6T       CT          HARMONIC     581.4210    1.5145
+ 6T       OH          HARMONIC     641.0889    1.4161
+ 6T       6t          HARMONIC     581.4210    1.5145
+ 6T       H1          HARMONIC     709.0228    1.0877
+ CV       H4          HARMONIC     741.3058    1.0887
+ CV       NB          HARMONIC     818.2921    1.3732
+ 6W       HC          HARMONIC     711.0721    1.0882
+ 6W       CT          HARMONIC     581.4210    1.5145
+ 6W       C*          HARMONIC     630.9901    1.4912
+ 6R       CT          HARMONIC     581.4210    1.5145
+ 6R       HC          HARMONIC     711.0721    1.0882
+ 6S       OH          HARMONIC     641.0889    1.4161
+ 6S       CT          HARMONIC     581.4210    1.5145
+ 6S       H1          HARMONIC     709.0228    1.0877
+ H        NA          HARMONIC     889.6731    1.0263
+ H        N*          HARMONIC     868.0000    1.0100
+ H        N3          HARMONIC     843.9292    1.0358
+ H        N           HARMONIC     917.8606    1.0111
+ H        NT          HARMONIC     868.0000    1.0100
+ H        N2          HARMONIC     892.1306    1.0211
+ 6K       CT          HARMONIC     581.4210    1.5145
+ 6K       HC          HARMONIC     711.0721    1.0882
+ 6M       HC          HARMONIC     711.0721    1.0882
+ 6M       CT          HARMONIC     581.4210    1.5145
+ LP       O           HARMONIC    1200.0000    0.2000
+ LP       N3          HARMONIC    1200.0000    0.2000
+ LP       NT          HARMONIC    1200.0000    0.2000
+ LP       NB          HARMONIC    1200.0000    0.2000
+ LP       SH          HARMONIC    1200.0000    0.7000
+ LP       S           HARMONIC    1200.0000    0.7000
+ LP       NC          HARMONIC    1200.0000    0.2000
+ LP       OS          HARMONIC    1200.0000    0.2000
+ LP       OH          HARMONIC    1200.0000    0.2000
+ 6e       HC          HARMONIC     711.0721    1.0882
+ 6e       C           HARMONIC     550.1872    1.5091
+ 6J       6j          HARMONIC     581.4210    1.5145
+ 6J       CT          HARMONIC     581.4210    1.5145
+ 6J       HC          HARMONIC     711.0721    1.0882
+ CQ       H5          HARMONIC     734.0000    1.0800
+ CQ       NC          HARMONIC    1004.0000    1.3240
+ CN       NA          HARMONIC     852.2883    1.3873
+ HO       OH          HARMONIC    1078.2907    0.9694
+ HO       OS          HARMONIC    1106.0000    0.9600
+ 6d       C           HARMONIC     550.1872    1.5091
+ 6d       HC          HARMONIC     711.0721    1.0882
+ 6d       CT          HARMONIC     581.4210    1.5145
+ CW       NA          HARMONIC     846.0507    1.3819
+ CW       H4          HARMONIC     750.0920    1.0775
+ 6k       HC          HARMONIC     711.0721    1.0882
+ 6k       CT          HARMONIC     581.4210    1.5145
+END
+#
+ANGLE_BEND
+ P        OS       P           THETA_HARM  200.0000  120.5000
+ HP       CT       HP          THETA_HARM   69.9451  109.4059
+ HP       CT       N3          THETA_HARM  100.1700  109.2421
+ 6M       CT       H1          THETA_HARM   97.0394  111.2081
+ 6M       CT       S           THETA_HARM  100.1661  114.4564
+ 6M       CT       N3          THETA_HARM  159.9460  111.3393
+ 6M       CT       N           THETA_HARM  159.7458  110.5014
+ 6M       CT       HP          THETA_HARM  100.2198  109.8210
+ 6M       CT       C           THETA_HARM  120.7445  111.1387
+ 6J       CT       C           THETA_HARM  120.7445  111.1387
+ 6J       CT       N           THETA_HARM  159.7458  110.5014
+ 6J       CT       H1          THETA_HARM   97.0394  111.2081
+ 6J       6j       HC          THETA_HARM   93.5325  109.2874
+ 6J       6j       C           THETA_HARM  120.7445  111.1387
+ 6e       C        O2          THETA_HARM  140.5325  117.4017
+ 6e       6E       HC          THETA_HARM   93.5325  109.2874
+ 6e       6E       CT          THETA_HARM   84.1196  109.6608
+ LP       S        LP          THETA_HARM  300.0000  180.0000
+ LP       O        LP          THETA_HARM  300.0000  120.0000
+ LP       OS       P           THETA_HARM  300.0000  109.5000
+ LP       OS       LP          THETA_HARM  300.0000  109.5000
+ LP       OH       LP          THETA_HARM  300.0000  109.5000
+ LP       SH       LP          THETA_HARM  300.0000  180.0000
+ HO       OH       P           THETA_HARM   90.0000  108.5000
+ HO       OH       LP          THETA_HARM  300.0000  109.5000
+ CN       NA       CW          THETA_HARM  139.9463  111.2161
+ CN       NA       H           THETA_HARM   99.5938  123.2260
+ CN       CA       HA          THETA_HARM   99.6061  120.1005
+ 6W       CT       C           THETA_HARM  120.7445  111.1387
+ 6W       CT       HP          THETA_HARM  100.2198  109.8210
+ 6W       CT       N           THETA_HARM  159.7458  110.5014
+ 6W       CT       N3          THETA_HARM  159.9460  111.3393
+ 6W       CT       H1          THETA_HARM   97.0394  111.2081
+ 6W       C*       CB          THETA_HARM  139.8091  128.4164
+ 6W       C*       CW          THETA_HARM  139.8588  124.9621
+ 6S       OH       HO          THETA_HARM  109.8782  107.6101
+ 6S       CT       HP          THETA_HARM  100.2198  109.8210
+ 6S       CT       N           THETA_HARM  159.7458  110.5014
+ 6S       CT       N3          THETA_HARM  159.9460  111.3393
+ 6S       CT       H1          THETA_HARM   97.0394  111.2081
+ 6S       CT       C           THETA_HARM  120.7445  111.1387
+ H        N2       H           THETA_HARM   69.4710  120.1327
+ H        NT       H           THETA_HARM   70.0000  109.5000
+ H        NT       LP          THETA_HARM  300.0000  109.5000
+ H        N3       H           THETA_HARM   72.7586  110.3830
+ H        N3       LP          THETA_HARM  300.0000  109.5000
+ H        N        H           THETA_HARM   69.0593  119.5077
+ N        C        O           THETA_HARM  161.1366  122.8806
+ 6q       6Q       CT          THETA_HARM   84.1196  109.6608
+ 6q       6Q       HC          THETA_HARM   93.5325  109.2874
+ 6q       C        N           THETA_HARM  140.3046  115.2858
+ 6q       C        O           THETA_HARM  158.2426  121.1871
+ 6h       CC       NB          THETA_HARM  139.9119  120.0522
+ 6h       CC       CW          THETA_HARM  138.5514  120.7823
+ 6h       CT       H1          THETA_HARM   97.0394  111.2081
+ 6h       CT       N3          THETA_HARM  159.9460  111.3393
+ 6h       CT       HP          THETA_HARM  100.2198  109.8210
+ 6h       CT       N           THETA_HARM  159.7458  110.5014
+ 6h       CT       C           THETA_HARM  120.7445  111.1387
+ Br       CA       CA          THETA_HARM  140.0000  118.8000
+ Br       CT       CT          THETA_HARM  100.0000  108.0000
+ Br       CT       H1          THETA_HARM  100.0000  106.5000
+ OS       CT       OS          THETA_HARM  120.0000  101.0000
+ OS       P        OS          THETA_HARM   90.0000  102.6000
+ N2       CA       NA          THETA_HARM  140.0000  116.0000
+ N2       CA       NC          THETA_HARM  140.0000  119.3000
+ N2       CA       N2          THETA_HARM  139.8915  120.0187
+ 6H       CC       NA          THETA_HARM  141.2014  118.4780
+ 6H       CC       CV          THETA_HARM  138.5206  120.9148
+ 6H       CT       C           THETA_HARM  120.7445  111.1387
+ 6H       CT       H1          THETA_HARM   97.0394  111.2081
+ 6H       CT       N3          THETA_HARM  159.9460  111.3393
+ 6H       CT       HP          THETA_HARM  100.2198  109.8210
+ 6H       CT       N           THETA_HARM  159.7458  110.5014
+ H5       CQ       NC          THETA_HARM  100.0000  115.4500
+ H5       C        O           THETA_HARM  100.0000  119.0000
+ H5       C        OS          THETA_HARM  100.0000  107.0000
+ H5       C        N           THETA_HARM  100.0000  120.0000
+ H5       C        OH          THETA_HARM  100.0000  107.0000
+ H5       CR       NB          THETA_HARM   98.6333  120.2665
+ H5       CR       NA          THETA_HARM   99.5082  119.5914
+ H5       CK       N*          THETA_HARM  100.0000  123.0500
+ H5       CK       NB          THETA_HARM  100.0000  123.0500
+ CK       NB       LP          THETA_HARM  300.0000  126.0000
+ CK       N*       H           THETA_HARM  100.0000  128.8000
+ CK       N*       CT          THETA_HARM  140.0000  128.8000
+ CM       C        NA          THETA_HARM  140.0000  114.1000
+ CM       C        O           THETA_HARM  160.0000  125.3000
+ CM       C        H4          THETA_HARM  100.0000  115.0000
+ CM       CD       HA          THETA_HARM  100.0000  120.0000
+ CM       CD       CT          THETA_HARM  140.0000  120.0000
+ CM       CT       HC          THETA_HARM  100.0000  109.5000
+ CM       CT       H1          THETA_HARM  100.0000  109.5000
+ CM       CT       OS          THETA_HARM  100.0000  109.5000
+ CM       CT       CT          THETA_HARM  126.0000  111.0000
+ CM       OS       CT          THETA_HARM  120.0000  117.0000
+ CM       OS       LP          THETA_HARM  300.0000  109.5000
+ CM       CA       N2          THETA_HARM  140.0000  120.1000
+ CM       CA       NC          THETA_HARM  140.0000  121.5000
+ CM       CM       HA          THETA_HARM  100.0000  119.7000
+ CM       CM       H4          THETA_HARM  100.0000  119.7000
+ CM       CM       OS          THETA_HARM  160.0000  125.0000
+ CM       CM       CT          THETA_HARM  140.0000  119.7000
+ CM       CM       N*          THETA_HARM  140.0000  121.2000
+ CM       N*       CT          THETA_HARM  140.0000  121.2000
+ CM       N*       H           THETA_HARM  100.0000  121.2000
+ 6C       CT       C           THETA_HARM  120.7445  111.1387
+ 6C       CT       H1          THETA_HARM   97.0394  111.2081
+ 6C       CT       HP          THETA_HARM  100.2198  109.8210
+ 6C       CT       N           THETA_HARM  159.7458  110.5014
+ 6C       CT       N3          THETA_HARM  159.9460  111.3393
+ 6C       SH       HS          THETA_HARM   86.2310   95.7053
+ CB       CB       NC          THETA_HARM  140.0000  127.7000
+ CB       CB       N*          THETA_HARM  140.0000  106.2000
+ CB       CB       NB          THETA_HARM  140.0000  110.4000
+ CB       NB       CK          THETA_HARM  140.0000  103.8000
+ CB       NB       LP          THETA_HARM  300.0000  126.0000
+ CB       CN       NA          THETA_HARM  139.9362  104.7255
+ CB       NC       LP          THETA_HARM  300.0000  120.0000
+ CB       NC       CQ          THETA_HARM  140.0000  111.0000
+ CB       C*       CW          THETA_HARM  125.9686  106.4595
+ CB       C*       CT          THETA_HARM  139.8091  128.4164
+ CB       N*       H           THETA_HARM  100.0000  125.8000
+ CB       N*       CK          THETA_HARM  140.0000  105.4000
+ CB       N*       CT          THETA_HARM  140.0000  125.8000
+ CB       CA       H4          THETA_HARM  100.0000  120.0000
+ CB       CA       NC          THETA_HARM  140.0000  117.3000
+ CB       CA       N2          THETA_HARM  140.0000  123.5000
+ CB       CA       HA          THETA_HARM   99.7863  119.9408
+ CB       C        O           THETA_HARM  160.0000  128.8000
+ CB       C        NA          THETA_HARM  140.0000  111.3000
+ 6D       C        O2          THETA_HARM  140.5325  117.4017
+ 6D       CT       N3          THETA_HARM  159.9460  111.3393
+ 6D       CT       HP          THETA_HARM  100.2198  109.8210
+ 6D       CT       N           THETA_HARM  159.7458  110.5014
+ 6D       CT       H1          THETA_HARM   97.0394  111.2081
+ 6D       CT       C           THETA_HARM  120.7445  111.1387
+ CY       CT       H1          THETA_HARM  100.0000  110.0000
+ CY       CT       OS          THETA_HARM  100.0000  110.0000
+ C*       CT       HC          THETA_HARM   99.7828  109.8617
+ C*       CT       CT          THETA_HARM  125.6799  115.0091
+ C*       6W       CT          THETA_HARM  125.6799  115.0091
+ C*       6W       HC          THETA_HARM   99.7828  109.8617
+ C*       CB       CN          THETA_HARM  125.9767  108.7435
+ C*       CB       CA          THETA_HARM  125.8718  134.7293
+ C*       CW       NA          THETA_HARM  139.9530  108.7741
+ C*       CW       H4          THETA_HARM   99.3469  120.1301
+ C        6j       HC          THETA_HARM   95.8119  108.0255
+ C        6q       HC          THETA_HARM   95.8119  108.0255
+ C        O        LP          THETA_HARM  300.0000  120.0000
+ C        N        CT          THETA_HARM   98.0032  116.7553
+ C        N        H           THETA_HARM   86.5791  121.1735
+ C        CT       HC          THETA_HARM   95.8119  108.0255
+ C        CT       H1          THETA_HARM   96.9793  110.5396
+ C        CT       CT          THETA_HARM  120.7445  111.1387
+ C        CT       OS          THETA_HARM  120.0000  109.5000
+ C        CT       HP          THETA_HARM  100.0000  109.5000
+ C        CT       N           THETA_HARM  125.0297  106.9814
+ C        CT       N3          THETA_HARM  160.0000  111.2000
+ C        6D       HC          THETA_HARM   95.8119  108.0255
+ C        6D       CT          THETA_HARM  120.7445  111.1387
+ C        CA       HA          THETA_HARM   99.2531  119.9329
+ C        CA       CA          THETA_HARM  125.9544  119.9734
+ C        C        O           THETA_HARM  160.0000  120.0000
+ C        C        H4          THETA_HARM  100.0000  120.0000
+ C        C        OH          THETA_HARM  160.0000  120.0000
+ C        6N       HC          THETA_HARM   95.8119  108.0255
+ C        6N       CT          THETA_HARM  120.7445  111.1387
+ C        6e       HC          THETA_HARM   95.8119  108.0255
+ C        CM       HA          THETA_HARM  100.0000  119.7000
+ C        CM       CM          THETA_HARM  126.0000  120.7000
+ C        CM       CT          THETA_HARM  140.0000  119.7000
+ C        CM       H4          THETA_HARM  100.0000  119.7000
+ C        6d       HC          THETA_HARM   95.8119  108.0255
+ C        6d       CT          THETA_HARM  120.7445  111.1387
+ C        CB       NB          THETA_HARM  140.0000  130.0000
+ C        CB       CB          THETA_HARM  126.0000  119.2000
+ C        N*       H           THETA_HARM  100.0000  119.2000
+ C        N*       CM          THETA_HARM  140.0000  121.6000
+ C        N*       CT          THETA_HARM  140.0000  117.6000
+ C        NA       CA          THETA_HARM  140.0000  125.2000
+ C        NA       C           THETA_HARM  140.0000  126.4000
+ C        NA       H           THETA_HARM  100.0000  116.8000
+ C        NC       CA          THETA_HARM  140.0000  120.5000
+ C        NC       LP          THETA_HARM  300.0000  120.0000
+ C        OS       CT          THETA_HARM  120.0000  117.0000
+ C        OS       LP          THETA_HARM  300.0000  109.5000
+ C        OH       HO          THETA_HARM   99.0461  112.1438
+ C        OH       LP          THETA_HARM  300.0000  120.0000
+ 6i       6I       CT          THETA_HARM   84.1196  109.6608
+ 6i       6I       HC          THETA_HARM   93.5325  109.2874
+ 6P       CT       H1          THETA_HARM   97.0394  111.2081
+ 6P       CT       N           THETA_HARM  159.7458  110.5014
+ 6P       CT       CT          THETA_HARM   84.1196  109.6608
+ 6P       CT       HP          THETA_HARM  100.2198  109.8210
+ 6P       CT       N3          THETA_HARM  159.9460  111.3393
+ 6P       CT       C           THETA_HARM  120.7445  111.1387
+ 6P       CT       HC          THETA_HARM   93.5325  109.2874
+ N*       CT       OS          THETA_HARM  100.0000  109.5000
+ N*       CK       NB          THETA_HARM  140.0000  113.9000
+ N*       C        NA          THETA_HARM  140.0000  115.4000
+ N*       C        O           THETA_HARM  160.0000  120.9000
+ N*       C        NC          THETA_HARM  140.0000  118.6000
+ N*       CB       NC          THETA_HARM  140.0000  126.2000
+ NA       CA       NC          THETA_HARM  140.0000  123.3000
+ NA       CR       NB          THETA_HARM  140.3394  120.1727
+ NA       CR       NA          THETA_HARM  140.0820  120.0120
+ NA       C        O           THETA_HARM  160.0000  120.6000
+ NC       CQ       NC          THETA_HARM  140.0000  129.1000
+ NC       C        O           THETA_HARM  160.0000  122.5000
+ F        CT       H1          THETA_HARM  100.0000  109.5000
+ F        CT       F           THETA_HARM  154.0000  109.1000
+ F        CT       H2          THETA_HARM  100.0000  109.5000
+ 6k       CT       CT          THETA_HARM   84.1196  109.6608
+ 6k       CT       N           THETA_HARM  159.7458  110.5014
+ 6k       CT       H1          THETA_HARM   97.0394  111.2081
+ 6k       CT       HC          THETA_HARM   93.5325  109.2874
+ 6k       CT       C           THETA_HARM  120.7445  111.1387
+ 6K       CT       C           THETA_HARM  120.7445  111.1387
+ 6K       CT       HC          THETA_HARM   93.5325  109.2874
+ 6K       CT       H1          THETA_HARM   97.0394  111.2081
+ 6K       CT       N           THETA_HARM  159.7458  110.5014
+ 6K       CT       CT          THETA_HARM   84.1196  109.6608
+ 6K       CT       HP          THETA_HARM  100.2198  109.8210
+ 6K       CT       N3          THETA_HARM  159.9460  111.3393
+ CQ       NC       LP          THETA_HARM  300.0000  120.0000
+ H2       CT       N*          THETA_HARM  100.0000  109.5000
+ H2       CT       OS          THETA_HARM  100.0000  109.5000
+ H2       CT       H2          THETA_HARM   70.0000  109.5000
+ 6d       C        O           THETA_HARM  158.2426  121.1871
+ 6d       C        OH          THETA_HARM  160.2725  109.6352
+ 6d       CT       N           THETA_HARM  159.7458  110.5014
+ 6d       CT       H1          THETA_HARM   97.0394  111.2081
+ 6d       CT       C           THETA_HARM  120.7445  111.1387
+ CW       NA       H           THETA_HARM   98.4592  120.3687
+ CW       CC       NA          THETA_HARM  140.0537  119.9879
+ CW       CC       NB          THETA_HARM  140.2404  120.1419
+ CV       CC       NA          THETA_HARM  139.6182  119.8427
+ CV       NB       LP          THETA_HARM  300.0000  126.0000
+ 6T       CT       N3          THETA_HARM  159.9460  111.3393
+ 6T       CT       N           THETA_HARM  159.7458  110.5014
+ 6T       CT       HP          THETA_HARM  100.2198  109.8210
+ 6T       CT       H1          THETA_HARM   97.0394  111.2081
+ 6T       CT       C           THETA_HARM  120.7445  111.1387
+ 6T       OH       HO          THETA_HARM  109.8782  107.6101
+ 6T       6t       HC          THETA_HARM   93.5325  109.2874
+ 6R       CT       HC          THETA_HARM   93.5325  109.2874
+ 6R       CT       C           THETA_HARM  120.7445  111.1387
+ 6R       CT       H1          THETA_HARM   97.0394  111.2081
+ 6R       CT       N3          THETA_HARM  159.9460  111.3393
+ 6R       CT       N           THETA_HARM  159.7458  110.5014
+ 6R       CT       HP          THETA_HARM  100.2198  109.8210
+ 6R       CT       CT          THETA_HARM   84.1196  109.6608
+ HA       CD       HA          THETA_HARM   70.0000  119.0000
+ HA       CM       HA          THETA_HARM   70.0000  120.0000
+ Cl       CT       H1          THETA_HARM  100.0000  108.5000
+ H4       CV       NB          THETA_HARM   99.7662  119.8420
+ H4       CM       N*          THETA_HARM  100.0000  119.1000
+ H4       CM       OS          THETA_HARM  100.0000  113.0000
+ H4       C        O           THETA_HARM  100.0000  120.0000
+ H4       C        OH          THETA_HARM  100.0000  120.0000
+ H4       CW       NA          THETA_HARM   99.6138  119.5305
+ 6E       CT       H1          THETA_HARM   97.0394  111.2081
+ 6E       CT       HP          THETA_HARM  100.2198  109.8210
+ 6E       CT       N           THETA_HARM  159.7458  110.5014
+ 6E       CT       N3          THETA_HARM  159.9460  111.3393
+ 6E       CT       C           THETA_HARM  120.7445  111.1387
+ 6E       6e       C           THETA_HARM  120.7445  111.1387
+ 6E       6e       HC          THETA_HARM   93.5325  109.2874
+ 6+       CC       NA          THETA_HARM  141.2014  118.4780
+ 6+       CC       CW          THETA_HARM  138.5514  120.7823
+ 6+       CT       C           THETA_HARM  120.7445  111.1387
+ 6+       CT       H1          THETA_HARM   97.0394  111.2081
+ 6+       CT       N3          THETA_HARM  159.9460  111.3393
+ 6+       CT       HP          THETA_HARM  100.2198  109.8210
+ 6+       CT       N           THETA_HARM  159.7458  110.5014
+ 6j       6J       CT          THETA_HARM   84.1196  109.6608
+ 6j       6J       HC          THETA_HARM   93.5325  109.2874
+ 6j       C        OH          THETA_HARM  160.2725  109.6352
+ 6j       C        O           THETA_HARM  158.2426  121.1871
+ 6Y       CA       CA          THETA_HARM  139.6408  120.3866
+ 6Y       CT       H1          THETA_HARM   97.0394  111.2081
+ 6Y       CT       N3          THETA_HARM  159.9460  111.3393
+ 6Y       CT       HP          THETA_HARM  100.2198  109.8210
+ 6Y       CT       N           THETA_HARM  159.7458  110.5014
+ 6Y       CT       C           THETA_HARM  120.7445  111.1387
+ 6t       6T       OH          THETA_HARM  100.5415  109.8595
+ 6t       6T       CT          THETA_HARM   84.1196  109.6608
+ 6t       6T       H1          THETA_HARM   97.0394  111.2081
+ O        C        O           THETA_HARM  160.0000  126.0000
+ O        C        OH          THETA_HARM  160.0753  121.0239
+ O        C        OS          THETA_HARM  160.0000  125.0000
+ HS       SH       HS          THETA_HARM   70.0000   92.0700
+ HS       SH       LP          THETA_HARM  300.0000   90.0000
+ HC       6F       HC          THETA_HARM   70.7753  108.1596
+ HC       6L       HC          THETA_HARM   70.7753  108.1596
+ HC       6H       HC          THETA_HARM   70.7753  108.1596
+ HC       6k       HC          THETA_HARM   70.7753  108.1596
+ HC       6Q       HC          THETA_HARM   70.7753  108.1596
+ HC       6K       HC          THETA_HARM   70.7753  108.1596
+ HC       6M       HC          THETA_HARM   70.7753  108.1596
+ HC       6e       HC          THETA_HARM   70.7753  108.1596
+ HC       6J       HC          THETA_HARM   70.7753  108.1596
+ HC       6d       HC          THETA_HARM   70.7753  108.1596
+ HC       6D       HC          THETA_HARM   70.7753  108.1596
+ HC       6W       HC          THETA_HARM   70.7753  108.1596
+ HC       6R       HC          THETA_HARM   70.7753  108.1596
+ HC       6N       HC          THETA_HARM   70.7753  108.1596
+ HC       6+       HC          THETA_HARM   70.7753  108.1596
+ HC       6E       HC          THETA_HARM   70.7753  108.1596
+ HC       CT       HC          THETA_HARM   70.7753  108.1596
+ HC       6Y       HC          THETA_HARM   70.7753  108.1596
+ HC       6h       HC          THETA_HARM   70.7753  108.1596
+ HC       6t       HC          THETA_HARM   70.7753  108.1596
+ HC       6j       HC          THETA_HARM   70.7753  108.1596
+ HC       6q       HC          THETA_HARM   70.7753  108.1596
+ HC       6P       HC          THETA_HARM   70.7753  108.1596
+ HC       6i       HC          THETA_HARM   70.7753  108.1596
+ OH       P        OS          THETA_HARM   90.0000  102.6000
+ 6c       CT       H1          THETA_HARM   97.0394  111.2081
+ 6c       CT       N           THETA_HARM  159.7458  110.5014
+ 6c       CT       C           THETA_HARM  120.7445  111.1387
+ 6F       CT       H1          THETA_HARM   97.0394  111.2081
+ 6F       CT       N3          THETA_HARM  159.9460  111.3393
+ 6F       CT       HP          THETA_HARM  100.2198  109.8210
+ 6F       CT       N           THETA_HARM  159.7458  110.5014
+ 6F       CT       C           THETA_HARM  120.7445  111.1387
+ 6F       CA       CA          THETA_HARM  139.6408  120.3866
+ 6L       CT       H1          THETA_HARM   97.0394  111.2081
+ 6L       CT       N3          THETA_HARM  159.9460  111.3393
+ 6L       CT       HP          THETA_HARM  100.2198  109.8210
+ 6L       CT       N           THETA_HARM  159.7458  110.5014
+ 6L       CT       CT          THETA_HARM   84.1196  109.6608
+ 6L       CT       HC          THETA_HARM   93.5325  109.2874
+ 6L       CT       C           THETA_HARM  120.7445  111.1387
+ CZ       CT       H1          THETA_HARM  100.0000  110.0000
+ CZ       CT       OS          THETA_HARM  100.0000  110.0000
+ CZ       CT       HC          THETA_HARM  100.0000  110.0000
+ CZ       CZ       HZ          THETA_HARM  100.0000  180.0000
+ 6Q       6q       C           THETA_HARM  120.7445  111.1387
+ 6Q       6q       HC          THETA_HARM   93.5325  109.2874
+ 6Q       CT       HP          THETA_HARM  100.2198  109.8210
+ 6Q       CT       N           THETA_HARM  159.7458  110.5014
+ 6Q       CT       N3          THETA_HARM  159.9460  111.3393
+ 6Q       CT       H1          THETA_HARM   97.0394  111.2081
+ 6Q       CT       C           THETA_HARM  120.7445  111.1387
+ O2       P        O2          THETA_HARM  280.0000  119.9000
+ O2       P        OS          THETA_HARM  200.0000  108.2300
+ O2       P        OH          THETA_HARM   90.0000  108.2300
+ O2       C        O2          THETA_HARM  161.1225  125.7098
+ 6I       6i       HC          THETA_HARM   93.5325  109.2874
+ 6I       CT       H1          THETA_HARM   97.0394  111.2081
+ 6I       CT       N3          THETA_HARM  159.9460  111.3393
+ 6I       CT       CT          THETA_HARM   84.1196  109.6608
+ 6I       CT       N           THETA_HARM  159.7458  110.5014
+ 6I       CT       HP          THETA_HARM  100.2198  109.8210
+ 6I       CT       HC          THETA_HARM   93.5325  109.2874
+ 6I       CT       C           THETA_HARM  120.7445  111.1387
+ CA       CN       CB          THETA_HARM  125.9529  122.6236
+ CA       CN       NA          THETA_HARM  139.9461  132.5845
+ CA       CB       NB          THETA_HARM  140.0000  132.4000
+ CA       CB       CN          THETA_HARM  125.8753  116.4361
+ CA       CB       CB          THETA_HARM  126.0000  117.3000
+ CA       CT       CT          THETA_HARM  125.6851  112.5723
+ CA       CT       HC          THETA_HARM   99.2728  110.2784
+ CA       CM       H4          THETA_HARM  100.0000  123.3000
+ CA       CM       CM          THETA_HARM  126.0000  117.0000
+ CA       CM       HA          THETA_HARM  100.0000  123.3000
+ CA       6Y       CT          THETA_HARM  125.6851  112.5723
+ CA       6Y       HC          THETA_HARM   99.2728  110.2784
+ CA       6F       CT          THETA_HARM  125.6851  112.5723
+ CA       6F       HC          THETA_HARM   99.2728  110.2784
+ CA       N2       H           THETA_HARM  100.4580  121.2316
+ CA       N2       CT          THETA_HARM   99.6058  123.5751
+ CA       C        CA          THETA_HARM  125.9597  120.0215
+ CA       C        OH          THETA_HARM  139.8575  119.9868
+ CA       CA       Cl          THETA_HARM  140.0000  118.8000
+ CA       CA       HA          THETA_HARM   92.6304  119.6228
+ CA       CA       F           THETA_HARM  140.0000  121.0000
+ CA       CA       CA          THETA_HARM  125.7677  120.0598
+ CA       CA       OH          THETA_HARM  140.0000  120.0000
+ CA       CA       I           THETA_HARM  140.0000  118.8000
+ CA       CA       CN          THETA_HARM  125.9590  119.9795
+ CA       CA       CB          THETA_HARM  125.9424  119.9111
+ CA       CA       H4          THETA_HARM  100.0000  120.0000
+ CA       CA       CT          THETA_HARM  139.6408  120.3866
+ CA       OH       HO          THETA_HARM  100.0000  113.0000
+ CA       NA       H           THETA_HARM  100.0000  118.0000
+ CA       NC       CB          THETA_HARM  140.0000  112.2000
+ CA       NC       CQ          THETA_HARM  140.0000  118.6000
+ CA       NC       LP          THETA_HARM  300.0000  120.0000
+ CC       6H       CT          THETA_HARM  126.2665  112.8314
+ CC       6H       HC          THETA_HARM   99.4417  110.0324
+ CC       CV       H4          THETA_HARM   99.7576  119.8946
+ CC       CV       NB          THETA_HARM  140.6564  120.3460
+ CC       NA       CR          THETA_HARM  140.0674  119.9936
+ CC       NA       H           THETA_HARM  100.3268  118.4400
+ CC       NB       CR          THETA_HARM  140.0183  117.0061
+ CC       NB       LP          THETA_HARM  300.0000  126.0000
+ CC       CW       NA          THETA_HARM  139.6487  119.8699
+ CC       CW       H4          THETA_HARM   98.6202  120.3819
+ CC       6+       CT          THETA_HARM  126.2665  112.8314
+ CC       6+       HC          THETA_HARM   99.4417  110.0324
+ CC       CT       CT          THETA_HARM  126.2665  112.8314
+ CC       CT       HC          THETA_HARM   99.4417  110.0324
+ CC       6h       CT          THETA_HARM  126.2665  112.8314
+ CC       6h       HC          THETA_HARM   99.4417  110.0324
+ 6N       CT       C           THETA_HARM  120.7445  111.1387
+ 6N       CT       H1          THETA_HARM   97.0394  111.2081
+ 6N       CT       N3          THETA_HARM  159.9460  111.3393
+ 6N       CT       HP          THETA_HARM  100.2198  109.8210
+ 6N       CT       N           THETA_HARM  159.7458  110.5014
+ 6N       C        N           THETA_HARM  140.3046  115.2858
+ 6N       C        O           THETA_HARM  158.2426  121.1871
+ CT       NT       H           THETA_HARM  100.0000  109.5000
+ CT       NT       LP          THETA_HARM  300.0000  109.5000
+ CT       NT       CT          THETA_HARM  100.0000  109.5000
+ CT       6P       CT          THETA_HARM   84.1196  109.6608
+ CT       6P       HC          THETA_HARM   93.5325  109.2874
+ CT       6V       HC          THETA_HARM   93.5325  109.2874
+ CT       6V       CT          THETA_HARM   84.1196  109.6608
+ CT       CT       CY          THETA_HARM  126.0000  110.0000
+ CT       CT       Cl          THETA_HARM  100.0000  108.5000
+ CT       CT       H1          THETA_HARM   97.0394  111.2081
+ CT       CT       CT          THETA_HARM   84.1196  109.6608
+ CT       CT       N           THETA_HARM  159.7458  110.5014
+ CT       CT       NT          THETA_HARM  160.0000  111.2000
+ CT       CT       HC          THETA_HARM   93.5325  109.2874
+ CT       CT       N*          THETA_HARM  100.0000  109.5000
+ CT       CT       S           THETA_HARM  100.1661  114.4564
+ CT       CT       OS          THETA_HARM  100.0000  109.5000
+ CT       CT       I           THETA_HARM  100.0000  106.0000
+ CT       CT       OH          THETA_HARM  100.5415  109.8595
+ CT       CT       F           THETA_HARM  100.0000  109.0000
+ CT       CT       N2          THETA_HARM  159.9851  109.9370
+ CT       CT       HP          THETA_HARM  100.2198  109.8210
+ CT       CT       N3          THETA_HARM  159.9460  111.3393
+ CT       CT       CZ          THETA_HARM  126.0000  110.0000
+ CT       CT       SH          THETA_HARM   99.3538  109.2645
+ CT       CT       H2          THETA_HARM  100.0000  109.5000
+ CT       6N       HC          THETA_HARM   93.5325  109.2874
+ CT       C        OH          THETA_HARM  160.2725  109.6352
+ CT       C        H4          THETA_HARM  100.0000  115.0000
+ CT       C        N           THETA_HARM  140.3046  115.2858
+ CT       C        OS          THETA_HARM  160.0000  115.0000
+ CT       C        CT          THETA_HARM  126.0000  117.0000
+ CT       C        O           THETA_HARM  158.2426  121.1871
+ CT       C        O2          THETA_HARM  140.5325  117.4017
+ CT       CC       CW          THETA_HARM  138.5514  120.7823
+ CT       CC       NB          THETA_HARM  139.9119  120.0522
+ CT       CC       NA          THETA_HARM  141.2014  118.4780
+ CT       CC       CV          THETA_HARM  138.5206  120.9148
+ CT       C*       CW          THETA_HARM  139.8588  124.9621
+ CT       CY       NY          THETA_HARM  160.0000  180.0000
+ CT       6D       HC          THETA_HARM   93.5325  109.2874
+ CT       6I       CT          THETA_HARM   84.1196  109.6608
+ CT       6I       HC          THETA_HARM   93.5325  109.2874
+ CT       6C       H1          THETA_HARM   97.0394  111.2081
+ CT       6C       SH          THETA_HARM   99.3538  109.2645
+ CT       6Q       HC          THETA_HARM   93.5325  109.2874
+ CT       CM       HA          THETA_HARM  100.0000  120.0000
+ CT       CZ       CZ          THETA_HARM  160.0000  180.0000
+ CT       N3       CT          THETA_HARM  100.0000  109.5000
+ CT       N3       LP          THETA_HARM  300.0000  109.5000
+ CT       N3       H           THETA_HARM  100.7211  108.4744
+ CT       6H       HC          THETA_HARM   93.5325  109.2874
+ CT       N2       H           THETA_HARM  100.6608  116.5317
+ CT       6F       HC          THETA_HARM   93.5325  109.2874
+ CT       6L       CT          THETA_HARM   84.1196  109.6608
+ CT       6L       HC          THETA_HARM   93.5325  109.2874
+ CT       6c       H1          THETA_HARM   97.0394  111.2081
+ CT       6c       SH          THETA_HARM   99.3538  109.2645
+ CT       S        CT          THETA_HARM  123.9967   99.0718
+ CT       S        S           THETA_HARM  136.0000  103.7000
+ CT       S        LP          THETA_HARM  300.0000   90.0000
+ CT       OH       HO          THETA_HARM  109.8782  107.6101
+ CT       OH       LP          THETA_HARM  300.0000  109.5000
+ CT       OS       CT          THETA_HARM  120.0000  109.5000
+ CT       OS       LP          THETA_HARM  300.0000  109.5000
+ CT       OS       P           THETA_HARM  200.0000  120.5000
+ CT       6Y       HC          THETA_HARM   93.5325  109.2874
+ CT       6h       HC          THETA_HARM   93.5325  109.2874
+ CT       6+       HC          THETA_HARM   93.5325  109.2874
+ CT       6E       HC          THETA_HARM   93.5325  109.2874
+ CT       N        H           THETA_HARM   86.1215  117.0955
+ CT       N        CT          THETA_HARM   99.2094  117.6199
+ CT       6S       OH          THETA_HARM  100.5415  109.8595
+ CT       6S       H1          THETA_HARM   97.0394  111.2081
+ CT       6W       HC          THETA_HARM   93.5325  109.2874
+ CT       6R       HC          THETA_HARM   93.5325  109.2874
+ CT       6R       CT          THETA_HARM   84.1196  109.6608
+ CT       6T       H1          THETA_HARM   97.0394  111.2081
+ CT       6T       OH          THETA_HARM  100.5415  109.8595
+ CT       SH       LP          THETA_HARM  300.0000   90.0000
+ CT       SH       HS          THETA_HARM   86.2310   95.7053
+ CT       6d       HC          THETA_HARM   93.5325  109.2874
+ CT       6J       HC          THETA_HARM   93.5325  109.2874
+ CT       6K       CT          THETA_HARM   84.1196  109.6608
+ CT       6K       HC          THETA_HARM   93.5325  109.2874
+ CT       6M       CT          THETA_HARM   84.1196  109.6608
+ CT       6M       HC          THETA_HARM   93.5325  109.2874
+ CT       6k       CT          THETA_HARM   84.1196  109.6608
+ CT       6k       HC          THETA_HARM   93.5325  109.2874
+ H1       6S       H1          THETA_HARM   73.3019  110.0645
+ H1       6S       OH          THETA_HARM   99.8295  109.4198
+ H1       6C       SH          THETA_HARM   99.4468  109.1985
+ H1       6C       H1          THETA_HARM   73.3019  110.0645
+ H1       6c       SH          THETA_HARM   99.4468  109.1985
+ H1       6c       H1          THETA_HARM   73.3019  110.0645
+ H1       6T       OH          THETA_HARM   99.8295  109.4198
+ H1       CT       SH          THETA_HARM   99.4468  109.1985
+ H1       CT       NT          THETA_HARM  100.0000  109.5000
+ H1       CT       N           THETA_HARM  100.9204  109.4538
+ H1       CT       H1          THETA_HARM   73.3019  110.0645
+ H1       CT       N2          THETA_HARM   99.6939  109.7825
+ H1       CT       OH          THETA_HARM   99.8295  109.4198
+ H1       CT       OS          THETA_HARM  100.0000  109.5000
+ H1       CT       N*          THETA_HARM  100.0000  109.5000
+ H1       CT       S           THETA_HARM   99.2534  109.2845
+ 6V       CT       C           THETA_HARM  120.7445  111.1387
+ 6V       CT       HC          THETA_HARM   93.5325  109.2874
+ 6V       CT       HP          THETA_HARM  100.2198  109.8210
+ 6V       CT       N           THETA_HARM  159.7458  110.5014
+ 6V       CT       N3          THETA_HARM  159.9460  111.3393
+ 6V       CT       H1          THETA_HARM   97.0394  111.2081
+ CR       NB       CV          THETA_HARM  139.9398  116.9085
+ CR       NB       LP          THETA_HARM  300.0000  126.0000
+ CR       NA       CW          THETA_HARM  139.6732  119.8141
+ CR       NA       H           THETA_HARM   96.7150  121.4759
+ CD       CD       HA          THETA_HARM  100.0000  120.0000
+ CD       CD       CM          THETA_HARM  126.0000  120.0000
+ CD       CD       CT          THETA_HARM  140.0000  120.0000
+ CD       CT       HC          THETA_HARM  100.0000  109.5000
+ CD       CM       HA          THETA_HARM  100.0000  120.0000
+END
+#
+UREY_BRADLEY
+END
+#
+TORSIONS
+ C*       6W       CT       C           SHFT_DIHDR   0.092220    4.0000    0.0000
+ C*       6W       CT       N           SHFT_DIHDR   0.033180    5.0000    0.2171
+                                                     0.033440    4.0000    0.8049
+                                                     0.035080    3.0000    0.1978
+ C*       6W       CT       N3          SHFT_DIHDR   0.033180    5.0000    0.2171
+                                                     0.033440    4.0000    0.8049
+                                                     0.035080    3.0000    0.1978
+ 6D       CT       N        C           SHFT_DIHDR   0.153660    5.0000    0.0000
+ 6D       CT       C        N           SHFT_DIHDR   0.212840    3.0000    0.8109
+                                                     0.387780    1.0000   12.3504
+ CA       6Y       CT       N3          SHFT_DIHDR   0.403420    5.0000    0.5690
+                                                     0.673560    4.0000   21.5628
+ CA       6Y       CT       N           SHFT_DIHDR   0.403420    5.0000    0.5690
+                                                     0.673560    4.0000   21.5628
+ CA       6Y       CT       C           SHFT_DIHDR   0.450320    6.0000    6.8063
+                                                     0.227460    5.0000    2.4366
+ CA       6F       CT       N           SHFT_DIHDR   0.158840    4.0000    7.3536
+ CA       6F       CT       N3          SHFT_DIHDR   0.158840    4.0000    7.3536
+ CA       6F       CT       C           SHFT_DIHDR   0.348740    5.0000    2.1256
+ 6N       CT       N        C           SHFT_DIHDR   0.153660    5.0000    0.0000
+ 6N       CT       C        N           SHFT_DIHDR   0.212840    3.0000    0.8109
+                                                     0.387780    1.0000   12.3504
+ C        6d       CT       C           SHFT_DIHDR   0.104640    3.0000    2.9908
+                                                     0.064340    2.0000    0.0000
+                                                     1.344720    1.0000   28.8318
+ C        6N       CT       N           SHFT_DIHDR   0.490220    4.0000    0.3870
+ C        6N       CT       N3          SHFT_DIHDR   0.490220    4.0000    0.3870
+ C        6N       CT       C           SHFT_DIHDR   0.310680    6.0000    9.2620
+                                                     1.141480    1.0000   22.7910
+ C        6D       CT       N3          SHFT_DIHDR   0.454700    3.0000    5.7569
+ C        6D       CT       N           SHFT_DIHDR   0.454700    3.0000    5.7569
+ C        6D       CT       C           SHFT_DIHDR   0.438360    5.0000    4.1317
+                                                     0.123360    3.0000    2.5405
+ C        N        CT       C           SHFT_DIHDR   0.139820    6.0000    0.0000
+                                                     0.575960    2.0000   35.5889
+ CC       6H       CT       N           SHFT_DIHDR   0.380840    4.0000    5.5248
+ CC       6H       CT       N3          SHFT_DIHDR   0.380840    4.0000    5.5248
+ CC       6H       CT       C           SHFT_DIHDR   0.136700    6.0000    5.7849
+ CC       6+       CT       C           SHFT_DIHDR   0.805580    6.0000   10.1782
+                                                     0.027580    4.0000    0.0776
+                                                     0.722220    2.0000   10.9557
+ CC       6+       CT       N           SHFT_DIHDR   0.519840    4.0000    2.1294
+                                                     0.252940    3.0000    1.6837
+ CC       6+       CT       N3          SHFT_DIHDR   0.519840    4.0000    2.1294
+                                                     0.252940    3.0000    1.6837
+ CC       6h       CT       C           SHFT_DIHDR   0.044980    1.0000    1.4536
+ CC       6h       CT       N3          SHFT_DIHDR   0.004460    3.0000    1.1382
+ CC       6h       CT       N           SHFT_DIHDR   0.004460    3.0000    1.1382
+ H1       CT       NT       LP          SHFT_DIHDR   0.000000    3.0000    0.0000
+ H1       CT       C        O           SHFT_DIHDR   0.693640    1.0000   38.2726
+ H1       CT       6S       OH          SHFT_DIHDR   0.000000    3.0000    0.0000
+                                                     1.456680    1.0000   36.5507
+ H1       CT       CT       OS          SHFT_DIHDR   0.000000    3.0000    0.0000
+                                                     0.500000    1.0000    0.0000
+ H1       CT       CT       OH          SHFT_DIHDR   0.000000    3.0000    0.0000
+                                                     1.456680    1.0000   36.5507
+ H1       CT       CT       Cl          SHFT_DIHDR   0.000000    3.0000    0.0000
+                                                     0.500000    1.0000    0.0000
+ H1       CT       CT       F           SHFT_DIHDR   0.000000    3.0000    0.0000
+                                                     0.380000    1.0000    0.0000
+ H1       CT       CT       Br          SHFT_DIHDR   0.000000    3.0000    0.0000
+                                                     1.100000    1.0000    0.0000
+ H1       CT       OS       LP          SHFT_DIHDR   0.000000    3.0000    0.0000
+ H1       CT       OH       LP          SHFT_DIHDR   0.000000    3.0000    0.0000
+ H1       CT       6T       OH          SHFT_DIHDR   0.000000    3.0000    0.0000
+                                                     1.456680    1.0000   36.5507
+ CT       6D       C        O2          SHFT_DIHDR   0.071440    3.0000    0.8594
+ CT       6R       CT       C           SHFT_DIHDR   1.428400    5.0000   57.4391
+                                                     0.164900    3.0000   12.7499
+ CT       6R       CT       CT          SHFT_DIHDR   0.328700    6.0000   18.1643
+                                                     0.375520    1.0000   13.4804
+ CT       6R       CT       N           SHFT_DIHDR   1.242260    1.0000   15.2695
+ CT       6R       CT       N3          SHFT_DIHDR   1.242260    1.0000   15.2695
+ CT       6W       C*       CW          SHFT_DIHDR   0.174340    6.0000    0.5910
+                                                     0.026400    5.0000    0.2371
+                                                     0.190560    2.0000    4.8281
+ CT       6W       C*       CB          SHFT_DIHDR   0.642120    3.0000   11.4505
+ CT       C        N        LP          SHFT_DIHDR   0.000000    2.0000  180.0000
+ CT       6N       C        O           SHFT_DIHDR   0.788300    3.0000    1.0026
+ CT       6N       C        N           SHFT_DIHDR   0.132860    1.0000    5.1311
+ CT       CT       OH       LP          SHFT_DIHDR   0.000000    3.0000    0.0000
+ CT       CT       CT       CT          SHFT_DIHDR   0.284300    2.0000  183.4355
+                                                     0.399400    1.0000  168.3091
+ CT       CT       OS       C           SHFT_DIHDR   0.766000    3.0000    0.0000
+                                                     1.600000    1.0000  180.0000
+ CT       CT       OS       LP          SHFT_DIHDR   0.000000    3.0000    0.0000
+ CT       CT       OS       CT          SHFT_DIHDR   0.766000    3.0000    0.0000
+                                                     0.200000    2.0000  180.0000
+ CT       CT       N        C           SHFT_DIHDR   0.153660    5.0000    0.0000
+ CT       CT       C        N           SHFT_DIHDR   0.212840    3.0000    0.8109
+                                                     0.387780    1.0000   12.3504
+ CT       CT       NT       CT          SHFT_DIHDR   0.600000    3.0000    0.0000
+                                                     0.960000    2.0000  180.0000
+ CT       CT       NT       LP          SHFT_DIHDR   0.000000    3.0000    0.0000
+ CT       6+       CC       CW          SHFT_DIHDR   0.663980    4.0000    6.0496
+                                                     0.200280    2.0000    3.6263
+                                                     1.015540    1.0000    1.9358
+ CT       6+       CC       NA          SHFT_DIHDR   0.023800    4.0000    1.2064
+                                                     0.930960    3.0000   33.5288
+                                                     0.221640    2.0000    5.7512
+ CT       6h       CC       CW          SHFT_DIHDR   0.175000    6.0000    0.8272
+                                                     0.010560    2.0000    0.5617
+ CT       6h       CC       NB          SHFT_DIHDR   0.443360    3.0000    1.9190
+                                                     0.248980    1.0000    0.7900
+ CT       6V       CT       C           SHFT_DIHDR   0.433640    5.0000    0.2639
+                                                     0.177260    3.0000    4.2563
+ CT       6V       CT       N3          SHFT_DIHDR   0.001720    4.0000    0.1554
+                                                     0.276400    3.0000    6.8638
+ CT       6V       CT       N           SHFT_DIHDR   0.001720    4.0000    0.1554
+                                                     0.276400    3.0000    6.8638
+ CT       6P       CT       CT          SHFT_DIHDR   0.284300    2.0000  183.4355
+                                                     0.399400    1.0000  168.3091
+ CT       6P       CT       C           SHFT_DIHDR   0.518660    5.0000   15.1110
+                                                     0.457480    1.0000   17.7996
+ CT       OS       CT       N*          SHFT_DIHDR   0.766000    3.0000    0.0000
+                                                     1.300000    2.0000    0.0000
+ CT       OS       CT       OS          SHFT_DIHDR   0.200000    3.0000    0.0000
+                                                     1.700000    2.0000  180.0000
+                                                     2.700000    1.0000  180.0000
+ CT       S        S        CT          SHFT_DIHDR   1.200000    3.0000    0.0000
+                                                     7.000000    2.0000    0.0000
+ CT       6L       CT       N           SHFT_DIHDR   0.531940    4.0000    7.5928
+ CT       6L       CT       CT          SHFT_DIHDR   0.219420    1.0000    0.0000
+ CT       6L       CT       N3          SHFT_DIHDR   0.531940    4.0000    7.5928
+ CT       6L       CT       C           SHFT_DIHDR   0.132740    6.0000    0.1053
+                                                     0.113240    5.0000    0.5332
+                                                     0.436060    1.0000    0.4829
+ CT       6H       CC       CV          SHFT_DIHDR   0.413120    5.0000   13.0239
+                                                     0.787640    2.0000    8.6562
+ CT       6H       CC       NA          SHFT_DIHDR   0.827800    3.0000   13.3330
+                                                     0.524160    2.0000    6.9733
+                                                     0.777820    1.0000   11.8973
+ CT       6k       CT       C           SHFT_DIHDR   0.032120    4.0000    0.1958
+ CT       6k       CT       CT          SHFT_DIHDR   0.417140    3.0000   16.1407
+ CT       6k       CT       N           SHFT_DIHDR   0.378420    4.0000    3.1873
+ CT       6M       CT       N           SHFT_DIHDR   0.016160    3.0000    0.6768
+ CT       6M       CT       N3          SHFT_DIHDR   0.016160    3.0000    0.6768
+ CT       6M       CT       S           SHFT_DIHDR   0.329120    6.0000    9.3406
+ CT       6K       CT       N3          SHFT_DIHDR   0.844680    1.0000   23.2902
+ CT       6K       CT       CT          SHFT_DIHDR   0.379260    4.0000    1.9962
+ CT       6K       CT       N           SHFT_DIHDR   0.844680    1.0000   23.2902
+ CT       6K       CT       C           SHFT_DIHDR   0.145340    5.0000    1.1795
+ CT       CZ       CZ       HZ          SHFT_DIHDR   0.000000    1.0000    0.0000
+ CT       CM       CM       CT          SHFT_DIHDR  13.300000    2.0000  180.0000
+                                                     3.800000    1.0000  180.0000
+ CT       6Q       6q       C           SHFT_DIHDR   0.518940    6.0000    8.2947
+ CT       6J       6j       C           SHFT_DIHDR   0.797480    2.0000   15.0117
+                                                     0.652700    1.0000    2.6807
+ CT       6C       SH       HS          SHFT_DIHDR   0.213020    3.0000    0.6361
+ CT       6d       C        O           SHFT_DIHDR   0.625880    3.0000   18.0188
+                                                     1.120180    1.0000    0.7306
+ CT       6d       C        OH          SHFT_DIHDR   0.193320    4.0000    6.6346
+ CT       6I       CT       C           SHFT_DIHDR   0.117700    5.0000    0.1451
+                                                     0.192380    4.0000    0.9158
+ CT       6I       CT       CT          SHFT_DIHDR   0.268540    1.0000    0.4666
+ CT       6I       CT       N           SHFT_DIHDR   0.193640    4.0000    0.0000
+                                                     0.141380    2.0000    2.1492
+                                                     0.195460    1.0000    0.8758
+ CT       6I       CT       N3          SHFT_DIHDR   0.193640    4.0000    0.0000
+                                                     0.141380    2.0000    2.1492
+                                                     0.195460    1.0000    0.8758
+ 6P       CT       C        N           SHFT_DIHDR   0.212840    3.0000    0.8109
+                                                     0.387780    1.0000   12.3504
+ 6P       CT       N        C           SHFT_DIHDR   0.153660    5.0000    0.0000
+ 6i       6I       CT       N           SHFT_DIHDR   0.103420    4.0000    0.1316
+                                                     0.282000    3.0000    6.4375
+ 6i       6I       CT       CT          SHFT_DIHDR   0.112440    5.0000    0.4514
+                                                     0.086020    4.0000    0.0800
+                                                     0.199200    3.0000    0.0000
+ 6i       6I       CT       N3          SHFT_DIHDR   0.103420    4.0000    0.1316
+                                                     0.282000    3.0000    6.4375
+ 6i       6I       CT       C           SHFT_DIHDR   0.056700    5.0000    0.6090
+                                                     0.317100    3.0000    6.2834
+ 6V       CT       N        C           SHFT_DIHDR   0.153660    5.0000    0.0000
+ 6V       CT       C        N           SHFT_DIHDR   0.212840    3.0000    0.8109
+                                                     0.387780    1.0000   12.3504
+ 6c       CT       N        C           SHFT_DIHDR   0.153660    5.0000    0.0000
+ 6c       CT       C        N           SHFT_DIHDR   0.212840    3.0000    0.8109
+                                                     0.387780    1.0000   12.3504
+ OH       CT       CT       OH          SHFT_DIHDR   0.288000    3.0000    0.0000
+                                                     2.350000    2.0000    0.0000
+ OH       6T       CT       C           SHFT_DIHDR   0.104260    4.0000    1.1491
+                                                     0.259120    3.0000    4.6203
+ OH       6T       CT       N           SHFT_DIHDR   0.459400    5.0000    4.9197
+                                                     0.249360    3.0000    3.7125
+                                                     0.045180    2.0000    0.2834
+                                                     0.872060    1.0000    2.4488
+ OH       6T       CT       N3          SHFT_DIHDR   0.459400    5.0000    4.9197
+                                                     0.249360    3.0000    3.7125
+                                                     0.045180    2.0000    0.2834
+                                                     0.872060    1.0000    2.4488
+ OH       P        OS       CT          SHFT_DIHDR   0.500000    3.0000    0.0000
+                                                     2.400000    2.0000    0.0000
+ OH       6S       CT       C           SHFT_DIHDR   0.128540    5.0000    1.8261
+                                                     0.022100    3.0000    0.4769
+ OH       6S       CT       N3          SHFT_DIHDR   0.509940    5.0000    5.9326
+                                                     0.442680    3.0000    6.2152
+ OH       6S       CT       N           SHFT_DIHDR   0.509940    5.0000    5.9326
+                                                     0.442680    3.0000    6.2152
+ OS       P        OS       CT          SHFT_DIHDR   0.500000    3.0000    0.0000
+                                                     2.400000    2.0000    0.0000
+ OS       CT       CT       OS          SHFT_DIHDR   0.288000    3.0000    0.0000
+                                                     2.350000    2.0000    0.0000
+ OS       CT       CT       OH          SHFT_DIHDR   0.288000    3.0000    0.0000
+                                                     2.350000    2.0000    0.0000
+ OS       CT       N*       CM          SHFT_DIHDR   5.000000    1.0000    0.0000
+ OS       CT       N*       CK          SHFT_DIHDR   5.000000    1.0000    0.0000
+ 6H       CT       N        C           SHFT_DIHDR   0.153660    5.0000    0.0000
+ 6H       CT       C        N           SHFT_DIHDR   0.212840    3.0000    0.8109
+                                                     0.387780    1.0000   12.3504
+ 6L       CT       C        N           SHFT_DIHDR   0.212840    3.0000    0.8109
+                                                     0.387780    1.0000   12.3504
+ 6L       CT       N        C           SHFT_DIHDR   0.153660    5.0000    0.0000
+ 6F       CT       N        C           SHFT_DIHDR   0.153660    5.0000    0.0000
+ 6F       CT       C        N           SHFT_DIHDR   0.212840    3.0000    0.8109
+                                                     0.387780    1.0000   12.3504
+ X        6+       CT       X           SHFT_DIHDR   0.358700    3.0000    3.7968
+ X        6E       6e       X           SHFT_DIHDR   0.358700    3.0000    3.7968
+ X        6E       CT       X           SHFT_DIHDR   0.358700    3.0000    3.7968
+ X        6Y       CT       X           SHFT_DIHDR   0.358700    3.0000    3.7968
+ X        6h       CT       X           SHFT_DIHDR   0.358700    3.0000    3.7968
+ X        6S       CT       X           SHFT_DIHDR   0.358700    3.0000    3.7968
+ X        CV       NB       X           SHFT_DIHDR   4.821100    2.0000  178.4795
+ X        6T       6t       X           SHFT_DIHDR   0.358700    3.0000    3.7968
+ X        6T       CT       X           SHFT_DIHDR   0.358700    3.0000    3.7968
+ X        6R       CT       X           SHFT_DIHDR   0.358700    3.0000    3.7968
+ X        6W       CT       X           SHFT_DIHDR   0.358700    3.0000    3.7968
+ X        CQ       NC       X           SHFT_DIHDR  13.600000    2.0000  180.0000
+ X        CW       NA       X           SHFT_DIHDR   2.996640    2.0000  195.1460
+ X        CN       NA       X           SHFT_DIHDR   2.999200    2.0000  190.9132
+ X        6d       CT       X           SHFT_DIHDR   0.358700    3.0000    3.7968
+ X        6K       CT       X           SHFT_DIHDR   0.358700    3.0000    3.7968
+ X        6M       CT       X           SHFT_DIHDR   0.358700    3.0000    3.7968
+ X        6J       CT       X           SHFT_DIHDR   0.358700    3.0000    3.7968
+ X        6J       6j       X           SHFT_DIHDR   0.358700    3.0000    3.7968
+ X        6k       CT       X           SHFT_DIHDR   0.358700    3.0000    3.7968
+ X        6V       CT       X           SHFT_DIHDR   0.358700    3.0000    3.7968
+ X        6P       CT       X           SHFT_DIHDR   0.358700    3.0000    3.7968
+ X        CR       NB       X           SHFT_DIHDR  10.049300    2.0000  175.1267
+ X        CR       NA       X           SHFT_DIHDR   4.945700    2.0000  202.0610
+ X        CD       CM       X           SHFT_DIHDR  13.300000    2.0000  180.0000
+ X        CD       CD       X           SHFT_DIHDR   2.000000    2.0000  180.0000
+ X        CT       NT       X           SHFT_DIHDR   0.600000    3.0000    0.0000
+ X        CT       SH       X           SHFT_DIHDR   0.752220    3.0000    0.9473
+ X        CT       CT       X           SHFT_DIHDR   0.358700    3.0000    3.7968
+ X        CT       OS       X           SHFT_DIHDR   0.766660    3.0000    0.0000
+ X        CT       N3       X           SHFT_DIHDR   0.386740    3.0000    4.9569
+ X        CT       S        X           SHFT_DIHDR   0.407080    3.0000    5.4486
+ X        CC       6H       X           SHFT_DIHDR   0.000000    1.0000    0.0000
+ X        CC       CW       X           SHFT_DIHDR  11.047220    2.0000  167.7167
+ X        CC       NB       X           SHFT_DIHDR   4.857820    2.0000  165.6258
+ X        CC       6+       X           SHFT_DIHDR   0.000000    1.0000    0.0000
+ X        CC       CV       X           SHFT_DIHDR  10.247740    2.0000  168.3035
+ X        CC       NA       X           SHFT_DIHDR   3.608500    2.0000  186.1193
+ X        CC       6h       X           SHFT_DIHDR   0.000000    1.0000    0.0000
+ X        C        6j       X           SHFT_DIHDR   0.000000    1.0000    0.0000
+ X        C        6q       X           SHFT_DIHDR   0.000000    1.0000    0.0000
+ X        C        O        X           SHFT_DIHDR   5.600000    2.0000  180.0000
+ X        C        N        X           SHFT_DIHDR   3.728440    2.0000  181.5121
+ X        C        C        X           SHFT_DIHDR   7.250000    2.0000  180.0000
+ X        C        6N       X           SHFT_DIHDR   0.000000    1.0000    0.0000
+ X        C        6D       X           SHFT_DIHDR   0.000000    1.0000    0.0000
+ X        C        CA       X           SHFT_DIHDR   7.174240    2.0000  177.2095
+ X        C        6d       X           SHFT_DIHDR   0.000000    1.0000    0.0000
+ X        C        CB       X           SHFT_DIHDR   6.000000    2.0000  180.0000
+ X        C        6e       X           SHFT_DIHDR   0.000000    1.0000    0.0000
+ X        C        CM       X           SHFT_DIHDR   4.350000    2.0000  180.0000
+ X        C        N*       X           SHFT_DIHDR   2.900000    2.0000  180.0000
+ X        C        NA       X           SHFT_DIHDR   2.700000    2.0000  180.0000
+ X        C        NC       X           SHFT_DIHDR   8.000000    2.0000  180.0000
+ X        C        OS       X           SHFT_DIHDR   5.400000    2.0000  180.0000
+ X        C        OH       X           SHFT_DIHDR   4.362880    2.0000  181.9127
+ X        6N       CT       X           SHFT_DIHDR   0.358700    3.0000    3.7968
+ X        6D       CT       X           SHFT_DIHDR   0.358700    3.0000    3.7968
+ X        CA       CN       X           SHFT_DIHDR   7.235800    2.0000  176.9700
+ X        CA       CB       X           SHFT_DIHDR   7.004820    2.0000  174.9734
+ X        CA       6Y       X           SHFT_DIHDR   0.000000    1.0000    0.0000
+ X        CA       CM       X           SHFT_DIHDR   5.100000    2.0000  180.0000
+ X        CA       6F       X           SHFT_DIHDR   0.000000    1.0000    0.0000
+ X        CA       N2       X           SHFT_DIHDR   3.406440    2.0000  187.5740
+ X        CA       NC       X           SHFT_DIHDR   9.600000    2.0000  180.0000
+ X        CA       NA       X           SHFT_DIHDR   3.000000    2.0000  180.0000
+ X        CA       CA       X           SHFT_DIHDR   6.364940    2.0000  182.5392
+ X        CA       OH       X           SHFT_DIHDR   1.800000    2.0000  180.0000
+ X        C*       CB       X           SHFT_DIHDR   3.207180    2.0000  183.1568
+ X        C*       CW       X           SHFT_DIHDR  12.766860    2.0000  182.6983
+ X        C*       6W       X           SHFT_DIHDR   0.000000    1.0000    0.0000
+ X        6C       SH       X           SHFT_DIHDR   0.752220    3.0000    0.9473
+ X        6C       CT       X           SHFT_DIHDR   0.358700    3.0000    3.7968
+ X        6I       6i       X           SHFT_DIHDR   0.358700    3.0000    3.7968
+ X        6I       CT       X           SHFT_DIHDR   0.358700    3.0000    3.7968
+ X        CB       NC       X           SHFT_DIHDR   8.300000    2.0000  180.0000
+ X        CB       N*       X           SHFT_DIHDR   3.300000    2.0000  180.0000
+ X        CB       CB       X           SHFT_DIHDR  10.900000    2.0000  180.0000
+ X        CB       NB       X           SHFT_DIHDR   5.100000    2.0000  180.0000
+ X        CB       CN       X           SHFT_DIHDR   6.078700    2.0000  188.2903
+ X        CK       NB       X           SHFT_DIHDR  20.000000    2.0000  180.0000
+ X        CK       N*       X           SHFT_DIHDR   3.400000    2.0000  180.0000
+ X        6Q       6q       X           SHFT_DIHDR   0.358700    3.0000    3.7968
+ X        6Q       CT       X           SHFT_DIHDR   0.358700    3.0000    3.7968
+ X        CM       N*       X           SHFT_DIHDR   3.700000    2.0000  180.0000
+ X        CM       CM       X           SHFT_DIHDR  13.300000    2.0000  180.0000
+ X        CM       OS       X           SHFT_DIHDR   2.100000    2.0000  180.0000
+ X        6F       CT       X           SHFT_DIHDR   0.358700    3.0000    3.7968
+ X        6L       CT       X           SHFT_DIHDR   0.358700    3.0000    3.7968
+ X        6H       CT       X           SHFT_DIHDR   0.358700    3.0000    3.7968
+ X        OS       P        X           SHFT_DIHDR   0.500000    3.0000    0.0000
+ X        OH       P        X           SHFT_DIHDR   0.500000    3.0000    0.0000
+ X        6c       CT       X           SHFT_DIHDR   0.358700    3.0000    3.7968
+ 6Q       6q       C        N           SHFT_DIHDR   0.212840    3.0000    0.8109
+                                                     0.387780    1.0000   12.3504
+ 6Q       CT       C        N           SHFT_DIHDR   0.212840    3.0000    0.8109
+                                                     0.387780    1.0000   12.3504
+ 6Q       CT       N        C           SHFT_DIHDR   0.153660    5.0000    0.0000
+ CM       CM       OS       LP          SHFT_DIHDR   0.000000    2.0000  180.0000
+ CM       CM       C        O           SHFT_DIHDR   0.600000    3.0000    0.0000
+                                                     4.350000    2.0000  180.0000
+ 6I       CT       N        C           SHFT_DIHDR   0.153660    5.0000    0.0000
+ 6I       CT       C        N           SHFT_DIHDR   0.212840    3.0000    0.8109
+                                                     0.387780    1.0000   12.3504
+ 6C       CT       C        N           SHFT_DIHDR   0.212840    3.0000    0.8109
+                                                     0.387780    1.0000   12.3504
+ 6C       CT       N        C           SHFT_DIHDR   0.153660    5.0000    0.0000
+ 6W       CT       N        C           SHFT_DIHDR   0.153660    5.0000    0.0000
+ 6W       CT       C        N           SHFT_DIHDR   0.212840    3.0000    0.8109
+                                                     0.387780    1.0000   12.3504
+ 6R       CT       C        N           SHFT_DIHDR   0.212840    3.0000    0.8109
+                                                     0.387780    1.0000   12.3504
+ 6R       CT       N        C           SHFT_DIHDR   0.153660    5.0000    0.0000
+ 6T       CT       C        N           SHFT_DIHDR   0.212840    3.0000    0.8109
+                                                     0.387780    1.0000   12.3504
+ 6T       CT       N        C           SHFT_DIHDR   0.153660    5.0000    0.0000
+ H        N        C        O           SHFT_DIHDR   3.091940    2.0000  189.9853
+ 6S       CT       C        N           SHFT_DIHDR   0.212840    3.0000    0.8109
+                                                     0.387780    1.0000   12.3504
+ 6S       CT       N        C           SHFT_DIHDR   0.153660    5.0000    0.0000
+ Cl       CT       CT       Cl          SHFT_DIHDR   0.000000    3.0000    0.0000
+                                                     0.900000    1.0000  180.0000
+ HA       CM       OS       LP          SHFT_DIHDR   0.000000    2.0000  180.0000
+ 6t       6T       CT       N           SHFT_DIHDR   0.405200    3.0000    3.7879
+ 6t       6T       CT       N3          SHFT_DIHDR   0.405200    3.0000    3.7879
+ 6t       6T       CT       C           SHFT_DIHDR   0.444680    5.0000    5.6363
+                                                     0.401080    3.0000    6.0373
+ 6h       CT       C        N           SHFT_DIHDR   0.212840    3.0000    0.8109
+                                                     0.387780    1.0000   12.3504
+ 6h       CT       N        C           SHFT_DIHDR   0.153660    5.0000    0.0000
+ 6Y       CT       C        N           SHFT_DIHDR   0.212840    3.0000    0.8109
+                                                     0.387780    1.0000   12.3504
+ 6Y       CT       N        C           SHFT_DIHDR   0.153660    5.0000    0.0000
+ O        C        N        LP          SHFT_DIHDR   0.000000    2.0000  180.0000
+ O        C        OS       CT          SHFT_DIHDR   5.400000    2.0000  180.0000
+                                                     2.800000    1.0000  180.0000
+ 6j       6J       CT       N           SHFT_DIHDR   0.806380    5.0000    7.4568
+                                                     0.110000    4.0000    1.1934
+ 6q       6Q       CT       N           SHFT_DIHDR   0.529900    5.0000    5.6310
+                                                     0.196500    4.0000    0.3744
+                                                     0.503440    1.0000    0.0000
+ 6q       6Q       CT       N3          SHFT_DIHDR   0.529900    5.0000    5.6310
+                                                     0.196500    4.0000    0.3744
+                                                     0.503440    1.0000    0.0000
+ 6E       CT       C        N           SHFT_DIHDR   0.212840    3.0000    0.8109
+                                                     0.387780    1.0000   12.3504
+ 6E       CT       N        C           SHFT_DIHDR   0.153660    5.0000    0.0000
+ 6+       CT       N        C           SHFT_DIHDR   0.153660    5.0000    0.0000
+ 6+       CT       C        N           SHFT_DIHDR   0.212840    3.0000    0.8109
+                                                     0.387780    1.0000   12.3504
+ N        CT       C        N           SHFT_DIHDR   0.445140    3.0000  138.0055
+                                                     3.438100    2.0000  179.1748
+                                                     0.761860    1.0000  200.8975
+ H4       CM       OS       LP          SHFT_DIHDR   0.000000    2.0000  180.0000
+ HC       6t       6T       CT          SHFT_DIHDR   0.295920    3.0000    5.2621
+ HC       6t       6T       OH          SHFT_DIHDR   0.000000    3.0000    0.0000
+                                                     0.458300    1.0000    0.1203
+ HC       6e       6E       CT          SHFT_DIHDR   0.295920    3.0000    5.2621
+ HC       6j       6J       CT          SHFT_DIHDR   0.295920    3.0000    5.2621
+ HC       6q       6Q       CT          SHFT_DIHDR   0.295920    3.0000    5.2621
+ HC       6K       CT       CT          SHFT_DIHDR   0.295920    3.0000    5.2621
+ HC       CT       6k       CT          SHFT_DIHDR   0.295920    3.0000    5.2621
+ HC       CT       6L       CT          SHFT_DIHDR   0.295920    3.0000    5.2621
+ HC       CT       6R       CT          SHFT_DIHDR   0.295920    3.0000    5.2621
+ HC       CT       6P       CT          SHFT_DIHDR   0.295920    3.0000    5.2621
+ HC       CT       6I       6i          SHFT_DIHDR   0.295920    3.0000    5.2621
+ HC       CT       6I       CT          SHFT_DIHDR   0.295920    3.0000    5.2621
+ HC       CT       6V       CT          SHFT_DIHDR   0.295920    3.0000    5.2621
+ HC       CT       CT       6K          SHFT_DIHDR   0.295920    3.0000    5.2621
+ HC       CT       CT       CT          SHFT_DIHDR   0.295920    3.0000    5.2621
+ HC       CT       CT       Br          SHFT_DIHDR   0.000000    3.0000    0.0000
+                                                     1.100000    1.0000    0.0000
+ HC       CT       CT       6I          SHFT_DIHDR   0.295920    3.0000    5.2621
+ HC       CT       CT       OH          SHFT_DIHDR   0.000000    3.0000    0.0000
+                                                     0.458300    1.0000    0.1203
+ HC       CT       CT       OS          SHFT_DIHDR   0.000000    3.0000    0.0000
+                                                     0.500000    1.0000    0.0000
+ HC       CT       CT       F           SHFT_DIHDR   0.000000    3.0000    0.0000
+                                                     0.380000    1.0000    0.0000
+ HC       CT       CT       6L          SHFT_DIHDR   0.295920    3.0000    5.2621
+ HC       CT       CT       6k          SHFT_DIHDR   0.295920    3.0000    5.2621
+ HC       CT       CT       Cl          SHFT_DIHDR   0.000000    3.0000    0.0000
+                                                     0.500000    1.0000    0.0000
+ HC       CT       6K       CT          SHFT_DIHDR   0.295920    3.0000    5.2621
+ HC       CT       CM       CM          SHFT_DIHDR   0.760000    3.0000  180.0000
+                                                     2.300000    1.0000    0.0000
+ HC       6I       CT       CT          SHFT_DIHDR   0.295920    3.0000    5.2621
+ HC       6i       6I       CT          SHFT_DIHDR   0.295920    3.0000    5.2621
+ HC       6P       CT       CT          SHFT_DIHDR   0.295920    3.0000    5.2621
+ HC       6R       CT       CT          SHFT_DIHDR   0.295920    3.0000    5.2621
+ HC       6k       CT       CT          SHFT_DIHDR   0.295920    3.0000    5.2621
+ HC       6L       CT       CT          SHFT_DIHDR   0.295920    3.0000    5.2621
+ Br       CT       CT       Br          SHFT_DIHDR   0.000000    3.0000    0.0000
+ 6k       CT       CT       CT          SHFT_DIHDR   0.284300    2.0000  183.4355
+                                                     0.399400    1.0000  168.3091
+ 6k       CT       N        C           SHFT_DIHDR   0.153660    5.0000    0.0000
+ 6k       CT       C        N           SHFT_DIHDR   0.212840    3.0000    0.8109
+                                                     0.387780    1.0000   12.3504
+ F        CT       CT       F           SHFT_DIHDR   0.000000    3.0000    0.0000
+                                                     2.400000    1.0000  180.0000
+ 6e       6E       CT       C           SHFT_DIHDR   0.323440    3.0000    3.8694
+ 6e       6E       CT       N3          SHFT_DIHDR   0.306980    2.0000    5.5055
+                                                     0.639940    1.0000    0.8586
+ 6e       6E       CT       N           SHFT_DIHDR   0.306980    2.0000    5.5055
+                                                     0.639940    1.0000    0.8586
+ 6J       CT       C        N           SHFT_DIHDR   0.212840    3.0000    0.8109
+                                                     0.387780    1.0000   12.3504
+ 6J       CT       N        C           SHFT_DIHDR   0.153660    5.0000    0.0000
+ 6M       CT       C        N           SHFT_DIHDR   0.212840    3.0000    0.8109
+                                                     0.387780    1.0000   12.3504
+ 6M       CT       N        C           SHFT_DIHDR   0.153660    5.0000    0.0000
+ 6K       CT       CT       CT          SHFT_DIHDR   0.284300    2.0000  183.4355
+                                                     0.399400    1.0000  168.3091
+ 6K       CT       N        C           SHFT_DIHDR   0.153660    5.0000    0.0000
+ 6K       CT       C        N           SHFT_DIHDR   0.212840    3.0000    0.8109
+                                                     0.387780    1.0000   12.3504
+ SH       6C       CT       C           SHFT_DIHDR   0.141720    6.0000    3.4041
+                                                     0.000980    4.0000    0.0836
+ SH       6c       CT       C           SHFT_DIHDR   0.144520    6.0000    1.3026
+                                                     0.125360    5.0000    0.7914
+                                                     0.062280    4.0000    0.7919
+ HO       OH       6T       CT          SHFT_DIHDR   0.037680    6.0000    0.1731
+ HO       OH       6T       6t          SHFT_DIHDR   0.314860    5.0000    1.7159
+                                                     0.305040    3.0000    0.7893
+ HO       OH       CT       CT          SHFT_DIHDR   0.320000    3.0000    0.0000
+                                                     0.500000    1.0000    0.0000
+ HO       OH       6S       CT          SHFT_DIHDR   0.283940    4.0000   14.6438
+ HO       OH       C        O           SHFT_DIHDR   4.572820    2.0000  163.4107
+                                                     3.695260    1.0000    1.2491
+ 6d       CT       C        N           SHFT_DIHDR   0.212840    3.0000    0.8109
+                                                     0.387780    1.0000   12.3504
+ 6d       CT       N        C           SHFT_DIHDR   0.153660    5.0000    0.0000
+ H2       CT       OS       LP          SHFT_DIHDR   0.000000    3.0000    0.0000
+END
+#
+INVERSIONS
+ CM       CM       C        CT          IT_JIKL        2.2000  180.0000    2.0000
+ N*       CM       C        CT          IT_JIKL        2.0000  180.0000    2.0000
+ N        CT       C        O           IT_JIKL        2.2000  180.0000    2.0000
+ N        CT       C        H           IT_JIKL        0.5730  180.0000    2.0000
+ CC       CV       6H       NA          IT_JIKL        2.2000  180.0000    2.0000
+ CA       NA       N2       NC          IT_JIKL        2.2000  180.0000    2.0000
+ C        CA       CA       OH          IT_JIKL        2.2083  180.0000    2.0000
+ CA       CA       CA       6F          IT_JIKL        2.1594  180.0000    2.0000
+ CA       CA       CA       6Y          IT_JIKL        2.1594  180.0000    2.0000
+ CA       CA       CA       OH          IT_JIKL        2.2000  180.0000    2.0000
+ CA       CA       CA       CT          IT_JIKL        2.1594  180.0000    2.0000
+ C        O        6d       OH          IT_JIKL       21.0000  180.0000    2.0000
+ C*       6W       CB       CW          IT_JIKL        2.2000  180.0000    2.0000
+ C*       CT       CB       CW          IT_JIKL        2.2000  180.0000    2.0000
+ N*       CK       CB       CT          IT_JIKL        2.0000  180.0000    2.0000
+ CA       N2       CB       NC          IT_JIKL        2.2000  180.0000    2.0000
+ CA       CA       Br       CA          IT_JIKL        2.2000  180.0000    2.0000
+ C        O        6j       OH          IT_JIKL       21.0000  180.0000    2.0000
+ CA       X        X        H4          IT_JIKL        2.2000  180.0000    2.0000
+ CA       X        X        H5          IT_JIKL        2.2000  180.0000    2.0000
+ CA       X        X        HA          IT_JIKL        1.9672  180.0000    2.0000
+ CV       X        X        H4          IT_JIKL        2.1810  180.0000    2.0000
+ NA       X        X        H           IT_JIKL        1.9883  180.0000    2.0000
+ N2       X        X        H           IT_JIKL        1.9704  180.0000    2.0000
+ C        X        X        O           IT_JIKL       20.9267  180.0000    2.0000
+ CM       X        X        HA          IT_JIKL        2.2000  180.0000    2.0000
+ CM       X        X        H4          IT_JIKL        2.2000  180.0000    2.0000
+ CK       X        X        H5          IT_JIKL        2.2000  180.0000    2.0000
+ N        X        X        H           IT_JIKL        0.3855  180.0000    2.0000
+ CQ       X        X        H5          IT_JIKL        2.2000  180.0000    2.0000
+ CR       X        X        H5          IT_JIKL        2.1808  180.0000    2.0000
+ CW       X        X        H4          IT_JIKL        2.1995  180.0000    2.0000
+ N        CT       X        CT          IT_JIKL        1.2100  180.0000    2.0000
+ C        O2       X        O2          IT_JIKL       21.0000  180.0000    2.0000
+ CA       N2       X        N2          IT_JIKL       21.0163  180.0000    2.0000
+ CC       CW       6h       NB          IT_JIKL        2.2000  180.0000    2.0000
+ C        O        CT       OH          IT_JIKL       21.0000  180.0000    2.0000
+ CC       CV       CT       NA          IT_JIKL        2.2000  180.0000    2.0000
+ CC       CW       CT       NB          IT_JIKL        2.2000  180.0000    2.0000
+ CC       CW       CT       NA          IT_JIKL        2.2000  180.0000    2.0000
+ C        O        H5       OH          IT_JIKL        2.2000  180.0000    2.0000
+ C        O        H5       OS          IT_JIKL        2.2000  180.0000    2.0000
+ CC       CW       6+       NA          IT_JIKL        2.2000  180.0000    2.0000
+ CM       CT       CM       HA          IT_JIKL        2.2000  180.0000    2.0000
+ C        H4       CM       O           IT_JIKL        2.2000  180.0000    2.0000
+ CA       N2       CM       NC          IT_JIKL        2.2000  180.0000    2.0000
+END
+#
+COULOMBIC
+ X		X		   CONST-EPS
+END

@@ -1,0 +1,43 @@
+ATOMTYPES
+ OW         O      16.00000  0.0000   0   0   0
+ EP         H       0.00000  0.0000   0   0   0
+ HW         H       1.00800  0.0000   0   0   0
+END
+#
+DIAGONAL_VDW
+ OW          LJ_6_12        3.5543  0.2128
+ EP          LJ_6_12        2.0000  0.0000
+ HW          LJ_6_12        0.0000  0.0000
+END
+#
+ATOM_TYPING_RULES
+END
+#
+OFF_DIAGONAL_VDW
+END
+#
+BOND_STRETCH
+ HW       HW          HARMONIC    1106.0000    1.3712
+ OW       HW          HARMONIC    1106.0000    0.8724
+ OW       EP          HARMONIC    1106.0000    0.1594
+END
+#
+ANGLE_BEND
+ HW       HW       OW          THETA_HARM    0.0000  127.7400
+ HW       OW       HW          THETA_HARM  200.0000  103.6000
+ HW       OW       EP          THETA_HARM    0.0000  120.0000
+END
+#
+UREY_BRADLEY
+END
+#
+TORSIONS
+ X        HW       OW       X           SHFT_DIHDR   0.000000    1.0000    0.0000
+END
+#
+INVERSIONS
+END
+#
+COULOMBIC
+ X		X		   CONST-EPS
+END

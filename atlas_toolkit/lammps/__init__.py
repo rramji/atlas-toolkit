@@ -1,0 +1,1 @@
+"""LAMMPS input file generation."""

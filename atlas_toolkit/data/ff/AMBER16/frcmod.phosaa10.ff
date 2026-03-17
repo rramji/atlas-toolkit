@@ -1,0 +1,184 @@
+VERSION
+ CERIUS2     1
+END
+#
+HEADER
+END
+#
+PREFERENCES
+ BONDS                                 T
+ ANGLES                                T
+ COULOMB                               T
+ INVERSIONS                            T
+ TORSIONS                              T
+ UREY_BRADLEY                          F
+ STRETCH_STRETCH                       F
+ SEPARATED_STRETCH_STRETCH             F
+ STRETCH_BEND_STRETCH                  F
+ BEND_BEND                             F
+ TORSION_STRETCH                       F
+ TORSION_BEND_BEND                     F
+ BEND_TORSION_BEND                     F
+ STRETCH_TORSION_STRETCH               F
+ HYDROGEN_BONDS                        F
+ DIAGONAL_VAN_DER_WAALS                T
+ OFF_DIAGONAL_VAN_DER_WAALS            T
+ GENERATE_UNDEFINED_TERMS              F
+ IGNORE_UNDEFINED_TERMS                F
+ NON-BONDED_3-BODY                     F
+ SHRINK_CH_BONDS                       F
+ SHRINK_CH_H_ATOM                      H__C 
+ SHRINK_CH_FACTOR                         0.91500
+ SINGLE_TORSION                        F
+ SCALE_TORSIONS_ABOUT_COMMON_BOND      F
+ SCALE_BY_N_DEFINED_TORSIONS           T
+ EXOCYCLIC_TORSIONS_SCALE_FACTOR          1.00000
+ SINGLE_INVERSION                      T
+ H-BOND_METHOD                         SPLINE
+ H-BOND_LIST                           T
+ H-BOND_DIRECT_RCUT                       4.00000
+ H-BOND_SPLINE_DISTANCE_ON                4.00000
+ H-BOND_SPLINE_DISTANCE_OFF               4.50000
+ H-BOND_SPLINE_ANGLE_ON                  65.00000
+ H-BOND_SPLINE_ANGLE_OFF                 75.00000
+ H-BOND_LIST_DISTANCE_OFF                 6.50000
+ H-BOND_LIST_ANGLE_OFF                   90.00000
+ NON_BOND_LIST                         T
+ NON_BOND_BUFFER_DISTANCE                 2.00000
+ H-BOND_BUFFER_DISTANCE                   2.00000
+ COU_DIELETRIC_CONSTANT                     1.00000000000000000      
+ COU_INTER_CUT_OFF                       50.00000
+ COU_SPLINE_OFF                          10.00000
+ COU_SPLINE_ON                            9.00000
+ EWALD_SUM_COU_ACCURACY                   0.00100
+ EWALD_SUM_COU_ETA                        2.50000
+ EWALD_SUM_COU_KCUT                       0.50000
+ EWALD_SUM_COU_RCUT                       6.00000
+ EWALD_SUM_COU_AUTO_OPT                T
+ COU_EXCLUDE_1-2                       T
+ COU_EXCLUDE_1-3                       T
+ COU_EXCLUDE_1-4                       F
+ COU_1-4_SCALE_FACTOR                     0.83000
+ COU_METHOD                            EWALD    
+ COU_DIRECT_CUT-OFF                       8.00000
+ VDW_COMBINATION_RULE                  GEOMETRIC
+ VDW_INTER_CUT_OFF                       10.00000
+ VDW_EXCLUDE_1-2                       T
+ VDW_EXCLUDE_1-3                       T
+ VDW_EXCLUDE_1-4                       F
+ VDW_1-4_SCALE_FACTOR                     0.50000
+ VDW_METHOD                            DIRECT    
+ VDW_SPLINE_ON                            9.00000
+ VDW_SPLINE_OFF                          10.00000
+ EWALD_SUM_VDW_AUTO_OPT                T
+ EWALD_SUM_VDW_ACCURACY                   0.00100
+ EWALD_SUM_VDW_ETA                        2.50000
+ EWALD_SUM_VDW_KCUT                       0.50000
+ EWALD_SUM_VDW_RCUT                       6.00000
+ EWALD_SUM_VDW_REP_CUT                    6.00000
+ FAST_EWALD_SUM_RATIO                    10.00000
+ SLOW_EWALD_SUM_RATIO                     5.00000
+ MINIMUM_IMAGE                         F
+ ASSIGN_MASS                           T
+ ASSIGN_CHARGE                         F
+ ASSIGN_HYBRIDIZATION                  F
+ ATOM_TYPE                             T
+ ATOM_TYPE_ALL                         F
+ CALCULATE_BOND_ORDER                  F
+END
+ATOMTYPES
+ OX         O      16.00000  0.0000   0   0   0
+ OR         O      16.00000  0.0000   0   0   0
+ OV         O      16.00000  0.0000   0   0   0
+ OT         O      16.00000  0.0000   0   0   0
+ OZ         O      16.00000  0.0000   0   0   0
+ OP         O      16.00000  0.0000   0   0   0
+ OQ         O      16.00000  0.0000   0   0   0
+END
+#
+DIAGONAL_VDW
+ OX          LJ_6_12        3.6802  0.2100
+ OR          LJ_6_12        3.5436  0.1700
+ OV          LJ_6_12        3.3124  0.1700
+ OT          LJ_6_12        3.2674  0.2100
+ OZ          LJ_6_12        3.7252  0.1700
+ OP          LJ_6_12        3.4986  0.2100
+ OQ          LJ_6_12        3.6182  0.2100
+END
+#
+ATOM_TYPING_RULES
+END
+#
+OFF_DIAGONAL_VDW
+END
+#
+BOND_STRETCH
+ OT       P           HARMONIC    1050.0000    1.4800
+ C        OR          HARMONIC     900.0000    1.3230
+ C        OZ          HARMONIC     900.0000    1.3230
+ C        OV          HARMONIC     900.0000    1.3230
+ CT       OV          HARMONIC     640.0000    1.4100
+ CT       OZ          HARMONIC     640.0000    1.4100
+ CT       OR          HARMONIC     640.0000    1.4100
+ OX       P           HARMONIC    1050.0000    1.4800
+ OR       P           HARMONIC     460.0000    1.6100
+ OV       P           HARMONIC     460.0000    1.6100
+ HO       OQ          HARMONIC    1106.0000    0.9600
+ OP       P           HARMONIC    1050.0000    1.4800
+ OZ       P           HARMONIC     460.0000    1.6100
+ OQ       P           HARMONIC     460.0000    1.6100
+END
+#
+ANGLE_BEND
+ HO       OQ       P           THETA_HARM  200.0000  113.2800
+ CA       C        OV          THETA_HARM  140.0000  120.0000
+ CA       C        OR          THETA_HARM  140.0000  120.0000
+ CA       C        OZ          THETA_HARM  140.0000  120.0000
+ OZ       P        OZ          THETA_HARM  180.0000  102.6000
+ OZ       P        OX          THETA_HARM  200.0000  108.2300
+ OP       P        OP          THETA_HARM  280.0000  119.9000
+ OP       P        OQ          THETA_HARM  180.0000  108.2300
+ OQ       P        OR          THETA_HARM  180.0000  108.2300
+ OQ       P        OQ          THETA_HARM  180.0000  108.2300
+ H1       CT       OV          THETA_HARM  100.0000  109.5000
+ H1       CT       OR          THETA_HARM  100.0000  109.5000
+ H1       CT       OZ          THETA_HARM  100.0000  109.5000
+ OT       P        OT          THETA_HARM  280.0000  119.9000
+ C        OZ       P           THETA_HARM  200.0000  120.5000
+ C        OR       P           THETA_HARM  200.0000  120.5000
+ C        OV       P           THETA_HARM  200.0000  120.5000
+ OX       P        OX          THETA_HARM  280.0000  119.9000
+ CT       OZ       P           THETA_HARM  200.0000  120.5000
+ CT       CT       OZ          THETA_HARM  100.0000  109.5000
+ CT       CT       OR          THETA_HARM  100.0000  109.5000
+ CT       CT       OV          THETA_HARM  100.0000  109.5000
+ CT       OR       P           THETA_HARM  200.0000  120.5000
+ CT       OV       P           THETA_HARM  200.0000  120.5000
+ OR       P        OR          THETA_HARM  180.0000  102.6000
+ OR       P        OP          THETA_HARM  200.0000  108.2300
+ OV       P        OT          THETA_HARM  200.0000  108.2300
+ OV       P        OV          THETA_HARM  180.0000  102.6000
+END
+#
+UREY_BRADLEY
+END
+#
+TORSIONS
+ X        C        OZ       X           SHFT_DIHDR  10.800000    2.0000  180.0000
+ X        C        OR       X           SHFT_DIHDR  10.800000    2.0000  180.0000
+ X        C        OV       X           SHFT_DIHDR  10.800000    2.0000  180.0000
+ X        CT       OV       X           SHFT_DIHDR   2.300000    3.0000    0.0000
+ X        CT       OR       X           SHFT_DIHDR   2.300000    3.0000    0.0000
+ X        CT       OZ       X           SHFT_DIHDR   2.300000    3.0000    0.0000
+ X        OZ       P        X           SHFT_DIHDR   1.500000    3.0000    0.0000
+ X        OR       P        X           SHFT_DIHDR   1.500000    3.0000    0.0000
+ X        OQ       P        X           SHFT_DIHDR   1.500000    3.0000    0.0000
+ X        OV       P        X           SHFT_DIHDR   1.500000    3.0000    0.0000
+END
+#
+INVERSIONS
+END
+#
+COULOMBIC
+ X		X		   CONST-EPS
+END

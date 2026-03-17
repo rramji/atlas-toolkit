@@ -1,0 +1,47 @@
+README for CHARMM topology/parameter files for OPLS-AA (opls.rtf, opls.prm)
+** reference for OPLS-AA for proteins: 
+** Jorgensen, W.L. et al., J. Am. Chem. Soc. 118:11225-11236 (1996) 
+
+Proper usage of these files requires CHARMM software version c28b1 or greater.
+If you are presently using c28b1, please check that you have the latest release,
+as not all of the pertinant code was included in the initial release, but was 
+included in a later bugfix.  Compilation of CHARMM requires that the OPLS
+keyword be included in pref.dat at compile time.  The relevant code has added 
+the ability to combine Lennard-Jones radii with a geometric average, and use 
+V2-Fourier terms for improper dihedrals.  The CHARMM program compiled with the 
+OPLS option in pref.dat can still use all other previously released topology and
+parameter files (CHARMM22, CHARMM19, etc.).
+
+Atom and residue names in the OPLS-AA topology file agree with that in CHARMM22.
+Consequently, any CHARMM script that reads CHARMM22 topology and parameter files
+can be converted to using OPLS-AA by adjusting the appropriate file OPEN
+statements.  The atom types have the OPLS atom type embedded within them for
+easy cross-reference.  For example, type H140 in opls.rtf and opls.prm is 
+type 140 the OPLS-AA parameter files available from Prof. Jorgensen.
+
+The topology and parameter files here include only the protein portion of the
+OPLS-AA force field.  User-defined topology and parameter files are required for
+other functionalities.
+
+While the OPLS-AA topology and parameter files are compatible with all
+functionality within CHARMM that is also compatible with CHARMM22, minimizations
+and simulations with a distance-dependent dielectric (RDIE) is not recommended 
+as collapse of atoms with hydrogens on heteroatoms is possible, causing
+unreasonable structures and energies.  Also, there is no current 
+optimzied parameter set for the linearized form of the Generalized Born equation
+as currently implemented in CHARMM.
+
+Any questions, email priced@scripps.edu
+
+
+**** These files were created in the laboratory of:
+**** Prof. C.L. Brooks III
+**** Dept. of Mol. Biol.
+**** The Scripps Research Institute
+
+**** OPLS-AA is developed in the laboratory of: 
+**** Prof. W.L. Jorgensen
+**** Dept. of Chemistry
+**** Yale University
+
+

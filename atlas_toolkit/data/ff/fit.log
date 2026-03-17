@@ -1,0 +1,67 @@
+
+
+*******************************************************************************
+Fri Jul 27 19:12:20 2018
+
+
+FIT:    data read from "yukawa.dat"
+        format = z
+        x range restricted to [3.00000 : 10.0000]
+        #datapoints = 100
+        residuals are weighted equally (unit weight)
+
+function used for fitting: yukawa(x)
+	yukawa(x)=A*exp(-k*x)/x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A             k            
+   0 1.4936032848e+00   0.00e+00  1.01e-02    1.000000e+00   1.000000e+00
+  55 7.1227470226e-04  -2.13e-01  1.01e-07    8.369672e+01   1.297948e+00
+
+After 55 iterations the fit converged.
+final sum of squares of residuals : 0.000712275
+rel. change during last iteration : -2.13107e-06
+
+degrees of freedom    (FIT_NDF)                        : 98
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00269594
+variance of residuals (reduced chisquare) = WSSR/ndf   : 7.26811e-06
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A               = 83.6967          +/- 1.844        (2.204%)
+k               = 1.29795          +/- 0.006695     (0.5158%)
+
+correlation matrix of the fit parameters:
+                A      k      
+A               1.000 
+k               0.995  1.000 
+
+
+*******************************************************************************
+Fri Jul 27 19:14:54 2018
+
+
+FIT:    data read from "yukawa.dat"
+        format = z
+        #datapoints = 100
+        residuals are weighted equally (unit weight)
+
+function used for fitting: yukawa(x)
+	yukawa(x)=A*exp(-x)/x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   A            
+   0 1.4936032848e+00   0.00e+00  4.05e-03    1.000000e+00
+   3 1.9426806913e-02  -7.44e-06  4.05e-06    3.095965e+01
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 0.0194268
+rel. change during last iteration : -7.43732e-11
+
+degrees of freedom    (FIT_NDF)                        : 99
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0140082
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00019623
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A               = 30.9596          +/- 0.3457       (1.116%)

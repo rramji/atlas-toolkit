@@ -1,0 +1,155 @@
+VERSION
+ CERIUS2     1
+END
+#
+HEADER
+From "Ionic liquids with anions based on fluorosulfonyl derivatives: from asymmetrical substitutions to a consistent force field model", Marrucho et al, PCCP 2017, 19, 29617
+END
+#
+PREFERENCES
+ BONDS                                 T
+ ANGLES                                T
+ COULOMB                               T
+ INVERSIONS                            T
+ TORSIONS                              T
+ UREY_BRADLEY                          F
+ STRETCH_STRETCH                       F
+ SEPARATED_STRETCH_STRETCH             F
+ STRETCH_BEND_STRETCH                  F
+ BEND_BEND                             F
+ TORSION_STRETCH                       F
+ TORSION_BEND_BEND                     F
+ BEND_TORSION_BEND                     F
+ STRETCH_TORSION_STRETCH               F
+ HYDROGEN_BONDS                        F
+ DIAGONAL_VAN_DER_WAALS                T
+ OFF_DIAGONAL_VAN_DER_WAALS            T
+ GENERATE_UNDEFINED_TERMS              F
+ IGNORE_UNDEFINED_TERMS                F
+ NON-BONDED_3-BODY                     F
+ SHRINK_CH_BONDS                       F
+ SHRINK_CH_H_ATOM                      H__C 
+ SHRINK_CH_FACTOR                         0.91500
+ SINGLE_TORSION                        F
+ SCALE_TORSIONS_ABOUT_COMMON_BOND      F
+ SCALE_BY_N_DEFINED_TORSIONS           F
+ EXOCYCLIC_TORSIONS_SCALE_FACTOR          1.00000
+ SINGLE_INVERSION                      T
+ H-BOND_METHOD                         SPLINE
+ H-BOND_LIST                           T
+ H-BOND_DIRECT_RCUT                       4.00000
+ H-BOND_SPLINE_DISTANCE_ON                4.00000
+ H-BOND_SPLINE_DISTANCE_OFF               4.50000
+ H-BOND_SPLINE_ANGLE_ON                  65.00000
+ H-BOND_SPLINE_ANGLE_OFF                 75.00000
+ H-BOND_LIST_DISTANCE_OFF                 6.50000
+ H-BOND_LIST_ANGLE_OFF                   90.00000
+ NON_BOND_LIST                         T
+ NON_BOND_BUFFER_DISTANCE                 2.00000
+ H-BOND_BUFFER_DISTANCE                   2.00000
+ COU_DIELETRIC_CONSTANT                     1.00000000000000000      
+ COU_INTER_CUT_OFF                       50.00000
+ COU_SPLINE_OFF                          10.00000
+ COU_SPLINE_ON                            9.00000
+ EWALD_SUM_COU_ACCURACY                   0.00001
+ EWALD_SUM_COU_ETA                        2.50000
+ EWALD_SUM_COU_KCUT                       0.50000
+ EWALD_SUM_COU_RCUT                       6.00000
+ EWALD_SUM_COU_AUTO_OPT                T
+ COU_EXCLUDE_1-2                       T
+ COU_EXCLUDE_1-3                       T
+ COU_EXCLUDE_1-4                       F
+ COU_1-4_SCALE_FACTOR                     0.50000
+ COU_METHOD                            EWALD    
+ COU_DIRECT_CUT-OFF                      12.00000
+ VDW_COMBINATION_RULE                  GEOMETRIC
+ VDW_INTER_CUT_OFF                        7.00000
+ VDW_EXCLUDE_1-2                       T
+ VDW_EXCLUDE_1-3                       T
+ VDW_EXCLUDE_1-4                       F
+ VDW_1-4_SCALE_FACTOR                     0.50000
+ VDW_METHOD                            DIRECT    
+ VDW_SPLINE_ON                            9.00000
+ VDW_SPLINE_OFF                          10.00000
+ EWALD_SUM_VDW_AUTO_OPT                T
+ EWALD_SUM_VDW_ACCURACY                   0.00001
+ EWALD_SUM_VDW_ETA                        2.50000
+ EWALD_SUM_VDW_KCUT                       0.50000
+ EWALD_SUM_VDW_RCUT                       6.00000
+ EWALD_SUM_VDW_REP_CUT                    6.00000
+ FAST_EWALD_SUM_RATIO                    10.00000
+ SLOW_EWALD_SUM_RATIO                     5.00000
+ MINIMUM_IMAGE                         F
+ ASSIGN_MASS                           T
+ ASSIGN_CHARGE                         T
+ ASSIGN_HYBRIDIZATION                  F
+ ATOM_TYPE                             T
+ ATOM_TYPE_ALL                         F
+ CALCULATE_BOND_ORDER                  F
+END
+#
+ATOMTYPES
+ FSI        F      18.99800 -0.1300   0   0   0 #F atom in FSI
+ FBT        F      18.99800 -0.1600   0   0   0 #F atom in TFSI
+ SBT        S      32.00000  1.0200   4   0   0
+ NBT        N      14.00000 -0.6600   2   0   0
+ OBT        O      15.99900 -0.5300   2   0   0
+ CBT        C      12.00001  0.3500   2   0   0
+END
+#
+DIAGONAL_VDW
+ FSI         LJ_6_12        3.49984 0.061042
+ FBT         LJ_6_12        3.49984 0.061042
+ SBT         LJ_6_12        3.98474 0.250000
+ NBT         LJ_6_12        3.6480  0.170000  
+ OBT         LJ_6_12        3.53576 0.200134  
+ CBT         LJ_6_12        3.92862 0.066000
+END
+#
+ATOM_TYPING_RULES
+END
+#
+#
+OFF_DIAGONAL_VDW
+END
+#
+BOND_STRETCH
+ FSI      SBT         HARMONIC     449.0920    1.5750
+ NBT      SBT         HARMONIC     749.7610    1.5700
+ OBT      SBT         HARMONIC    1274.1400    1.4370
+ CBT      FBT         HARMONIC     883.6042    1.3230
+ CBT      SBT         HARMONIC     470.8413    1.818
+END
+#
+ANGLE_BEND
+ FSI      SBT      NBT         HARMONIC     215.583   103.0000
+ FSI      SBT      OBT         HARMONIC     257.409   104.1000  
+ NBT      SBT      OBT         HARMONIC     188.576   113.6000  
+ OBT      SBT      OBT         HARMONIC     231.597   118.5000  
+ SBT      NBT      SBT         HARMONIC     160.373   125.6000  
+ FBT      CBT      FBT         HARMONIC     186.6634  107.1000
+ OBT      SBT      CBT         HARMONIC     207.935   102.6000
+ FBT      CBT      SBT         HARMONIC     165.867   111.7000
+ NBT      SBT      CBT         HARMONIC     182.600   103.5000
+END
+#
+TORSIONS
+ FSI      SBT      NBT      SBT         OPLS         2.735421  -3.629541   -0.767686   0.000000
+ OBT      SBT      NBT      SBT         OPLS         0.000000   0.000000   -0.003585   0.000000
+ FBT      CBT      SBT      OBT         OPLS         0.000000   0.000000    0.346800   0.000000
+ CBT      SBT      NBT      SBT         OPLS         7.83293   -2.49044    -0.763623   0.000000
+ FBT      CBT      SBT      NBT         OPLS         0.000000   0.000000    0..31500   0.000000
+END
+#
+INVERSIONS
+END
+#
+COULOMBIC
+ X        X           CONST-EPS 
+END
+#
+HYDROGEN_BONDS
+END
+#
+GENERATOR
+END

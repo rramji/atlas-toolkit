@@ -1,0 +1,229 @@
+VERSION
+ CERIUS2     1
+END
+#
+HEADER
+END
+#
+PREFERENCES
+ BONDS                                 T
+ ANGLES                                T
+ COULOMB                               T
+ INVERSIONS                            T
+ TORSIONS                              T
+ UREY_BRADLEY                          F
+ STRETCH_STRETCH                       F
+ SEPARATED_STRETCH_STRETCH             F
+ STRETCH_BEND_STRETCH                  F
+ BEND_BEND                             F
+ TORSION_STRETCH                       F
+ TORSION_BEND_BEND                     F
+ BEND_TORSION_BEND                     F
+ STRETCH_TORSION_STRETCH               F
+ HYDROGEN_BONDS                        F
+ DIAGONAL_VAN_DER_WAALS                T
+ OFF_DIAGONAL_VAN_DER_WAALS            T
+ GENERATE_UNDEFINED_TERMS              F
+ IGNORE_UNDEFINED_TERMS                F
+ NON-BONDED_3-BODY                     F
+ SHRINK_CH_BONDS                       F
+ SHRINK_CH_H_ATOM                      H__C 
+ SHRINK_CH_FACTOR                         0.91500
+ SINGLE_TORSION                        F
+ SCALE_TORSIONS_ABOUT_COMMON_BOND      F
+ SCALE_BY_N_DEFINED_TORSIONS           T
+ EXOCYCLIC_TORSIONS_SCALE_FACTOR          1.00000
+ SINGLE_INVERSION                      T
+ H-BOND_METHOD                         SPLINE
+ H-BOND_LIST                           T
+ H-BOND_DIRECT_RCUT                       4.00000
+ H-BOND_SPLINE_DISTANCE_ON                4.00000
+ H-BOND_SPLINE_DISTANCE_OFF               4.50000
+ H-BOND_SPLINE_ANGLE_ON                  65.00000
+ H-BOND_SPLINE_ANGLE_OFF                 75.00000
+ H-BOND_LIST_DISTANCE_OFF                 6.50000
+ H-BOND_LIST_ANGLE_OFF                   90.00000
+ NON_BOND_LIST                         T
+ NON_BOND_BUFFER_DISTANCE                 2.00000
+ H-BOND_BUFFER_DISTANCE                   2.00000
+ COU_DIELETRIC_CONSTANT                     1.00000000000000000      
+ COU_INTER_CUT_OFF                       50.00000
+ COU_SPLINE_OFF                          10.00000
+ COU_SPLINE_ON                            9.00000
+ EWALD_SUM_COU_ACCURACY                   0.00100
+ EWALD_SUM_COU_ETA                        2.50000
+ EWALD_SUM_COU_KCUT                       0.50000
+ EWALD_SUM_COU_RCUT                       6.00000
+ EWALD_SUM_COU_AUTO_OPT                T
+ COU_EXCLUDE_1-2                       T
+ COU_EXCLUDE_1-3                       T
+ COU_EXCLUDE_1-4                       F
+ COU_1-4_SCALE_FACTOR                     0.83000
+ COU_METHOD                            EWALD    
+ COU_DIRECT_CUT-OFF                       8.00000
+ VDW_COMBINATION_RULE                  GEOMETRIC
+ VDW_INTER_CUT_OFF                       10.00000
+ VDW_EXCLUDE_1-2                       T
+ VDW_EXCLUDE_1-3                       T
+ VDW_EXCLUDE_1-4                       F
+ VDW_1-4_SCALE_FACTOR                     0.50000
+ VDW_METHOD                            DIRECT    
+ VDW_SPLINE_ON                            9.00000
+ VDW_SPLINE_OFF                          10.00000
+ EWALD_SUM_VDW_AUTO_OPT                T
+ EWALD_SUM_VDW_ACCURACY                   0.00100
+ EWALD_SUM_VDW_ETA                        2.50000
+ EWALD_SUM_VDW_KCUT                       0.50000
+ EWALD_SUM_VDW_RCUT                       6.00000
+ EWALD_SUM_VDW_REP_CUT                    6.00000
+ FAST_EWALD_SUM_RATIO                    10.00000
+ SLOW_EWALD_SUM_RATIO                     5.00000
+ MINIMUM_IMAGE                         F
+ ASSIGN_MASS                           T
+ ASSIGN_CHARGE                         F
+ ASSIGN_HYBRIDIZATION                  F
+ ATOM_TYPE                             T
+ ATOM_TYPE_ALL                         F
+ CALCULATE_BOND_ORDER                  F
+END
+ATOMTYPES
+ C2         C      12.01000  0.0000   0   0   0
+ CE         C      12.00100  0.0000   0   0   0
+ C1         C      12.01000  0.0000   0   0   0
+END
+#
+DIAGONAL_VDW
+ C2          LJ_6_12        3.8160  0.0860
+ CE          LJ_6_12        3.8160  0.1094
+ C1          LJ_6_12        3.8160  0.0860
+END
+#
+ATOM_TYPING_RULES
+END
+#
+OFF_DIAGONAL_VDW
+END
+#
+BOND_STRETCH
+ C2       H4          HARMONIC     734.0000    1.0800
+ C2       C2          HARMONIC    1098.0000    1.3500
+ C2       N*          HARMONIC     896.0000    1.3650
+ C2       HA          HARMONIC     734.0000    1.0800
+ C2       CT          HARMONIC     634.0000    1.5100
+ OS       CE          HARMONIC     640.0000    1.4100
+ CE       H1          HARMONIC     680.0000    1.0900
+ CE       CT          HARMONIC     620.0000    1.5260
+ CE       OH          HARMONIC     640.0000    1.4100
+ C1       NB          HARMONIC    1058.0000    1.3040
+ C1       N*          HARMONIC     880.0000    1.3710
+ C1       H5          HARMONIC     734.0000    1.0800
+ C        C2          HARMONIC     820.0000    1.4440
+END
+#
+ANGLE_BEND
+ H4       C2       N*          THETA_HARM  100.0000  119.1000
+ CI       CT       CE          THETA_HARM   80.0000  109.5000
+ C2       C        O           THETA_HARM  160.0000  125.3000
+ C2       C        NA          THETA_HARM  140.0000  114.1000
+ C2       C2       CT          THETA_HARM  140.0000  119.7000
+ C2       C2       N*          THETA_HARM  140.0000  121.2000
+ C2       C2       HA          THETA_HARM  100.0000  119.7000
+ C2       C2       H4          THETA_HARM  100.0000  119.7000
+ C2       N*       CT          THETA_HARM  140.0000  121.2000
+ HC       CT       C2          THETA_HARM  100.0000  109.5000
+ P        OS       CE          THETA_HARM  200.0000  120.5000
+ CB       N*       C1          THETA_HARM  140.0000  105.4000
+ CB       NB       C1          THETA_HARM  140.0000  103.8000
+ CE       OH       HO          THETA_HARM  110.0000  108.5000
+ CE       CT       HC          THETA_HARM  100.0000  109.5000
+ CE       CT       CT          THETA_HARM   80.0000  109.5000
+ CE       CT       OS          THETA_HARM  100.0000  109.5000
+ CE       CT       H1          THETA_HARM  100.0000  109.5000
+ H1       CT       CE          THETA_HARM  100.0000  109.5000
+ H1       CE       CT          THETA_HARM  100.0000  109.5000
+ H1       CE       OH          THETA_HARM  100.0000  109.5000
+ H1       CE       OS          THETA_HARM  100.0000  109.5000
+ C        C2       CT          THETA_HARM  140.0000  119.7000
+ C        C2       HA          THETA_HARM  100.0000  119.7000
+ C        C2       C2          THETA_HARM  126.0000  120.7000
+ C        N*       C2          THETA_HARM  140.0000  121.6000
+ C1       N*       CT          THETA_HARM  140.0000  128.8000
+ N*       C1       NB          THETA_HARM  140.0000  113.9000
+ H5       C1       N*          THETA_HARM  100.0000  123.0500
+ H5       C1       NB          THETA_HARM  100.0000  123.0500
+ CT       CE       CT          THETA_HARM   80.0000  109.5000
+ CT       CE       OH          THETA_HARM  100.0000  109.5000
+ OS       CE       H1          THETA_HARM  100.0000  109.5000
+ OS       CE       CT          THETA_HARM  100.0000  109.5000
+END
+#
+UREY_BRADLEY
+END
+#
+TORSIONS
+ H1       CI       CT       CE          SHFT_DIHDR   0.320000    3.0000    0.0000
+ CT       CE       CT       OS          SHFT_DIHDR   2.400000    1.0000  322.4100
+ CT       CT       CE       CT          SHFT_DIHDR   2.400000    1.0000   38.4500
+ OS       CE       CT       OS          SHFT_DIHDR   0.288000    3.0000    0.0000
+                                                     2.350000    2.0000    0.0000
+ OS       CT       N*       C1          SHFT_DIHDR   0.820000    3.0000  225.4000
+                                                     3.820000    2.0000    0.7000
+                                                     1.820000    1.0000  120.1000
+ OS       CT       N*       C2          SHFT_DIHDR   0.340000    3.0000  210.9000
+                                                     3.340000    2.0000    4.7000
+                                                     1.980000    1.0000  188.0000
+ OS       CT       N*       CM          SHFT_DIHDR   0.520000    3.0000  209.6000
+                                                     3.040000    2.0000    7.8000
+                                                     2.060000    1.0000  184.8000
+ OS       CT       N*       CK          SHFT_DIHDR   0.880000    3.0000  219.8000
+                                                     3.460000    2.0000    4.0000
+                                                     1.620000    1.0000   87.5000
+ OS       P        OS       CE          SHFT_DIHDR   0.643718    1.0000   65.9160
+                                                     1.089200    2.0000    5.4649
+                                                     1.594288    3.0000  295.4528
+ OH       CE       CT       OS          SHFT_DIHDR   0.288000    3.0000    0.0000
+                                                     2.350000    2.0000    0.0000
+ HO       OH       CE       CT          SHFT_DIHDR   2.159866    1.0000  297.7650
+                                                     0.638034    2.0000  200.6104
+                                                     0.109672    3.0000  151.6266
+ HC       CT       C2       C2          SHFT_DIHDR   0.760000    3.0000  180.0000
+                                                     2.300000    1.0000    0.0000
+ X        C1       NB       X           SHFT_DIHDR  40.000000    2.0000  180.0000
+ X        C1       N*       X           SHFT_DIHDR  13.600000    2.0000  180.0000
+ X        C        C2       X           SHFT_DIHDR  17.400000    2.0000  180.0000
+ X        CE       CT       X           SHFT_DIHDR   2.800000    3.0000    0.0000
+ X        CE       OS       X           SHFT_DIHDR   2.300000    3.0000    0.0000
+ X        CE       OH       X           SHFT_DIHDR   1.000000    3.0000    0.0000
+ X        C2       C2       X           SHFT_DIHDR  53.200000    2.0000  180.0000
+ X        C2       N*       X           SHFT_DIHDR  14.800000    2.0000  180.0000
+ X        C2       CT       X           SHFT_DIHDR   0.000000    3.0000    0.0000
+ P        OS       CE       CT          SHFT_DIHDR   2.159866    1.0000  297.7650
+                                                     0.638034    2.0000  200.6104
+                                                     0.109672    3.0000  151.6266
+ C2       C2       C        O           SHFT_DIHDR   4.350000    2.0000  180.0000
+                                                     0.600000    3.0000    0.0000
+ CE       CT       OS       CT          SHFT_DIHDR   0.766600    3.0000    0.0000
+                                                     0.200000    2.0000  180.0000
+ CE       CT       CI       OS          SHFT_DIHDR   2.356080    1.0000  190.9765
+                                                     0.184204    2.0000  295.6328
+                                                     1.925660    3.0000  348.0953
+ CE       CT       CI       OH          SHFT_DIHDR   2.356080    1.0000  190.9765
+                                                     0.184204    2.0000  295.6328
+                                                     1.925660    3.0000  348.0953
+END
+#
+INVERSIONS
+ N*       C2       C        CT          IT_JIKL        2.0000  180.0000    2.0000
+ C2       C2       C        CT          IT_JIKL        2.2000  180.0000    2.0000
+ C1       X        X        H5          IT_JIKL        2.2000  180.0000    2.0000
+ C2       X        X        HA          IT_JIKL        2.2000  180.0000    2.0000
+ C2       X        X        H4          IT_JIKL        2.2000  180.0000    2.0000
+ C2       CT       C2       HA          IT_JIKL        2.2000  180.0000    2.0000
+ C        H4       C2       O           IT_JIKL        2.2000  180.0000    2.0000
+ CA       N2       C2       NC          IT_JIKL        2.2000  180.0000    2.0000
+ N*       C1       CB       CT          IT_JIKL        2.0000  180.0000    2.0000
+END
+#
+COULOMBIC
+ X		X		   CONST-EPS
+END

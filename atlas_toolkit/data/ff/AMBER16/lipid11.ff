@@ -1,0 +1,402 @@
+VERSION
+ CERIUS2     1
+END
+#
+HEADER
+END
+#
+PREFERENCES
+ BONDS                                 T
+ ANGLES                                T
+ COULOMB                               T
+ INVERSIONS                            T
+ TORSIONS                              T
+ UREY_BRADLEY                          F
+ STRETCH_STRETCH                       F
+ SEPARATED_STRETCH_STRETCH             F
+ STRETCH_BEND_STRETCH                  F
+ BEND_BEND                             F
+ TORSION_STRETCH                       F
+ TORSION_BEND_BEND                     F
+ BEND_TORSION_BEND                     F
+ STRETCH_TORSION_STRETCH               F
+ HYDROGEN_BONDS                        F
+ DIAGONAL_VAN_DER_WAALS                T
+ OFF_DIAGONAL_VAN_DER_WAALS            T
+ GENERATE_UNDEFINED_TERMS              F
+ IGNORE_UNDEFINED_TERMS                F
+ NON-BONDED_3-BODY                     F
+ SHRINK_CH_BONDS                       F
+ SHRINK_CH_H_ATOM                      H__C 
+ SHRINK_CH_FACTOR                         0.91500
+ SINGLE_TORSION                        F
+ SCALE_TORSIONS_ABOUT_COMMON_BOND      F
+ SCALE_BY_N_DEFINED_TORSIONS           T
+ EXOCYCLIC_TORSIONS_SCALE_FACTOR          1.00000
+ SINGLE_INVERSION                      T
+ H-BOND_METHOD                         SPLINE
+ H-BOND_LIST                           T
+ H-BOND_DIRECT_RCUT                       4.00000
+ H-BOND_SPLINE_DISTANCE_ON                4.00000
+ H-BOND_SPLINE_DISTANCE_OFF               4.50000
+ H-BOND_SPLINE_ANGLE_ON                  65.00000
+ H-BOND_SPLINE_ANGLE_OFF                 75.00000
+ H-BOND_LIST_DISTANCE_OFF                 6.50000
+ H-BOND_LIST_ANGLE_OFF                   90.00000
+ NON_BOND_LIST                         T
+ NON_BOND_BUFFER_DISTANCE                 2.00000
+ H-BOND_BUFFER_DISTANCE                   2.00000
+ COU_DIELETRIC_CONSTANT                     1.00000000000000000      
+ COU_INTER_CUT_OFF                       50.00000
+ COU_SPLINE_OFF                          10.00000
+ COU_SPLINE_ON                            9.00000
+ EWALD_SUM_COU_ACCURACY                   0.00100
+ EWALD_SUM_COU_ETA                        2.50000
+ EWALD_SUM_COU_KCUT                       0.50000
+ EWALD_SUM_COU_RCUT                       6.00000
+ EWALD_SUM_COU_AUTO_OPT                T
+ COU_EXCLUDE_1-2                       T
+ COU_EXCLUDE_1-3                       T
+ COU_EXCLUDE_1-4                       F
+ COU_1-4_SCALE_FACTOR                     0.83000
+ COU_METHOD                            EWALD    
+ COU_DIRECT_CUT-OFF                       8.00000
+ VDW_COMBINATION_RULE                  GEOMETRIC
+ VDW_INTER_CUT_OFF                       10.00000
+ VDW_EXCLUDE_1-2                       T
+ VDW_EXCLUDE_1-3                       T
+ VDW_EXCLUDE_1-4                       F
+ VDW_1-4_SCALE_FACTOR                     0.50000
+ VDW_METHOD                            DIRECT    
+ VDW_SPLINE_ON                            9.00000
+ VDW_SPLINE_OFF                          10.00000
+ EWALD_SUM_VDW_AUTO_OPT                T
+ EWALD_SUM_VDW_ACCURACY                   0.00100
+ EWALD_SUM_VDW_ETA                        2.50000
+ EWALD_SUM_VDW_KCUT                       0.50000
+ EWALD_SUM_VDW_RCUT                       6.00000
+ EWALD_SUM_VDW_REP_CUT                    6.00000
+ FAST_EWALD_SUM_RATIO                    10.00000
+ SLOW_EWALD_SUM_RATIO                     5.00000
+ MINIMUM_IMAGE                         F
+ ASSIGN_MASS                           T
+ ASSIGN_CHARGE                         F
+ ASSIGN_HYBRIDIZATION                  F
+ ATOM_TYPE                             T
+ ATOM_TYPE_ALL                         F
+ CALCULATE_BOND_ORDER                  F
+END
+ATOMTYPES
+ oC         O      16.00000  0.0000   0   0   0
+ cB         C      12.01000  0.0000   0   0   0
+ oP         O      16.00000  0.0000   0   0   0
+ oO         O      16.00000  0.0000   0   0   0
+ cC         C      12.01000  0.0000   0   0   0
+ oT         O      16.00000  0.0000   0   0   0
+ hE         He      1.00800  0.0000   0   0   0
+ hR         H       1.00800  0.0000   0   0   0
+ hS         Hs      1.00800  0.0000   0   0   0
+ hN         H       1.00800  0.0000   0   0   0
+ nA         Na     14.01000  0.0000   0   0   0
+ hO         Ho      1.00800  0.0000   0   0   0
+ oS         Os     16.00000  0.0000   0   0   0
+ oH         O      16.00000  0.0000   0   0   0
+ oR         O      16.00000  0.0000   0   0   0
+ hB         H       1.00800  0.0000   0   0   0
+ cP         C      12.01000  0.0000   0   0   0
+ cR         Cr     12.01000  0.0000   0   0   0
+ cA         Ca     12.01000  0.0000   0   0   0
+ hA         H       1.00800  0.0000   0   0   0
+ hX         H       1.00800  0.0000   0   0   0
+ pA         Pa     30.97000  0.0000   0   0   0
+END
+#
+DIAGONAL_VDW
+ oC          LJ_6_12        3.3224  0.2100
+ cB          LJ_6_12        3.8160  0.0860
+ oP          LJ_6_12        3.3224  0.2100
+ oO          LJ_6_12        3.3224  0.2100
+ cC          LJ_6_12        3.8160  0.0860
+ oT          LJ_6_12        3.3674  0.1700
+ hE          LJ_6_12        2.7740  0.0157
+ hR          LJ_6_12        0.0000  0.0000
+ hS          LJ_6_12        2.7740  0.0157
+ hN          LJ_6_12        1.2000  0.0157
+ nA          LJ_6_12        3.6480  0.1700
+ hO          LJ_6_12        0.0000  0.0000
+ oS          LJ_6_12        3.3674  0.1700
+ oH          LJ_6_12        3.4420  0.2104
+ oR          LJ_6_12        3.4420  0.2104
+ hB          LJ_6_12        2.9180  0.0150
+ cP          LJ_6_12        3.8160  0.1094
+ cR          LJ_6_12        3.8160  0.1094
+ cA          LJ_6_12        3.8160  0.1094
+ hA          LJ_6_12        2.9740  0.0157
+ hX          LJ_6_12        2.2000  0.0157
+ pA          LJ_6_12        4.2000  0.2000
+END
+#
+ATOM_TYPING_RULES
+END
+#
+OFF_DIAGONAL_VDW
+END
+#
+BOND_STRETCH
+ hN       nA          HARMONIC     738.0000    1.0330
+ hO       oH          HARMONIC     739.2000    0.9740
+ oS       pA          HARMONIC     685.0000    1.6020
+ oH       pA          HARMONIC     642.4000    1.6250
+ oC       pA          HARMONIC     975.4000    1.4810
+ cB       cB          HARMONIC    1179.4000    1.3240
+ cB       hB          HARMONIC     688.6000    1.0870
+ cP       oS          HARMONIC     570.0000    1.4600
+ cP       oT          HARMONIC     570.0000    1.4600
+ cP       hS          HARMONIC     680.0000    1.0900
+ cP       cR          HARMONIC     620.0000    1.5200
+ oP       pA          HARMONIC     975.4000    1.4810
+ cR       cR          HARMONIC     620.0000    1.5200
+ cR       hS          HARMONIC     680.0000    1.0900
+ cR       oR          HARMONIC     640.0000    1.4300
+ cC       oO          HARMONIC    1296.0000    1.2140
+ cC       oS          HARMONIC     822.6000    1.3430
+ cC       oC          HARMONIC    1296.0000    1.2140
+ oT       pA          HARMONIC     685.0000    1.6020
+ cA       hX          HARMONIC     677.4000    1.0910
+ cA       hA          HARMONIC     674.6000    1.0920
+ cA       cA          HARMONIC     606.2000    1.5350
+ cA       hE          HARMONIC     671.8000    1.0930
+ cA       oT          HARMONIC     603.0000    1.4390
+ cA       cC          HARMONIC     656.6000    1.5080
+ cA       oS          HARMONIC     603.0000    1.4390
+ cA       cB          HARMONIC     656.6000    1.5080
+ cA       oH          HARMONIC     628.2000    1.4260
+ cA       nA          HARMONIC     587.2000    1.4990
+ hR       oR          HARMONIC    1106.0000    0.9600
+END
+#
+ANGLE_BEND
+ oH       pA       oT          THETA_HARM  143.5400  102.3700
+ oH       pA       oS          THETA_HARM  143.5400  102.3700
+ hO       oH       pA          THETA_HARM   88.3000  110.1400
+ oS       pA       oS          THETA_HARM  145.0200  101.7700
+ hN       nA       hN          THETA_HARM   81.0400  108.1100
+ cR       cR       hS          THETA_HARM   90.0000  111.0000
+ cR       cR       cR          THETA_HARM   90.0000  113.5000
+ cR       cR       oR          THETA_HARM  140.0000  107.5000
+ cR       cP       oT          THETA_HARM  140.0000  108.5000
+ cR       cP       hS          THETA_HARM   90.0000  111.0000
+ cR       cP       cR          THETA_HARM   90.0000  113.5000
+ cR       cP       oS          THETA_HARM  140.0000  108.5000
+ cR       oR       hR          THETA_HARM  110.0000  109.5000
+ cP       cR       cR          THETA_HARM   90.0000  113.5000
+ cP       cR       hS          THETA_HARM   90.0000  111.0000
+ cP       cR       oR          THETA_HARM  140.0000  108.5000
+ cP       oT       pA          THETA_HARM  100.0000  119.0000
+ cP       oS       pA          THETA_HARM  100.0000  119.0000
+ cA       oS       cC          THETA_HARM  127.2600  115.1400
+ cA       oS       pA          THETA_HARM  124.0000  118.0000
+ cA       oH       hO          THETA_HARM   94.1800  108.1600
+ cA       cB       cB          THETA_HARM  128.6600  123.4200
+ cA       cB       hB          THETA_HARM   91.3200  117.3000
+ cA       cB       cA          THETA_HARM  125.4000  116.5200
+ cA       nA       cA          THETA_HARM  125.6800  110.6400
+ cA       nA       hN          THETA_HARM   92.3800  110.1100
+ cA       cA       nA          THETA_HARM  128.9000  114.3200
+ cA       cA       cB          THETA_HARM  127.0600  111.4400
+ cA       cA       oS          THETA_HARM  135.5600  108.4200
+ cA       cA       oH          THETA_HARM  135.4400  109.4300
+ cA       cA       oT          THETA_HARM  135.5600  108.4200
+ cA       cA       cC          THETA_HARM  127.5800  110.5300
+ cA       cA       cA          THETA_HARM  126.4200  110.6300
+ cA       cA       hE          THETA_HARM   92.7200  110.0700
+ cA       cA       hX          THETA_HARM   92.0400  111.7400
+ cA       cA       hA          THETA_HARM   92.7400  110.0500
+ cA       cC       oO          THETA_HARM  136.0600  123.1100
+ cA       cC       oC          THETA_HARM  136.0600  123.1100
+ cA       cC       oS          THETA_HARM  138.5200  111.9600
+ cA       oT       pA          THETA_HARM  124.0000  118.0000
+ hX       cA       nA          THETA_HARM   98.0400  107.9100
+ hX       cA       hX          THETA_HARM   78.0800  110.7400
+ hA       cA       hA          THETA_HARM   78.8600  108.3500
+ oC       pA       oS          THETA_HARM  140.6800  116.0900
+ oC       pA       oC          THETA_HARM  147.0600  115.8000
+ oC       pA       oH          THETA_HARM  139.9600  115.2600
+ oC       cC       oS          THETA_HARM  151.8600  123.3300
+ oC       cC       oC          THETA_HARM  156.3400  130.3800
+ cB       cB       hB          THETA_HARM  100.0800  120.9400
+ cB       cA       cB          THETA_HARM  127.8600  112.0800
+ cB       cA       hA          THETA_HARM   94.0600  110.4900
+ oT       pA       oT          THETA_HARM  145.0200  101.7700
+ cC       cA       nA          THETA_HARM  130.1400  114.2100
+ cC       cA       hA          THETA_HARM   94.4000  109.6800
+ cC       cA       hX          THETA_HARM   94.4600  109.5400
+ oO       cC       oO          THETA_HARM  156.3400  130.3800
+ oP       pA       oT          THETA_HARM  140.6800  116.0900
+ oP       pA       oP          THETA_HARM  147.0600  115.8000
+ oP       pA       oH          THETA_HARM  139.9600  115.2600
+ hE       cA       oT          THETA_HARM  101.6800  108.8200
+ hE       cA       oS          THETA_HARM  101.6800  108.8200
+ hE       cA       oH          THETA_HARM  101.9400  109.8800
+ hE       cA       hE          THETA_HARM   78.3600  109.5500
+ hS       cP       oT          THETA_HARM  120.0000  110.0000
+ hS       cP       oS          THETA_HARM  120.0000  110.0000
+ hS       cR       oR          THETA_HARM  120.0000  110.0000
+END
+#
+UREY_BRADLEY
+END
+#
+TORSIONS
+ hA       cA       cA       hA          SHFT_DIHDR   0.300000    3.0000    0.0000
+ hA       cA       cA       oH          SHFT_DIHDR   0.000000    3.0000    0.0000
+                                                     0.500000    1.0000    0.0000
+ hA       cA       cA       hE          SHFT_DIHDR   0.311200    3.0000    0.0000
+ hA       cA       cB       cB          SHFT_DIHDR   0.760000    3.0000  180.0000
+                                                     2.300000    1.0000    0.0000
+ hA       cA       cB       hB          SHFT_DIHDR   0.000000    2.0000    0.0000
+ hA       cA       cC       oC          SHFT_DIHDR   1.600000    1.0000    0.0000
+                                                     0.160000    3.0000  180.0000
+ hA       cA       cC       oS          SHFT_DIHDR   0.000000    2.0000  180.0000
+ hX       cA       cA       oT          SHFT_DIHDR   0.311200    3.0000    0.0000
+ hX       cA       cA       oS          SHFT_DIHDR   0.311200    3.0000    0.0000
+ hX       cA       cC       oO          SHFT_DIHDR   0.000000    2.0000  180.0000
+ hX       cA       cC       oC          SHFT_DIHDR   0.000000    2.0000  180.0000
+ cA       cC       oS       cA          SHFT_DIHDR   5.400000    2.0000  180.0000
+ cA       oT       pA       oH          SHFT_DIHDR   0.500000    3.0000    0.0000
+                                                     2.400000    2.0000    0.0000
+ cA       oT       pA       oT          SHFT_DIHDR   0.500000    3.0000    0.0000
+                                                     2.400000    2.0000    0.0000
+ cA       oT       pA       oP          SHFT_DIHDR   1.600000    2.0000    0.0000
+                                                     1.600000    2.0000    0.0000
+ cA       oS       cC       oS          SHFT_DIHDR   5.400000    2.0000  180.0000
+ cA       oS       cC       oC          SHFT_DIHDR   5.400000    2.0000  180.0000
+                                                     2.800000    1.0000  180.0000
+ cA       oS       pA       oH          SHFT_DIHDR   0.500000    3.0000    0.0000
+                                                     2.400000    2.0000    0.0000
+ cA       oS       pA       oS          SHFT_DIHDR   0.500000    3.0000    0.0000
+                                                     2.400000    2.0000    0.0000
+ cA       oS       pA       oC          SHFT_DIHDR   1.600000    2.0000    0.0000
+ cA       cB       cB       cA          SHFT_DIHDR  13.300000    2.0000  180.0000
+                                                     3.800000    1.0000  180.0000
+ cA       cB       cB       hB          SHFT_DIHDR  13.300000    2.0000  180.0000
+ cA       cB       cA       hA          SHFT_DIHDR   0.000000    2.0000    0.0000
+ cA       nA       cA       hX          SHFT_DIHDR   0.311200    3.0000    0.0000
+ cA       cA       cC       oO          SHFT_DIHDR   0.000000    2.0000  180.0000
+ cA       cA       cC       oC          SHFT_DIHDR   0.000000    2.0000  180.0000
+ cA       cA       cC       oS          SHFT_DIHDR   0.000000    2.0000  180.0000
+ cA       cA       oT       pA          SHFT_DIHDR   0.766600    3.0000    0.0000
+ cA       cA       nA       cA          SHFT_DIHDR   0.311200    3.0000    0.0000
+ cA       cA       nA       hN          SHFT_DIHDR   0.311200    3.0000    0.0000
+ cA       cA       cA       cA          SHFT_DIHDR   0.360000    3.0000    0.0000
+                                                     0.500000    2.0000  180.0000
+                                                     0.400000    1.0000  180.0000
+ cA       cA       cA       hE          SHFT_DIHDR   0.311200    3.0000    0.0000
+ cA       cA       cA       oS          SHFT_DIHDR   0.311200    3.0000    0.0000
+ cA       cA       cA       oH          SHFT_DIHDR   0.311200    3.0000    0.0000
+ cA       cA       cA       oT          SHFT_DIHDR   0.311200    3.0000    0.0000
+ cA       cA       cA       hA          SHFT_DIHDR   0.320000    3.0000    0.0000
+ cA       cA       cA       cC          SHFT_DIHDR   0.311200    3.0000    0.0000
+ cA       cA       oS       cC          SHFT_DIHDR   0.766000    3.0000    0.0000
+                                                     1.600000    1.0000  180.0000
+ cA       cA       oS       pA          SHFT_DIHDR   0.766600    3.0000    0.0000
+ cA       cA       cB       hB          SHFT_DIHDR   0.000000    2.0000    0.0000
+ cA       cA       cB       cB          SHFT_DIHDR   0.000000    2.0000    0.0000
+ cA       cA       cB       cA          SHFT_DIHDR   0.000000    2.0000    0.0000
+ cA       cA       oH       hO          SHFT_DIHDR   0.320000    3.0000    0.0000
+                                                     0.500000    1.0000    0.0000
+ cP       oS       pA       oS          SHFT_DIHDR   1.000000    3.0000    0.0000
+                                                     1.400000    2.0000    0.0000
+ cP       oS       pA       oC          SHFT_DIHDR   0.200000    3.0000    0.0000
+                                                     0.200000    1.0000    0.0000
+ cP       cR       cR       oR          SHFT_DIHDR   0.200000    3.0000    0.0000
+ cP       cR       cR       cR          SHFT_DIHDR   0.900000    1.0000    0.0000
+ cP       cR       cR       hS          SHFT_DIHDR   0.300000    3.0000    0.0000
+ cP       cR       oR       hR          SHFT_DIHDR   0.360000    3.0000    0.0000
+ cP       oT       pA       oT          SHFT_DIHDR   1.000000    3.0000    0.0000
+                                                     1.400000    2.0000    0.0000
+ cP       oT       pA       oP          SHFT_DIHDR   0.200000    3.0000    0.0000
+                                                     0.200000    1.0000    0.0000
+ cR       cP       oT       pA          SHFT_DIHDR   0.200000    3.0000    0.0000
+                                                     0.100000    2.0000    0.0000
+ cR       cP       oS       pA          SHFT_DIHDR   0.200000    3.0000    0.0000
+                                                     0.100000    2.0000    0.0000
+ cR       cR       oR       hR          SHFT_DIHDR   0.360000    3.0000    0.0000
+ cR       cR       cR       oR          SHFT_DIHDR   0.200000    3.0000    0.0000
+ cR       cR       cR       cR          SHFT_DIHDR   0.900000    1.0000    0.0000
+ cR       cR       cP       cR          SHFT_DIHDR   0.900000    1.0000    0.0000
+ cR       cR       cP       hS          SHFT_DIHDR   0.300000    3.0000    0.0000
+ nA       cA       cC       oC          SHFT_DIHDR   0.000000    2.0000  180.0000
+ nA       cA       cC       oO          SHFT_DIHDR   0.000000    2.0000  180.0000
+ nA       cA       cA       oS          SHFT_DIHDR   0.311200    3.0000    0.0000
+ nA       cA       cA       oT          SHFT_DIHDR   0.311200    3.0000    0.0000
+ hN       nA       cA       hX          SHFT_DIHDR   0.311200    3.0000    0.0000
+ oS       cA       cA       oS          SHFT_DIHDR   0.288000    3.0000    0.0000
+                                                     2.350000    2.0000    0.0000
+ hO       oH       pA       oS          SHFT_DIHDR   1.066600    3.0000    0.0000
+ hO       oH       pA       oC          SHFT_DIHDR   1.066600    3.0000    0.0000
+ hO       oH       pA       oP          SHFT_DIHDR   1.066600    3.0000    0.0000
+ hO       oH       pA       oT          SHFT_DIHDR   1.066600    3.0000    0.0000
+ oH       cA       cA       oT          SHFT_DIHDR   0.288000    3.0000    0.0000
+                                                     2.350000    2.0000    0.0000
+ oH       cA       cA       oH          SHFT_DIHDR   0.288000    3.0000    0.0000
+                                                     2.350000    2.0000    0.0000
+ oH       cA       cA       oS          SHFT_DIHDR   0.288000    3.0000    0.0000
+                                                     2.350000    2.0000    0.0000
+ oR       cR       cP       oS          SHFT_DIHDR   0.500000    2.0000    0.0000
+ oR       cR       cP       oT          SHFT_DIHDR   0.500000    2.0000    0.0000
+ oR       cR       cP       hS          SHFT_DIHDR   0.100000    3.0000    0.0000
+ oR       cR       cR       oR          SHFT_DIHDR   1.900000    2.0000    0.0000
+                                                     1.100000    3.0000    0.0000
+ hB       cB       cB       hB          SHFT_DIHDR  13.300000    2.0000  180.0000
+ hS       cP       oS       pA          SHFT_DIHDR   0.140000    3.0000    0.0000
+ hS       cP       cR       hS          SHFT_DIHDR   0.340000    3.0000    0.0000
+ hS       cP       oT       pA          SHFT_DIHDR   0.140000    3.0000    0.0000
+ hS       cR       cP       oT          SHFT_DIHDR   0.100000    3.0000    0.0000
+                                                     0.100000    3.0000    0.0000
+ hS       cR       cP       cR          SHFT_DIHDR   0.300000    3.0000    0.0000
+ hS       cR       cP       oS          SHFT_DIHDR   0.100000    3.0000    0.0000
+ hS       cR       cR       oR          SHFT_DIHDR   0.100000    3.0000    0.0000
+ hS       cR       cR       cR          SHFT_DIHDR   0.300000    3.0000    0.0000
+ hS       cR       cR       hS          SHFT_DIHDR   0.340000    3.0000    0.0000
+ hE       cA       cA       hX          SHFT_DIHDR   0.311200    3.0000    0.0000
+ hE       cA       cA       oT          SHFT_DIHDR   0.000000    3.0000    0.0000
+                                                     0.500000    1.0000    0.0000
+ hE       cA       cA       nA          SHFT_DIHDR   0.311200    3.0000    0.0000
+ hE       cA       cA       hE          SHFT_DIHDR   0.311200    3.0000    0.0000
+ hE       cA       cA       oS          SHFT_DIHDR   0.000000    3.0000    0.0000
+                                                     0.500000    1.0000    0.0000
+ hE       cA       cA       oH          SHFT_DIHDR   0.000000    3.0000    0.0000
+                                                     0.500000    1.0000    0.0000
+ hE       cA       oS       pA          SHFT_DIHDR   0.766600    3.0000    0.0000
+ hE       cA       oH       hO          SHFT_DIHDR   1.000000    3.0000    0.0000
+ hE       cA       oT       pA          SHFT_DIHDR   0.766600    3.0000    0.0000
+ hR       oR       cR       hS          SHFT_DIHDR   0.360000    3.0000    0.0000
+ cC       oS       cA       hE          SHFT_DIHDR   0.766600    3.0000    0.0000
+ cC       cA       cA       oT          SHFT_DIHDR   0.311200    3.0000    0.0000
+ cC       cA       cA       hA          SHFT_DIHDR   0.311200    3.0000    0.0000
+ cC       cA       cA       oS          SHFT_DIHDR   0.311200    3.0000    0.0000
+ cC       cA       cA       cB          SHFT_DIHDR   0.311200    3.0000    0.0000
+ cC       cA       cA       hE          SHFT_DIHDR   0.311200    3.0000    0.0000
+ cC       cA       nA       hN          SHFT_DIHDR   0.311200    3.0000    0.0000
+ oT       cA       cA       oS          SHFT_DIHDR   0.288000    3.0000    0.0000
+                                                     2.350000    2.0000    0.0000
+ oC       pA       oH       hO          SHFT_DIHDR   1.066600    3.0000    0.0000
+ cB       cA       cB       hB          SHFT_DIHDR   0.000000    2.0000    0.0000
+ cB       cA       cB       cB          SHFT_DIHDR   0.000000    2.0000    0.0000
+ cB       cA       cA       oH          SHFT_DIHDR   0.311200    3.0000    0.0000
+ cB       cA       cA       cA          SHFT_DIHDR   0.311200    3.0000    0.0000
+ cB       cA       cA       hE          SHFT_DIHDR   0.311200    3.0000    0.0000
+ cB       cA       cA       hA          SHFT_DIHDR   0.311200    3.0000    0.0000
+END
+#
+INVERSIONS
+ cC       oC       cA       oC          IT_JIKL        2.2000  180.0000    2.0000
+ cC       oC       cA       oS          IT_JIKL       21.0000  180.0000    2.0000
+ cB       cA       cB       hB          IT_JIKL        2.2000  180.0000    2.0000
+ cB       cA       cB       cA          IT_JIKL        2.2000  180.0000    2.0000
+END
+#
+COULOMBIC
+ X		X		   CONST-EPS
+END

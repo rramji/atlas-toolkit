@@ -1,0 +1,142 @@
+VERSION
+ CERIUS2     1
+END
+#
+HEADER
+END
+#
+PREFERENCES
+ BONDS                                 T
+ ANGLES                                T
+ COULOMB                               T
+ INVERSIONS                            T
+ TORSIONS                              T
+ UREY_BRADLEY                          F
+ STRETCH_STRETCH                       T
+ SEPARATED_STRETCH_STRETCH             F
+ STRETCH_BEND_STRETCH                  T
+ BEND_BEND                             T
+ TORSION_STRETCH                       F
+ TORSION_BEND_BEND                     F
+ BEND_TORSION_BEND                     F
+ STRETCH_TORSION_STRETCH               F
+ HYDROGEN_BONDS                        F
+ DIAGONAL_VAN_DER_WAALS                T
+ OFF_DIAGONAL_VAN_DER_WAALS            T
+ IGNORE_UNDEFINED_TERMS                T
+ NON-BONDED_3-BODY                     F
+ SHRINK_CH_BONDS                       F
+ SHRINK_CH_H_ATOM                      H__C 
+ SHRINK_CH_FACTOR                         0.91500
+ SINGLE_TORSION                        F
+ SCALE_TORSIONS_ABOUT_COMMON_BOND      T
+ SCALE_BY_N_DEFINED_TORSIONS           T
+ EXOCYCLIC_TORSIONS_SCALE_FACTOR          0.40000
+ SINGLE_INVERSION                      F
+ H-BOND_METHOD                         SPLINE
+ H-BOND_LIST                           T
+ H-BOND_DIRECT_RCUT                       4.00000
+ H-BOND_SPLINE_DISTANCE_ON                4.00000
+ H-BOND_SPLINE_DISTANCE_OFF               4.50000
+ H-BOND_SPLINE_ANGLE_ON                  65.00000
+ H-BOND_SPLINE_ANGLE_OFF                 75.00000
+ H-BOND_LIST_DISTANCE_OFF                 6.50000
+ H-BOND_LIST_ANGLE_OFF                   90.00000
+ NB_NEIGHBOUR_SEARCH_METHOD            LIST                          
+ NON_BOND_BUFFER_DISTANCE                 2.00000
+ H-BOND_BUFFER_DISTANCE                   2.00000
+ COU_DIELETRIC_CONSTANT                     1.00000000000000000      
+ COU_INTER_CUT_OFF                      999.00000
+ COU_SPLINE_OFF                         999.50000
+ COU_SPLINE_ON                          999.00000
+ EWALD_SUM_COU_ACCURACY                   0.01000
+ EWALD_SUM_COU_ETA                        2.32100
+ EWALD_SUM_COU_KCUT                       0.50200
+ EWALD_SUM_COU_RCUT                       6.73000
+ EWALD_SUM_COU_OPTIMIZE                SMART                         
+ COU_EXCLUDE_1-2                       T
+ COU_EXCLUDE_1-3                       T
+ COU_EXCLUDE_1-4                       F
+ COU_1-4_SCALE_FACTOR                     1.00000
+ COU_METHOD                            EWALD                         
+ COU_DIRECT_CUT-OFF                     999.00000
+ VDW_COMBINATION_RULE                  GEOMETRIC                     
+ VDW_INTER_CUT_OFF                      999.00000
+ VDW_EXCLUDE_1-2                       T
+ VDW_EXCLUDE_1-3                       T
+ VDW_EXCLUDE_1-4                       F
+ VDW_1-4_SCALE_FACTOR                     1.00000
+ VDW_METHOD                            EWALD                         
+ VDW_SPLINE_ON                          999.00000
+ VDW_SPLINE_OFF                         999.50000
+ EWALD_SUM_VDW_OPTIMIZE                SMART                         
+ EWALD_SUM_VDW_ACCURACY                   0.01000
+ EWALD_SUM_VDW_ETA                        2.60000
+ EWALD_SUM_VDW_KCUT                       0.45000
+ EWALD_SUM_VDW_RCUT                       7.10000
+ EWALD_SUM_VDW_REP_CUT                    5.97000
+ FAST_EWALD_SUM_RATIO                    10.00000
+ SLOW_EWALD_SUM_RATIO                     5.00000
+ MINIMUM_IMAGE                         F
+ ASSIGN_MASS                           T
+ ASSIGN_CHARGE                         F
+ ASSIGN_HYBRIDIZATION                  F
+ ASSIGN_VALBOND_CENTER                 F
+ ATOM_TYPE                             T
+ ATOM_TYPE_ALL                         T
+ CALCULATE_BOND_ORDER                  F
+END
+#
+ATOMTYPES
+ Si3        Si     28.08550  0.7679   3   0   0
+ N_3        N      14.00670 -0.5759   3   0   0
+END
+#
+DIAGONAL_VDW
+ Si3         EXPO_6        4.179999828338623       0.3100000023841858        12.00000000000000    
+ N_3         EXPO_6        3.994999885559082       0.1899999976158142        12.00000000000000    
+END
+#
+ATOM_TYPING_RULES
+ N_3             Si           3           0           0           1
+ Si3             N            3           0           0           1
+END
+#
+#
+OFF_DIAGONAL_VDW
+END
+#
+BOND_STRETCH
+ N_3      Si3         MORSE        528.0125    1.7785  105.0000  105.0000               
+END
+#
+ANGLE_BEND
+ N_3      N_3      Si3         COS_HARMON    54.6706  120.1804               
+ N_3      Si3      N_3         COS_HARMON   106.1720  113.7037               
+END
+#
+TORSIONS
+ Si3      N_3      Si3      N_3         DIHEDRAL       0.5575    3.0000   -1.0000               
+END
+#
+INVERSIONS
+ Si3      N_3      N_3      N_3         UMBRELLA      47.2143    0.0000               
+END
+#
+STRETCH_BEND_STRETCH
+ Si3      N_3      Si3         r-cosine     -18.8965  -18.8965               
+ N_3      Si3      N_3         r-cosine     -54.7625  -54.7625               
+END
+#
+STRETCH_STRETCH
+ Si3      N_3      Si3         r-r           49.0204               
+ N_3      Si3      N_3         r-r          -13.2418               
+END
+#
+BEND_BEND
+ Si3      N_3      N_3      N_3         cosine2       -0.1558               
+END
+#
+COULOMBIC
+ X        X           LIN-R-EPS 
+END

@@ -1,0 +1,249 @@
+VERSION
+ CERIUS2     1
+END
+#
+HEADER
+END
+#
+PREFERENCES
+ BONDS                                 T
+ ANGLES                                T
+ COULOMB                               T
+ INVERSIONS                            T
+ TORSIONS                              T
+ UREY_BRADLEY                          F
+ STRETCH_STRETCH                       F
+ SEPARATED_STRETCH_STRETCH             F
+ STRETCH_BEND_STRETCH                  F
+ BEND_BEND                             F
+ TORSION_STRETCH                       F
+ TORSION_BEND_BEND                     F
+ BEND_TORSION_BEND                     F
+ STRETCH_TORSION_STRETCH               F
+ HYDROGEN_BONDS                        F
+ DIAGONAL_VAN_DER_WAALS                T
+ OFF_DIAGONAL_VAN_DER_WAALS            T
+ GENERATE_UNDEFINED_TERMS              F
+ IGNORE_UNDEFINED_TERMS                F
+ NON-BONDED_3-BODY                     F
+ SHRINK_CH_BONDS                       F
+ SHRINK_CH_H_ATOM                      H__C 
+ SHRINK_CH_FACTOR                         0.91500
+ SINGLE_TORSION                        F
+ SCALE_TORSIONS_ABOUT_COMMON_BOND      F
+ SCALE_BY_N_DEFINED_TORSIONS           T
+ EXOCYCLIC_TORSIONS_SCALE_FACTOR          1.00000
+ SINGLE_INVERSION                      T
+ H-BOND_METHOD                         SPLINE
+ H-BOND_LIST                           T
+ H-BOND_DIRECT_RCUT                       4.00000
+ H-BOND_SPLINE_DISTANCE_ON                4.00000
+ H-BOND_SPLINE_DISTANCE_OFF               4.50000
+ H-BOND_SPLINE_ANGLE_ON                  65.00000
+ H-BOND_SPLINE_ANGLE_OFF                 75.00000
+ H-BOND_LIST_DISTANCE_OFF                 6.50000
+ H-BOND_LIST_ANGLE_OFF                   90.00000
+ NON_BOND_LIST                         T
+ NON_BOND_BUFFER_DISTANCE                 2.00000
+ H-BOND_BUFFER_DISTANCE                   2.00000
+ COU_DIELETRIC_CONSTANT                     1.00000000000000000      
+ COU_INTER_CUT_OFF                       50.00000
+ COU_SPLINE_OFF                          10.00000
+ COU_SPLINE_ON                            9.00000
+ EWALD_SUM_COU_ACCURACY                   0.00100
+ EWALD_SUM_COU_ETA                        2.50000
+ EWALD_SUM_COU_KCUT                       0.50000
+ EWALD_SUM_COU_RCUT                       6.00000
+ EWALD_SUM_COU_AUTO_OPT                T
+ COU_EXCLUDE_1-2                       T
+ COU_EXCLUDE_1-3                       T
+ COU_EXCLUDE_1-4                       F
+ COU_1-4_SCALE_FACTOR                     0.83000
+ COU_METHOD                            EWALD    
+ COU_DIRECT_CUT-OFF                       8.00000
+ VDW_COMBINATION_RULE                  GEOMETRIC
+ VDW_INTER_CUT_OFF                       10.00000
+ VDW_EXCLUDE_1-2                       T
+ VDW_EXCLUDE_1-3                       T
+ VDW_EXCLUDE_1-4                       F
+ VDW_1-4_SCALE_FACTOR                     0.50000
+ VDW_METHOD                            DIRECT    
+ VDW_SPLINE_ON                            9.00000
+ VDW_SPLINE_OFF                          10.00000
+ EWALD_SUM_VDW_AUTO_OPT                T
+ EWALD_SUM_VDW_ACCURACY                   0.00100
+ EWALD_SUM_VDW_ETA                        2.50000
+ EWALD_SUM_VDW_KCUT                       0.50000
+ EWALD_SUM_VDW_RCUT                       6.00000
+ EWALD_SUM_VDW_REP_CUT                    6.00000
+ FAST_EWALD_SUM_RATIO                    10.00000
+ SLOW_EWALD_SUM_RATIO                     5.00000
+ MINIMUM_IMAGE                         F
+ ASSIGN_MASS                           T
+ ASSIGN_CHARGE                         F
+ ASSIGN_HYBRIDIZATION                  F
+ ATOM_TYPE                             T
+ ATOM_TYPE_ALL                         F
+ CALCULATE_BOND_ORDER                  F
+END
+ATOMTYPES
+ G1         H      25.00000  0.0000   0   0   0
+ G6         H      25.00000  0.0000   0   0   0
+ P          P      95.00000  0.0000   0   0   0
+ A1         H      26.80000  0.0000   0   0   0
+ CB         C      56.00000  0.0000   0   0   0
+ G3         H      25.00000  0.0000   0   0   0
+ A6         H      26.80000  0.0000   0   0   0
+ C4         C      27.50000  0.0000   0   0   0
+ G9         H      25.00000  0.0000   0   0   0
+ G2         H      25.00000  0.0000   0   0   0
+ C3         C      27.50000  0.0000   0   0   0
+ U4         U      27.75000  0.0000   0   0   0
+ U3         U      27.75000  0.0000   0   0   0
+ U2         U      27.75000  0.0000   0   0   0
+ G7         H      25.00000  0.0000   0   0   0
+ A3         H      26.80000  0.0000   0   0   0
+ A7         H      26.80000  0.0000   0   0   0
+ C2         C      27.50000  0.0000   0   0   0
+END
+#
+DIAGONAL_VDW
+ G1          LJ_6_12        3.6000  0.2000
+ G6          LJ_6_12        3.6000  0.2000
+ P           LJ_6_12        6.0000  0.2000
+ A1          LJ_6_12        3.6000  0.2000
+ CB          LJ_6_12        4.0000  0.2000
+ G3          LJ_6_12        3.6000  0.2000
+ A6          LJ_6_12        3.6000  0.2000
+ C4          LJ_6_12        3.6000  0.2000
+ G9          LJ_6_12        3.6000  0.3000
+ G2          LJ_6_12        3.6000  0.2000
+ C3          LJ_6_12        3.6000  0.2000
+ U4          LJ_6_12        3.6000  0.2000
+ U3          LJ_6_12        3.6000  0.2000
+ U2          LJ_6_12        3.6000  0.2000
+ G7          LJ_6_12        3.6000  0.2000
+ A3          LJ_6_12        3.6000  0.2000
+ A7          LJ_6_12        3.6000  0.2000
+ C2          LJ_6_12        3.6000  0.2000
+END
+#
+ATOM_TYPING_RULES
+END
+#
+OFF_DIAGONAL_VDW
+END
+#
+BOND_STRETCH
+ C1       C4          HARMONIC     200.0000    4.0400
+ U1       U4          HARMONIC     200.0000    4.0400
+ CS       U1          HARMONIC     300.0000    1.4800
+ CS       A9          HARMONIC     300.0000    1.4800
+ CS       C1          HARMONIC     300.0000    1.4800
+ CS       G9          HARMONIC     300.0000    1.4800
+ P        CB          HARMONIC     300.0000    3.9000
+ G6       G1          HARMONIC     200.0000    2.2700
+ G1       G2          HARMONIC     200.0000    2.2900
+ A1       A3          HARMONIC     200.0000    2.3900
+ C4       C3          HARMONIC     200.0000    2.3100
+ G9       G7          HARMONIC     200.0000    2.2500
+ A6       A1          HARMONIC     200.0000    2.3100
+ G2       G3          HARMONIC     200.0000    2.3100
+ CB       CS          HARMONIC     200.0000    2.3500
+ G3       G9          HARMONIC     200.0000    2.4200
+ C3       C2          HARMONIC     200.0000    2.2600
+ U4       U3          HARMONIC     200.0000    2.2700
+ A7       A6          HARMONIC     200.0000    3.0800
+ C2       C1          HARMONIC     200.0000    2.2700
+ U3       U2          HARMONIC     200.0000    2.2800
+ A9       A7          HARMONIC     200.0000    2.2400
+ A3       A9          HARMONIC     200.0000    2.4300
+ U2       U1          HARMONIC     200.0000    2.2900
+ G7       G6          HARMONIC     200.0000    3.0900
+END
+#
+ANGLE_BEND
+ G9       G7       G6          THETA_HARM  100.0000  117.7000
+ C4       C3       C2          THETA_HARM    0.0000  180.0000
+ A6       A1       A3          THETA_HARM  100.0000  123.9000
+ G2       G3       G9          THETA_HARM  100.0000  169.6000
+ G3       G9       G7          THETA_HARM  100.0000  100.3000
+ CB       CS       A9          THETA_HARM   60.0000  122.5000
+ CB       CS       U1          THETA_HARM   60.0000  122.5000
+ CB       CS       G9          THETA_HARM   60.0000  122.5000
+ CB       CS       C1          THETA_HARM   60.0000  122.5000
+ CB       P        CB          THETA_HARM   60.0000  103.0000
+ C1       C4       C3          THETA_HARM  100.0000   30.0000
+ G1       G2       G3          THETA_HARM  100.0000   62.2000
+ G6       G1       G2          THETA_HARM   20.0000  175.1000
+ P        CB       CS          THETA_HARM   60.0000  104.0000
+ P        CB       P           THETA_HARM   44.0000   97.0000
+ U1       U4       U3          THETA_HARM  100.0000   29.5000
+ CS       C1       C4          THETA_HARM    0.0000  180.0000
+ CS       C1       C2          THETA_HARM   90.0000   89.2000
+ CS       G9       G3          THETA_HARM   90.0000   97.9000
+ CS       G9       G7          THETA_HARM   90.0000  161.2000
+ CS       U1       U4          THETA_HARM    0.0000  180.0000
+ CS       U1       U2          THETA_HARM   90.0000   90.8000
+ CS       A9       A3          THETA_HARM   90.0000   99.1000
+ CS       A9       A7          THETA_HARM   90.0000  160.9000
+ A1       A3       A9          THETA_HARM  100.0000  112.1000
+ A7       A6       A1          THETA_HARM  100.0000   85.4000
+ C2       C1       C4          THETA_HARM  100.0000   87.7000
+ U3       U2       U1          THETA_HARM  100.0000   61.8000
+ U2       U1       U4          THETA_HARM  100.0000   87.3000
+ G7       G6       G1          THETA_HARM  100.0000   85.2000
+ A9       A7       A6          THETA_HARM  100.0000  118.9000
+ A3       A9       A7          THETA_HARM  100.0000   99.7000
+ C3       C2       C1          THETA_HARM  100.0000   62.3000
+ U4       U3       U2          THETA_HARM    0.0000  180.0000
+END
+#
+UREY_BRADLEY
+END
+#
+TORSIONS
+ U4       U1       U2       U3          SHFT_DIHDR   4.000000    2.0000  180.0000
+ CB       CS       A9       A3          SHFT_DIHDR   4.000000    2.0000  180.0000
+ CB       CS       U1       U2          SHFT_DIHDR   4.000000    2.0000  180.0000
+ CB       CS       G9       G3          SHFT_DIHDR   4.000000    2.0000  180.0000
+ CB       CS       C1       C2          SHFT_DIHDR   4.000000    2.0000  180.0000
+ A9       A7       A6       A1          SHFT_DIHDR   4.000000    2.0000  180.0000
+ X        A1       A3       X           SHFT_DIHDR   0.000000    2.0000  180.0000
+ X        U1       U4       X           SHFT_DIHDR   0.000000    2.0000  180.0000
+ X        CS       U1       X           SHFT_DIHDR   0.000000    2.0000  180.0000
+ X        CS       A9       X           SHFT_DIHDR   0.000000    2.0000  180.0000
+ X        CS       C1       X           SHFT_DIHDR   0.000000    2.0000  180.0000
+ X        CS       G9       X           SHFT_DIHDR   0.000000    2.0000  180.0000
+ X        P        CB       X           SHFT_DIHDR   0.000000    2.0000  180.0000
+ X        G6       G1       X           SHFT_DIHDR   0.000000    2.0000  180.0000
+ X        G1       G2       X           SHFT_DIHDR   0.000000    2.0000  180.0000
+ X        C1       C4       X           SHFT_DIHDR   0.000000    2.0000  180.0000
+ X        G3       G9       X           SHFT_DIHDR   0.000000    2.0000  180.0000
+ X        C4       C3       X           SHFT_DIHDR   0.000000    2.0000  180.0000
+ X        G9       G7       X           SHFT_DIHDR   0.000000    2.0000  180.0000
+ X        A6       A1       X           SHFT_DIHDR   0.000000    2.0000  180.0000
+ X        G2       G3       X           SHFT_DIHDR   0.000000    2.0000  180.0000
+ X        U4       U3       X           SHFT_DIHDR   0.000000    2.0000  180.0000
+ X        C3       C2       X           SHFT_DIHDR   0.000000    2.0000  180.0000
+ X        A3       A9       X           SHFT_DIHDR   0.000000    2.0000  180.0000
+ X        A9       A7       X           SHFT_DIHDR   0.000000    2.0000  180.0000
+ X        U2       U1       X           SHFT_DIHDR   0.000000    2.0000  180.0000
+ X        G7       G6       X           SHFT_DIHDR   0.000000    2.0000  180.0000
+ X        U3       U2       X           SHFT_DIHDR   0.000000    2.0000  180.0000
+ X        C2       C1       X           SHFT_DIHDR   0.000000    2.0000  180.0000
+ X        A7       A6       X           SHFT_DIHDR   0.000000    2.0000  180.0000
+ CS       U1       U2       U3          SHFT_DIHDR   4.000000    2.0000  180.0000
+ CS       A9       A7       A6          SHFT_DIHDR   4.000000    2.0000  180.0000
+ CS       C1       C2       C3          SHFT_DIHDR   4.000000    2.0000  180.0000
+ CS       G9       G7       G6          SHFT_DIHDR   4.000000    2.0000  180.0000
+ C4       C1       C2       C3          SHFT_DIHDR   4.000000    2.0000  180.0000
+ G9       G7       G6       G1          SHFT_DIHDR   4.000000    2.0000  180.0000
+END
+#
+INVERSIONS
+END
+#
+COULOMBIC
+ X		X		   CONST-EPS
+END
