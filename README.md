@@ -40,6 +40,9 @@ All scripts are available as `atlas-*` entry points after installation.
 | `atlas-create-lammps-input` | `createLammpsInput.pl` | Generate LAMMPS data file + input script from BGF + FF |
 | `atlas-update-bgf-coords` | `convertLammpsTrj.pl` (subset) | Update BGF coords from last frame of a LAMMPS dump |
 | `atlas-convert-lammps-trj` | `convertLammpsTrj.pl` | Convert LAMMPS dump → LAMMPS/AMBER/XYZ/BGF/PDB |
+| `atlas-get-bgf-atoms` | `getBGFAtoms.pl` | Extract atom subset by selection, optionally whole molecules |
+| `atlas-combine-bgf` | `combineBGF.pl` | Merge two or more BGF files into one |
+| `atlas-get-bounds` | `getBounds.pl` | Print XYZ coordinate min/max for selected atoms |
 
 ### Quick examples
 
@@ -170,7 +173,7 @@ pytest tests/ -v -m "not perl_oracle"  # skip Perl comparison tests
 pytest tests/oracle/ -v                # comparison tests only
 ```
 
-**263 tests** passing (248 unit + 15 oracle). Perl oracle/comparison tests are automatically
+**277 tests** passing (262 unit + 15 oracle). Perl oracle/comparison tests are automatically
 skipped when `~/ATLAS-toolkit` is not found or Perl is not installed.
 
 ---
@@ -188,8 +191,9 @@ skipped when `~/ATLAS-toolkit` is not found or Perl is not installed.
 | **5b** LAMMPS input generation | `lammps/topology.py`, `lammps/data_file.py`, `lammps/input_script.py`, `scripts/create_lammps_input.py` | +36 |
 | **5c** `add_box_to_bgf` | `scripts/add_box_to_bgf.py` | +8 |
 | **6** LAMMPS trajectory I/O | `lammps/dump.py`, `scripts/update_bgf_coords.py`, `scripts/convert_lammps_trj.py` | +35 |
+| **7** BGF utilities | `scripts/get_bgf_atoms.py`, `scripts/combine_bgf.py`, `scripts/get_bounds.py`; `core/manip_atoms.get_bounds` | +14 |
 | **Oracle** | `tests/oracle/` — 15 Perl-vs-Python comparison tests (replicate, trim, remove_mols, modify_atom_data, add_box, add_solvent) | +15 |
-| **Total** | | **263** |
+| **Total** | | **277** |
 
 ### Not yet ported
 

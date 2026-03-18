@@ -26,6 +26,9 @@ atlas-add-box-to-bgf = "atlas_toolkit.scripts.add_box_to_bgf:main"
 atlas-create-lammps-input = "atlas_toolkit.scripts.create_lammps_input:main"
 atlas-update-bgf-coords = "atlas_toolkit.scripts.update_bgf_coords:main"
 atlas-convert-lammps-trj = "atlas_toolkit.scripts.convert_lammps_trj:main"
+atlas-get-bgf-atoms = "atlas_toolkit.scripts.get_bgf_atoms:main"
+atlas-combine-bgf = "atlas_toolkit.scripts.combine_bgf:main"
+atlas-get-bounds = "atlas_toolkit.scripts.get_bounds:main"
 
 [tool.pytest.ini_options]
 markers = [

@@ -19,6 +19,7 @@ __all__ = [
     "build_selection",
     "select_atoms",
     "get_atm_data",
+    "get_bounds",
 ]
 
 # ── field names recognised in selection strings ────────────────────────────
@@ -291,6 +292,32 @@ def get_atm_data(atoms: AtomsDict, index_set: dict) -> AtomsDict:
     Does NOT deep-copy — shares the underlying atom dicts.
     """
     return {idx: atoms[idx] for idx in index_set if idx in atoms}
+
+
+def get_bounds(atoms: AtomsDict, selection: dict | None = None) -> dict:
+    """Return coordinate min/max for selected atoms.
+
+    Port of getBounds.pl::getBounds.
+
+    Parameters
+    ----------
+    atoms     : full atoms dict
+    selection : keys to include (default: all atoms)
+
+    Returns
+    -------
+    {"X": {"min": float, "max": float}, "Y": ..., "Z": ...}
+    """
+    keys = list(selection) if selection is not None else list(atoms)
+    result: dict = {}
+    for dim in ("X", "Y", "Z"):
+        coord = f"{dim}COORD"
+        vals = [float(atoms[k][coord]) for k in keys if k in atoms]
+        if vals:
+            result[dim] = {"min": min(vals), "max": max(vals)}
+        else:
+            result[dim] = {"min": 0.0, "max": 0.0}
+    return result
 
 
 # ── periodic image repair ────────────────────────────────────────────────────
