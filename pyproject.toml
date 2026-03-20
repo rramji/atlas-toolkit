@@ -29,6 +29,7 @@ atlas-convert-lammps-trj = "atlas_toolkit.scripts.convert_lammps_trj:main"
 atlas-get-bgf-atoms = "atlas_toolkit.scripts.get_bgf_atoms:main"
 atlas-combine-bgf = "atlas_toolkit.scripts.combine_bgf:main"
 atlas-get-bounds = "atlas_toolkit.scripts.get_bounds:main"
+atlas-bgf-to-mol2 = "atlas_toolkit.scripts.bgf_to_mol2:main"
 
 [tool.pytest.ini_options]
 markers = [
