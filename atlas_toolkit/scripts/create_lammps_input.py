@@ -16,7 +16,7 @@ import sys
 from pathlib import Path
 
 
-def create_lammps_input(bgf_file: str, ff_string: str, save_name: str = None,
+def create_lammps_input(bgf_file: str, ff_string: str = None, save_name: str = None,
                         protocol: str = "min", cutoff: float = 12.0,
                         seed: int = 12345) -> None:
     """Generate LAMMPS data.* and in.* files from a BGF structure.
@@ -25,6 +25,8 @@ def create_lammps_input(bgf_file: str, ff_string: str, save_name: str = None,
     ----------
     bgf_file:  Path to input BGF file.
     ff_string: Space-separated force-field file paths (.ff / .frcmod).
+               If None or empty, FF files are auto-detected from the FF types
+               present in the BGF using ff_detect.
     save_name: Output stem (default: BGF basename without extension).
     protocol:  Run protocol — "min", "nvt", or "npt" (default: "min").
     cutoff:    VDW / real-space electrostatic cutoff in Å (default: 12.0).
@@ -33,6 +35,7 @@ def create_lammps_input(bgf_file: str, ff_string: str, save_name: str = None,
     from atlas_toolkit.io.bgf import read_bgf
     from atlas_toolkit.core.box import get_box
     from atlas_toolkit.io.ff import load_ff
+    from atlas_toolkit.io.ff_detect import detect_ff
     from atlas_toolkit.lammps.data_file import write_data_file
     from atlas_toolkit.lammps.input_script import write_input_script
 
@@ -48,8 +51,24 @@ def create_lammps_input(bgf_file: str, ff_string: str, save_name: str = None,
     atoms, bonds_dict, headers = read_bgf(bgf_path)
     box = get_box(atoms, headers)
 
-    print(f"Loading FF: {ff_string}")
-    ff_parms = load_ff(ff_string)
+    if ff_string:
+        print(f"Loading FF: {ff_string}")
+        ff_parms = load_ff(ff_string)
+    else:
+        # Auto-detect from FF types in the BGF
+        observed = {a["FFTYPE"] for a in atoms.values() if a.get("FFTYPE")}
+        hits = detect_ff(observed, min_confidence=0.0)
+        auto_paths = [h.path for h in hits if h.path and h.confidence >= 0.5]
+        if not auto_paths:
+            raise RuntimeError(
+                "FF auto-detection found no matches. "
+                "Pass FF paths explicitly with -f / ff_string."
+            )
+        print(f"Auto-detected FF files:")
+        for h in hits:
+            if h.path and h.confidence >= 0.5:
+                print(f"  {h.ff_name:25s} ({h.confidence*100:.0f}% coverage)  {h.path.name}")
+        ff_parms = load_ff([str(p) for p in auto_paths])
 
     print(f"Writing {data_name} ...")
     summary = write_data_file(
@@ -97,8 +116,9 @@ def _parse_args(argv=None):
         description="Generate LAMMPS data.* and in.* from a BGF structure.",
     )
     p.add_argument("-b", "--bgf",      required=True,  help="Input BGF file")
-    p.add_argument("-f", "--ff",       required=True,
-                   help="Force-field file(s): space-separated .ff / .frcmod paths")
+    p.add_argument("-f", "--ff",       default=None,
+                   help="Force-field file(s): space-separated .ff / .frcmod paths. "
+                        "If omitted, FF files are auto-detected from the BGF.")
     p.add_argument("-t", "--type",     default="min",
                    choices=["min", "nvt", "npt"],
                    help="Run protocol (default: min)")

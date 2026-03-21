@@ -134,17 +134,32 @@ def lookup_inversion(t1: str, t2: str, t3: str, t4: str, parms: dict) -> Optiona
 # ── public API ────────────────────────────────────────────────────────────────
 
 def find_ff(name: str) -> Optional[Path]:
-    """Return Path to a bundled .ff file matching *name* (case-insensitive).
+    """Return Path to a bundled FF file matching *name* (case-insensitive).
 
-    Searches the bundled ff/ tree.  Returns None if not found.
+    Searches the bundled ff/ tree for .ff and .frcmod files.
+    Returns None if not found.
     """
     candidate = Path(name)
     if candidate.exists():
         return candidate
 
-    name_lower = name.lower().rstrip(".ff")
-    for p in _FF_DIR.rglob("*.ff"):
-        if p.stem.lower() == name_lower or p.name.lower() == name.lower():
+    name_lower = name.lower()
+    # strip trailing extension for stem comparison
+    name_stem = name_lower
+    for ext in (".ff", ".frcmod"):
+        if name_stem.endswith(ext):
+            name_stem = name_stem[: -len(ext)]
+
+    for p in _FF_DIR.rglob("*"):
+        if not p.is_file():
+            continue
+        # Accept .ff, .frcmod, files whose name starts with "frcmod.", or no extension
+        pname_lower = p.name.lower()
+        if not (p.suffix.lower() in (".ff", ".frcmod")
+                or pname_lower.startswith("frcmod.")
+                or "." not in p.name):
+            continue
+        if p.stem.lower() == name_stem or pname_lower == name_lower:
             return p
     return None
 
