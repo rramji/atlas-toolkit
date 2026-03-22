@@ -5,6 +5,10 @@ from .io.bgf_parmed import (
     load_bgf_as_parmed, save_parmed_as_bgf,
 )
 from .io.ff_detect import detect_ff, suggest_ff_files, fftype_family
+try:
+    from .io.param_openff import param_openff, mol_to_openff, CHARGE_METHODS
+except ImportError:
+    pass  # openff-toolkit not installed (base env)
 from .core.headers import create_headers, insert_header_remark, add_box_to_header
 from .core.manip_atoms import get_mols, select_atoms, build_selection, add_mols_to_selection
 from .core.general import trim, file_tester, has_cell
