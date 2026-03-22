@@ -222,11 +222,11 @@ def write_data_file_parmed(
     summary.n_angle_types = len(angle_type_reg)
 
     # ── 4. Dihedral type registry (proper + improper) ──────────────────────────
-    # LAMMPS charmm dihedral style: K n d weight
-    #   K     = force constant (kcal/mol)
-    #   n     = periodicity (integer)
-    #   d     = phase offset in degrees (0 or 180)
-    #   weight = 1-4 scaling weight (1.0 for charmm style)
+    # LAMMPS harmonic dihedral style: K d n
+    #   K  = force constant (kcal/mol)
+    #   d  = +1 (phase=0°) or -1 (phase=180°)
+    #   n  = periodicity (integer)
+    # No 1-4 scaling in harmonic style — handled by special_bonds instead.
     dihedral_type_reg = _TypeRegistry()
     dihedral_entries: list[tuple] = []
 
@@ -245,11 +245,22 @@ def write_data_file_parmed(
 
         phi_k = float(dt.phi_k)
         per   = float(dt.per)
-        phase = float(dt.phase)   # radians in parmed
+        phase = float(dt.phase)
 
-        # Convert phase radians → degrees, round to 0 or 180
-        phase_deg = math.degrees(phase)
-        d_int = 1 if abs(phase_deg) < 1.0 else -1   # +1 = 0°, -1 = 180°
+        # ParmEd phase units depend on source:
+        # - AMBER prmtop (GAFF/ff14SB): stored in radians
+        # - SMIRNOFF/OpenFF prmtop:      stored in degrees
+        # Distinguish: if |phase| > 2*pi it must already be degrees.
+        if abs(phase) > 7.0:   # > 2π → already degrees
+            phase_deg = phase
+        else:                   # radians → convert
+            phase_deg = math.degrees(phase)
+
+        # Round to nearest valid phase (0° or 180°)
+        if abs(phase_deg % 360) < 90 or abs(phase_deg % 360) > 270:
+            d_int = 1   # phase ≈ 0°
+        else:
+            d_int = -1  # phase ≈ 180°
         n_int = max(1, int(round(abs(per))))
 
         if dih.improper:
@@ -267,7 +278,7 @@ def write_data_file_parmed(
             label = (f"{dih.atom1.type}-{dih.atom2.type}-"
                      f"{dih.atom3.type}-{dih.atom4.type}")
             tid   = dihedral_type_reg.register(key, label,
-                                                [phi_k, n_int, d_int, 1.0])
+                                                [phi_k, d_int, n_int])
             dihedral_entries.append((tid,
                                      dih.atom1.idx + 1,
                                      dih.atom2.idx + 1,
@@ -375,10 +386,10 @@ def _write_angle_coeffs(fh, angle_type_reg: _TypeRegistry) -> None:
 def _write_dihedral_coeffs(fh, dihedral_type_reg: _TypeRegistry) -> None:
     if not len(dihedral_type_reg):
         return
-    fh.write("Dihedral Coeffs  # charmm\n\n")
+    fh.write("Dihedral Coeffs  # harmonic\n\n")
     for tid, label, coeffs in dihedral_type_reg.items():
-        k, n, d, w = coeffs
-        fh.write(f"{tid:6d}  {k:12.6f}  {int(n):4d}  {int(d):4d}  {w:.1f}  # {label}\n")
+        k, d, n = coeffs
+        fh.write(f"{tid:6d}  {k:12.6f}  {int(d):4d}  {int(n):4d}  # {label}\n")
     fh.write("\n")
 
 
