@@ -217,3 +217,20 @@ skipped when `~/ATLAS-toolkit` is not found or Perl is not installed.
 | No support for `xu yu zu` / `xsu ysu zsu` dump columns | Auto-detects all four LAMMPS coordinate conventions |
 | CHARMM dihedral written as `K d n wlj wcoul` (two 1-4 weights) | Correctly written as `K n d w` (single weight, phase in degrees) |
 | `addSolvent.pl` with `total: N` on a box-less solute trims solvent to solute bounding box (nearly empty) | Skips trim when no replication is needed; uses full solvent box then removes excess |
+
+## mol-param-core pipeline (2026-03-21 session)
+
+Three new modules added to `atlas_toolkit/io/`:
+
+- **`bgf_parmed.py`** — BGF ↔ ParmEd Structure bridge (`load_bgf_as_parmed`, `save_parmed_as_bgf`, `bgf_to_parmed`, `parmed_to_bgf`)
+- **`ff_detect.py`** — FF type auto-detection (`detect_ff`, `suggest_ff_files`, `fftype_family`)
+- `ff.py` — `find_ff()` now finds `frcmod.*` files correctly
+
+`atlas-create-lammps-input` now auto-detects FF files when `-f` is omitted.
+
+Tested end-to-end on `2AuNP_RR25_aggregation_implicit.bgf`: GAFF17 + Au_heinzFCC + frcmod.ionsjc_tip3p, all 100% coverage.
+
+### Blocked: openff / OPLS parameterization path
+- `molsim` conda env created (py3.12 + openbabel + foyer + rdkit + mbuild installed)
+- `openff-toolkit` install killed by OOM — machine has 8 GB RAM, mamba solver needs more
+- **Next step after RAM upgrade:** install `openff-toolkit openff-forcefields openff-interchange` into molsim env, then build the SMIRNOFF/OPLS parameterization bridge
