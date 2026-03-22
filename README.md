@@ -234,3 +234,23 @@ Tested end-to-end on `2AuNP_RR25_aggregation_implicit.bgf`: GAFF17 + Au_heinzFCC
 - `molsim` conda env created (py3.12 + openbabel + foyer + rdkit + mbuild installed)
 - `openff-toolkit` install killed by OOM — machine has 8 GB RAM, mamba solver needs more
 - **Next step after RAM upgrade:** install `openff-toolkit openff-forcefields openff-interchange` into molsim env, then build the SMIRNOFF/OPLS parameterization bridge
+
+## 2026-03-21 evening: LAMMPS pipeline bugs fixed
+
+Three bugs in `data_file_parmed.py` caused catastrophically wrong energies:
+
+1. **Phase units** — SMIRNOFF prmtops store dihedral phase in **degrees**, not radians.
+   `math.degrees(180) = 10313°` was corrupting d signs. Fixed: detect `|phase| > 7` → already degrees.
+
+2. **Dihedral style** — `charmm` requires `lj/charmm` pair style (LAMMPS hardcoded).
+   Switched to `harmonic` (K d n, 3 cols) + `lj/cut/coul/long` + `special_bonds amber`.
+
+3. **Shared `_UnassignedAtomType` singleton** — `bgf_to_parmed` creates one shared
+   `_UnassignedAtomType` for all atoms from a BGF. Writing LJ params to it overwrites
+   every atom. `inject_lj` now creates a fresh `AtomType` per atom.
+
+**Pipeline now uses** `heinzAu_oplsIons_softChlorine.ff` (from the repo) for Au/Na+/Cl-
+instead of separate `Au_heinzFCC.ff` + `frcmod.ionsjc_tip3p` — this is the actual FF
+used in the original simulations.
+
+**Verified:** 2AuNP/RR25 system minimizes cleanly in 166 steps to -21,541 kcal/mol.
