@@ -86,7 +86,12 @@ def write_input_script(
     blank()
 
     # ── interaction styles ──────────────────────────────────────────────────
-    w("pair_style", "lj/cut/coul/long", cut, cut)
+    # lj/charmm/coul/long required when dihedral_style charmm is used
+    # (charmm dihedrals handle 1-4 scaling internally; incompatible with lj/cut)
+    if summary.n_dihedral_types > 0:
+        w("pair_style", "lj/charmm/coul/long", cut - 2.0, cut)
+    else:
+        w("pair_style", "lj/cut/coul/long", cut, cut)
 
     if summary.n_bond_types > 0:
         w("bond_style", "harmonic")
