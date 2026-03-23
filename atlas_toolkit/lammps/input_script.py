@@ -93,7 +93,7 @@ def write_input_script(
     if summary.n_angle_types > 0:
         w("angle_style", "harmonic")
     if summary.n_dihedral_types > 0:
-        w("dihedral_style", "harmonic")
+        w("dihedral_style", "charmm")
     if summary.n_improper_types > 0:
         w("improper_style", "cvff")
     blank()
