@@ -1,11 +1,17 @@
 """ATLAS toolkit — Python port of the ATLAS molecular simulation library."""
 from .io.bgf import read_bgf, write_bgf, parse_struct_file
-from .io.bgf_parmed import (
-    bgf_to_parmed, parmed_to_bgf,
-    load_bgf_as_parmed, save_parmed_as_bgf,
-)
-from .io.ff_detect import detect_ff, suggest_ff_files, fftype_family
-from .io.bgf_to_lammps import bgf_ff_to_parmed, bgf_ff_to_lammps
+try:
+    from .io.bgf_parmed import (
+        bgf_to_parmed, parmed_to_bgf,
+        load_bgf_as_parmed, save_parmed_as_bgf,
+    )
+except ImportError:
+    pass  # parmed not installed
+try:
+    from .io.ff_detect import detect_ff, suggest_ff_files, fftype_family
+    from .io.bgf_to_lammps import bgf_ff_to_parmed, bgf_ff_to_lammps
+except ImportError:
+    pass  # optional parmed deps
 try:
     from .io.param_openff import param_openff, mol_to_openff, CHARGE_METHODS
 except ImportError:

@@ -266,7 +266,7 @@ def test_input_script_has_pair_style(spc_input_script):
     out, _ = spc_input_script
     text = out.read_text()
     assert "pair_style" in text
-    assert "lj/cut/coul/long" in text
+    assert "lj/charmm/coul/long" in text
 
 
 def test_input_script_has_bond_style(spc_input_script):

@@ -17,8 +17,8 @@ from pathlib import Path
 
 
 def create_lammps_input(bgf_file: str, ff_string: str = None, save_name: str = None,
-                        protocol: str = "min", cutoff: float = 12.0,
-                        seed: int = 12345) -> None:
+                        protocol: str = "min", cutoff: float = 14.0,
+                        seed: int = 12345, solute_atoms: int | None = None) -> None:
     """Generate LAMMPS data.* and in.* files from a BGF structure.
 
     Parameters
@@ -106,6 +106,7 @@ def create_lammps_input(bgf_file: str, ff_string: str = None, save_name: str = N
         cutoff=cutoff,
         seed=seed,
         title=f"Generated from {bgf_path.name}",
+        solute_atoms=solute_atoms,
     )
     print("Done.")
 
@@ -124,7 +125,7 @@ def _parse_args(argv=None):
                    help="Run protocol (default: min)")
     p.add_argument("-s", "--stem",     default=None,
                    help="Output stem (default: BGF basename without extension)")
-    p.add_argument("-c", "--cutoff",   type=float, default=12.0,
+    p.add_argument("-c", "--cutoff",   type=float, default=14.0,
                    help="VDW / real-space electrostatic cutoff in Å (default: 12)")
     p.add_argument("--seed",           type=int,   default=12345,
                    help="RNG seed for velocity initialisation (default: 12345)")

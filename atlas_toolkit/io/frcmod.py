@@ -63,7 +63,12 @@ def read_frcmod(path: str | Path, alter: bool = True) -> dict:
         "ANGLES": {},
         "TORSIONS": {},
         "INVERSIONS": {},
-        "PARMS": {},
+        # AMBER convention defaults (scee=1.2): both LJ and Coulomb 1-4 use the
+        # same Coulomb scale to match createLammpsInput.pl same_scale=1 behavior.
+        "PARMS": {
+            "coul_14_scale": 1.0 / 1.2,
+            "vdw_14_scale": 1.0 / 1.2,
+        },
     }
 
     section: Optional[str] = None

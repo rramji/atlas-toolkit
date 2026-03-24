@@ -12,8 +12,8 @@ Force-field type mapping
 ------------------------
 Bond    HARMONIC   → bond_style harmonic        coeff: K  r0
 Angle   THETA_HARM → angle_style harmonic       coeff: K  theta0
-Torsion SHFT_DIHDR → dihedral_style charmm      coeff: K  n  d  0.0  0.0
-           (multi-term → multiple type IDs, multiple Dihedrals entries)
+Torsion SHFT_DIHDR → dihedral_style fourier     coeff: N  K1 n1 d1  [K2 n2 d2 ...]
+           (multi-term → single type with N triplets, one Dihedrals entry per quartet)
 Improper IT_JIKL   → improper_style cvff         coeff: K  d  n
            (d = +1 if phase==0, -1 if phase==180)
 """
@@ -199,7 +199,7 @@ def write_data_file(
         tid = angle_reg.register(pkey, label, [kc, theta0])
         angle_entries.append((tid, lammps_id[i], lammps_id[j], lammps_id[k]))
 
-    # Torsions (CHARMM style — one entry per Fourier term)
+    # Torsions (FOURIER style — one type per unique multi-term set, one entry per quartet)
     dihedral_entries: list[tuple[int, int, int, int, int]] = []
     for (i, j, k, l) in raw_torsions:
         ti = _get_atom_fftype(atoms[i])
@@ -210,17 +210,21 @@ def write_data_file(
         if terms is None:
             summary.missing_torsions.append((ti, tj, tk, tl))
             continue
+        # Collect all Fourier terms: flat list [K1, n1, d1, K2, n2, d2, ...]
+        flat: list = []
         for term in terms:
             kd, n, phi0 = term["VALS"]
-            n_int = int(round(abs(n)))
-            d_deg = int(round(phi0))   # phase in degrees (0 or 180)
-            pkey = _round_key([kd, n_int, phi0])
-            label = f"{ti}-{tj}-{tk}-{tl}"
-            tid = dihedral_reg.register(pkey, label, [kd, n_int, d_deg, 0.0])
-            dihedral_entries.append((tid, lammps_id[i], lammps_id[j],
-                                      lammps_id[k], lammps_id[l]))
+            flat.extend([kd, int(round(abs(n))), int(round(phi0))])
+        n_terms = len(terms)
+        pkey = _round_key(flat)
+        label = f"{ti} {tj} {tk} {tl}"
+        # vals = [N_terms, K1, n1, d1, K2, n2, d2, ...]
+        tid = dihedral_reg.register(pkey, label, [n_terms] + flat)
+        dihedral_entries.append((tid, lammps_id[i], lammps_id[j],
+                                  lammps_id[k], lammps_id[l]))
 
-    # Impropers (cvff style)
+    # Impropers (cvff style — Perl convention: center at position 3 / K in I-J-K-L)
+    # 3 cyclic permutations per center: (b,a,ctr,c), (c,b,ctr,a), (a,c,ctr,b)
     improper_entries: list[tuple[int, int, int, int, int]] = []
     for (center, a, b, c) in raw_impropers:
         tc = _get_atom_fftype(atoms[center])
@@ -236,10 +240,13 @@ def write_data_file(
             d = _phase_to_d(phi0)
             n_int = int(round(abs(ni)))
             pkey = _round_key([ki, phi0, n_int])
-            label = f"{tc}-{ta}-{tb}-{tv}"
+            label = f"{tc} {ta} {tb} {tv}"
             tid = improper_reg.register(pkey, label, [ki, d, n_int])
-            improper_entries.append((tid, lammps_id[center], lammps_id[a],
-                                      lammps_id[b], lammps_id[c]))
+            la, lb, lc_sat = lammps_id[a], lammps_id[b], lammps_id[c]
+            lc_ctr = lammps_id[center]
+            improper_entries.append((tid, lb,     la,     lc_ctr, lc_sat))
+            improper_entries.append((tid, lc_sat, lb,     lc_ctr, la))
+            improper_entries.append((tid, la,     lc_sat, lc_ctr, lb))
 
     # ── 6.  Fill summary counts ───────────────────────────────────────────────
     summary.n_atoms        = len(atoms)
@@ -359,8 +366,15 @@ def _write_dihedral_coeffs(fh, dihedral_reg: _TypeRegistry):
         return
     fh.write("Dihedral Coeffs\n\n")
     for tid, label, vals in dihedral_reg.items():
-        k, n, d, w = vals
-        fh.write(f"{tid:6d}  {k:12.6f}  {n:4d}  {d:4d}  {w:.1f}\n")
+        # vals = [N_terms, K1, n1, d1, K2, n2, d2, ...]  (fourier style)
+        n_terms = int(vals[0])
+        fh.write(f"{tid:6d}  {n_terms:6d}")
+        for t in range(n_terms):
+            k  = vals[1 + 3 * t]
+            n  = vals[2 + 3 * t]
+            d  = vals[3 + 3 * t]
+            fh.write(f"  {k:12.6f}  {n:5d}  {d:5d}")
+        fh.write(f"  # {label}\n")
     fh.write("\n")
 
 

@@ -255,6 +255,9 @@ def read_ff(path: str | Path, alter: bool = True) -> dict:
                 m = re.match(r"^\s*VDW_1-4_SCALE_FACTOR\s+([\d.]+)", stripped)
                 if m:
                     parms["PARMS"]["vdw_14_scale"] = float(m.group(1)); continue
+                m = re.match(r"^\s*EWALD_SUM_COU_ACCURACY\s+([\d.eE+\-]+)", stripped)
+                if m:
+                    parms["PARMS"]["coul_accuracy"] = float(m.group(1)); continue
 
             # ── ATOMTYPES ────────────────────────────────────────────────────
             if section == 1:
