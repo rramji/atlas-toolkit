@@ -89,9 +89,24 @@ def lookup_bond(t1: str, t2: str, parms: dict) -> Optional[dict]:
 
 
 def lookup_angle(t1: str, t2: str, t3: str, parms: dict) -> Optional[dict]:
-    """Return angle parms for (t1, t2, t3), or None."""
+    """Return angle parms for (t1, t2, t3), with wildcard 'X' fallback.
+
+    DREIDING defines all angles as X-center-X wildcards, so we try:
+      1. Exact match (t1, t2, t3)
+      2. Wildcard endpoints: (X, t2, X)
+    This also correctly gives DREIDING priority over UFF when both are
+    loaded, since load_ff merges later files last (DREIDING overrides UFF)
+    and the wildcard lookup finds the DREIDING center-type entry.
+    """
     angles = parms.get("ANGLES", {})
-    return angles.get(angle_key(t1, t2, t3))
+    key = angle_key(t1, t2, t3)
+    if key in angles:
+        return angles[key]
+    # Wildcard fallback: X-center-X (DREIDING style)
+    wkey = angle_key("X", t2, "X")
+    if wkey in angles:
+        return angles[wkey]
+    return None
 
 
 def lookup_torsion(t1: str, t2: str, t3: str, t4: str, parms: dict) -> Optional[list]:
